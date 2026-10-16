@@ -79,7 +79,7 @@ export const PLANS = [
   {
     id: "trial",
     name: "Prueba",
-    price: "S/ 0",
+    price: "US$ 0",
     per: "7 días gratis",
     highlight: false,
     cta: "Empezar gratis",
@@ -94,7 +94,7 @@ export const PLANS = [
   {
     id: "growth",
     name: "Crecimiento",
-    price: "S/ 80",
+    price: "US$ 25",
     per: "al mes",
     highlight: true,
     cta: "Elegir Crecimiento",
@@ -109,7 +109,7 @@ export const PLANS = [
   {
     id: "congregation",
     name: "Congregación",
-    price: "S/ 150",
+    price: "US$ 50",
     per: "al mes",
     highlight: false,
     cta: "Elegir Congregación",
