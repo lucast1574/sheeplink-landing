@@ -75,13 +75,6 @@ export const ROLES = [
   },
 ];
 
-export const STATS = [
-  { value: "+85", label: "iglesias organizadas" },
-  { value: "12 mil", label: "integrantes registrados" },
-  { value: "1 200", label: "células activas" },
-  { value: "4 min", label: "para marcar la asistencia" },
-];
-
 export const PLANS = [
   {
     id: "trial",

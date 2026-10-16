@@ -18,12 +18,7 @@ export default function LegalPage({
 }) {
   const content = LEGAL_DOCUMENTS[kind];
   useEffect(() => {
-    const previous = document.title;
-    document.title = `${content.title} · SHEEPLINK`;
     window.scrollTo(0, 0);
-    return () => {
-      document.title = previous;
-    };
   }, [content.title]);
   return (
     <div className="legal-page">
