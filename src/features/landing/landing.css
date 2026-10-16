@@ -1,0 +1,181 @@
+.lp.lp {
+  --lp-bg: #faf8f2;
+  --lp-soft: #eef0e7;
+}
+.lp .lp-brand img.lp-wordmark {
+  width: 170px;
+  height: 40px;
+  object-fit: contain;
+}
+@media (max-width: 480px) {
+  .lp .lp-brand img.lp-wordmark {
+    width: 137px;
+    height: 34px;
+  }
+}
+.lp .lp-hero {
+  background:
+    radial-gradient(ellipse at 10% 0%, #e6eee2 0%, transparent 56%),
+    radial-gradient(ellipse at 94% 30%, #f1e7d2 0%, transparent 48%), #faf8f2;
+}
+.lp .lp-hero::before {
+  background-image: none;
+}
+.lp .lp-hero h1 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 500;
+  font-size: clamp(2.7rem, 4.7vw, 4.25rem);
+  line-height: 1.09;
+  letter-spacing: -0.045em;
+}
+.lp .lp-hero h1 em {
+  font-style: italic;
+}
+.lp .lp-pill {
+  background: #ffffff9c;
+  border-color: #d7dfcf;
+  font-size: 0.8rem;
+  letter-spacing: 0.01em;
+}
+.lp .lp-pill svg {
+  color: #9c7944;
+}
+.lp .lp-lead {
+  font-size: 1.06rem;
+  line-height: 1.75;
+}
+.lp .lp-lead2 {
+  color: #64776b;
+}
+.lp .lp-pastoral-note {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: #5b6d5d;
+  font-size: 0.87rem;
+  padding-top: 6px;
+}
+.lp .lp-pastoral-note svg {
+  color: #947342;
+  flex-shrink: 0;
+}
+.lp .lp-mission {
+  padding: 68px 0 76px;
+  background: #f1efe5;
+  border-block: 1px solid #e3e1d3;
+  text-align: center;
+}
+.lp-mission-heading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  color: #9c7944;
+  margin-bottom: 22px;
+}
+.lp-mission-line {
+  width: 68px;
+  height: 1px;
+  background: #c4b598;
+}
+.lp .lp-mission .lp-eyebrow {
+  font-size: 0.72rem;
+  color: #766141;
+  letter-spacing: 0.18em;
+}
+.lp .lp-mission h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: clamp(2rem, 3.5vw, 3rem);
+  font-weight: 400;
+  line-height: 1.18;
+  letter-spacing: -0.035em;
+  color: #294b3b;
+  margin: 8px 0 18px;
+}
+.lp-mission-intro {
+  max-width: 600px;
+  margin: 0 auto;
+  color: #607063;
+  line-height: 1.8;
+}
+.lp-mission-values {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 44px;
+}
+.lp-mission-values article {
+  padding: 8px 18px;
+}
+.lp-mission-values article + article {
+  border-left: 1px solid #dcdccc;
+}
+.lp-mission-icon {
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #d8dccb;
+  color: #496b50;
+  background: #f9f9f0;
+  border-radius: 50%;
+  margin: 0 auto 18px;
+}
+.lp .lp-mission h3 {
+  font-size: 1rem;
+  color: #294b3b;
+  margin: 0 0 10px;
+}
+.lp-mission-values p {
+  font-size: 0.92rem;
+  line-height: 1.75;
+  color: #607063;
+  margin: 0;
+}
+.lp .lp-final h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+@media (max-width: 700px) {
+  .lp .lp-mission {
+    padding: 48px 0;
+  }
+  .lp-mission-values {
+    grid-template-columns: 1fr;
+    gap: 22px;
+    margin-top: 30px;
+  }
+  .lp-mission-values article {
+    max-width: 390px;
+    margin: 0 auto;
+  }
+  .lp-mission-values article + article {
+    border-left: 0;
+    border-top: 1px solid #dcdccc;
+    padding-top: 24px;
+  }
+}
+
+.lp .lp-hero .lp-cta-row {
+  align-items: flex-start;
+  gap: 12px 18px;
+}
+.lp-primary-action {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+.lp .lp-primary-action .lp-micro {
+  margin: 10px 0 0;
+  text-align: center;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+.lp .lp-hero .lp-pastoral-note {
+  margin-top: 24px;
+}
+@media (max-width: 640px) {
+  .lp-primary-action {
+    flex: 1 1 100%;
+  }
+}

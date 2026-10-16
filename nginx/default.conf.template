@@ -1,0 +1,7 @@
+server {
+ listen 0.0.0.0:${PORT};server_name _;root /usr/share/nginx/html;index index.html;
+ location = /health {default_type application/json;return 200 '{"status":"ok"}';}
+ location = /config.js {add_header Cache-Control "no-store" always;}
+ location /assets/ {try_files $uri =404;expires 1y;add_header Cache-Control "public, immutable";}
+ location / {try_files $uri $uri/ /index.html;add_header Cache-Control "no-cache";}
+}
