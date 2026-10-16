@@ -82,7 +82,7 @@ export const LEGAL_DOCUMENTS = {
         title: "2. Información utilizada",
         paragraphs: [
           "El registro utiliza el nombre y correo del responsable, la contraseña protegida mediante hash, el nombre de la iglesia y los datos de ubicación o contacto que se proporcionen. Las invitaciones usan el correo, nombre, rol y asignaciones del usuario.",
-          "Según el uso de cada iglesia, se almacenan nombres de integrantes, edad o cumpleaños, pertenencia a células y zonas, estado de participación, asistencias, ministerios y turnos, cursos, notas, historial y mensajes internos. No todos estos campos son obligatorios.",
+          "Según el uso de cada iglesia, se almacenan nombres de integrantes, edad o cumpleaños, pertenencia a células y zonas, estado de participación, asistencias, ministerios y turnos, cursos, notas, historial y mensajes internos. También pueden guardarse fotografías, estado de bautismo, lecturas y reflexiones devocionales, disponibilidad de servicio y períodos de disciplina con sus motivos. El acceso depende de los permisos y el ámbito asignado. No todos estos campos son obligatorios.",
           "También se procesan datos técnicos necesarios para seguridad y funcionamiento, como la dirección IP utilizada para limitar intentos, registros de errores y solicitudes y marcas de actividad de la sesión. No incluyas en mensajes libres información sensible que no sea necesaria.",
         ],
       },
@@ -97,8 +97,8 @@ export const LEGAL_DOCUMENTS = {
       {
         title: "4. Acceso y proveedores",
         paragraphs: [
-          "Los usuarios acceden según su rol y ámbito asignado. El administrador de la plataforma gestiona iglesias y suscripciones; ese rol no habilita las pantallas ordinarias de datos internos de una iglesia. El soporte técnico debe limitar cualquier intervención a lo necesario para resolver incidencias o cumplir obligaciones.",
-          "El funcionamiento utiliza Nexode para alojamiento y base de datos y Brevo para los correos transaccionales. Cuando se habilite la contratación de planes, Stripe procesará los pagos y la facturación. SHEEPLINK conservará identificadores de cliente y suscripción y su estado; no recibirá el número completo de la tarjeta ni su código de seguridad. La entrega y protección del tráfico puede involucrar servicios de red como Cloudflare. Solo se comunica a los proveedores la información necesaria para su función; por ejemplo, el correo de destino y el contenido de una invitación.",
+          "Los usuarios acceden según su rol y ámbito asignado. El administrador de la plataforma gestiona iglesias y suscripciones y puede seleccionar una iglesia para prestar soporte autorizado. Toda intervención técnica debe limitarse a lo necesario para gestionar el servicio, resolver incidencias o cumplir obligaciones.",
+          "El funcionamiento utiliza Nexode para alojamiento, base de datos y almacenamiento S3 de fotografías, portadas y materiales de cursos, y Brevo para los correos transaccionales. El acceso opcional con Google utiliza Firebase Authentication: se verifica el identificador de Google, el correo y el nombre disponibles; SHEEPLINK no recibe la contraseña de Google y conserva sus propios roles y permisos. Cuando se habilite la contratación de planes, Stripe procesará los pagos y la facturación. SHEEPLINK conservará identificadores de cliente y suscripción y su estado; no recibirá el número completo de la tarjeta ni su código de seguridad. La entrega y protección del tráfico puede involucrar servicios de red como Cloudflare. Solo se comunica a los proveedores la información necesaria para su función; por ejemplo, el correo de destino y el contenido de una invitación.",
           "Estos proveedores pueden procesar información en otros países. La ubicación efectiva depende de la infraestructura y de sus condiciones. Para detalles sobre una operación o las garantías aplicables a tu caso, contacta al servicio. No se vende la información de los integrantes.",
           "La tipografía se carga actualmente desde Google Fonts. Al solicitarla, el navegador se comunica con Google y le transmite datos técnicos de la conexión, como la dirección IP. Los enlaces externos a WhatsApp y otros sitios solo se abren cuando decides visitarlos y tienen sus propias políticas.",
         ],
@@ -135,7 +135,7 @@ export const LEGAL_DOCUMENTS = {
       {
         title: "1. Qué utiliza la aplicación",
         paragraphs: [
-          "SHEEPLINK utiliza una cookie de sesión y almacenamiento local del navegador para autenticación, control de inactividad y sincronización del cierre de sesión entre pestañas. La aplicación no incorpora actualmente herramientas de publicidad ni cookies analíticas opcionales.",
+          "SHEEPLINK utiliza una cookie de sesión y almacenamiento local del navegador para autenticación, control de inactividad y sincronización del cierre de sesión entre pestañas. La landing pública no consulta la sesión de la app. El acceso opcional con Google utiliza Firebase para completar la autenticación; la sesión de Firebase se mantiene en memoria y después se cierra, mientras SHEEPLINK conserva su propia cookie de sesión. La aplicación no incorpora actualmente herramientas de publicidad ni cookies analíticas opcionales.",
           "Estos mecanismos son operativos y de seguridad. No se muestra una elección ficticia para rechazar una sesión que es necesaria para entrar. Si se incorporan tecnologías opcionales, se informarán sus finalidades y se ofrecerán las opciones que correspondan antes de utilizarlas.",
         ],
       },
