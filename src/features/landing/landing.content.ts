@@ -77,6 +77,21 @@ export const ROLES = [
 
 export const PLANS = [
   {
+    id: "trial",
+    name: "Prueba",
+    price: "US$ 0",
+    per: "7 días gratis",
+    highlight: false,
+    cta: "Empezar gratis",
+    signup: true,
+    items: [
+      "Hasta 50 integrantes",
+      "3 células",
+      "1 ministerio",
+      "Asistencia semanal",
+    ],
+  },
+  {
     id: "growth",
     name: "Crecimiento",
     price: "US$ 25",
@@ -135,8 +150,8 @@ export const FAQ = [
     a: "Sí. Cada líder solo accede a la información que le corresponde y la sesión se cierra sola tras unos minutos de inactividad.",
   },
   {
-    q: "¿Cómo empiezo con mi iglesia?",
-    a: "Crea la cuenta de tu iglesia, invita a tu equipo y elige el plan que necesitas. La suscripción mensual y los pagos se gestionan a través de Stripe.",
+    q: "¿Puedo probarlo antes de pagar?",
+    a: "Claro. Tienes 7 días de prueba gratis, con hasta 50 integrantes, 3 células y 1 ministerio. Después puedes contratar tu suscripción desde Facturación y pagar a través de Stripe.",
   },
   {
     q: "¿Funciona bien en el celular?",

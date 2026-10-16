@@ -68,7 +68,7 @@ export default function Landing() {
               className="lp-btn primary sm hide-sm"
               href={appPath("/registro")}
             >
-              Crear mi iglesia
+              Empezar gratis
             </a>
             <button
               type="button"
@@ -104,7 +104,7 @@ export default function Landing() {
               </a>
             ))}
             <a className="lp-btn primary" href={appPath("/registro")}>
-              Crear mi iglesia
+              Empezar gratis
             </a>
           </div>
         )}
@@ -138,8 +138,9 @@ export default function Landing() {
               <div className="lp-cta-row">
                 <div className="lp-primary-action">
                   <a className="lp-btn primary" href={appPath("/registro")}>
-                    Crear mi iglesia <Icon name="arrow" size={18} />
+                    Empezar gratis <Icon name="arrow" size={18} />
                   </a>
+                  <p className="lp-micro">Prueba gratis por 7 días</p>
                 </div>
                 <a className="lp-btn link" href="#como-funciona">
                   Ver cómo funciona
@@ -398,8 +399,8 @@ export default function Landing() {
               <span className="lp-eyebrow">Precios</span>
               <h2 className="lp-h2">Un plan para cada etapa de tu iglesia</h2>
               <p className="lp-sub">
-                Elige el plan que necesita tu iglesia. La suscripción y los
-                pagos se gestionan a través de Stripe.
+                Empieza con 7 días de prueba. Los planes de pago se contratan y
+                gestionan a través de Stripe.
               </p>
             </div>
             <div className="lp-plans">
@@ -479,7 +480,7 @@ export default function Landing() {
             </p>
             <div className="lp-cta-row">
               <a className="lp-btn light" href={appPath("/registro")}>
-                Crear mi iglesia <Icon name="arrow" size={18} />
+                Empezar gratis <Icon name="arrow" size={18} />
               </a>
               <a
                 className="lp-btn outline-light"
