@@ -1,0 +1,38 @@
+[
+  {
+    "id": "redil",
+    "name": "Redil",
+    "description": "Para organizar y acompañar a una comunidad que empieza.",
+    "amount": 2500,
+    "currency": "usd",
+    "trialDays": 7,
+    "maxUsers": 50,
+    "maxMembers": 150,
+    "maxCells": 10,
+    "maxMinistries": 5
+  },
+  {
+    "id": "vina",
+    "name": "Viña",
+    "description": "Para una iglesia con más equipos y comunidades.",
+    "amount": 5000,
+    "currency": "usd",
+    "trialDays": 0,
+    "maxUsers": 150,
+    "maxMembers": 500,
+    "maxCells": 40,
+    "maxMinistries": 15
+  },
+  {
+    "id": "mies",
+    "name": "Mies",
+    "description": "Para coordinar una congregación sin topes de integrantes ni equipos.",
+    "amount": 8000,
+    "currency": "usd",
+    "trialDays": 0,
+    "maxUsers": null,
+    "maxMembers": null,
+    "maxCells": null,
+    "maxMinistries": null
+  }
+]

@@ -1,3 +1,4 @@
+import { PRICING } from "../landing.content";
 import { useEffect, useRef, useState } from "react";
 import { appPath } from "../../../shared/config/sites";
 import logoWhite from "../../../assets/sheeplink-logo-white.svg";
@@ -93,10 +94,10 @@ export default function Landing() {
               Iniciar sesión
             </a>
             <a
-              href={appPath("/registro?plan=redil")}
+              href={appPath(PRICING.registrationPath)}
               className="landing-nav-trial"
             >
-              Probar gratis <Icon name="arrow" size={16} />
+              {PRICING.navCta} <Icon name="arrow" size={16} />
             </a>
             <button
               type="button"
@@ -134,9 +135,7 @@ export default function Landing() {
                 {n.label}
               </a>
             ))}
-            <a href={appPath("/registro?plan=redil")}>
-              Empezar mis 7 días gratis
-            </a>
+            <a href={appPath(PRICING.registrationPath)}>{PRICING.cta}</a>
           </nav>
         )}
       </header>
@@ -164,23 +163,22 @@ export default function Landing() {
               </p>
               <div className="landing-hero-actions">
                 <MarketingButton
-                  href={appPath("/registro?plan=redil")}
+                  href={appPath(PRICING.registrationPath)}
                   variant="light"
                   arrow
                 >
-                  Empezar mis 7 días gratis
+                  {PRICING.cta}
                 </MarketingButton>
                 <a className="landing-explore" href="#funciones">
-                  <span className="landing-play">▶</span> Explorar SHEEPLINK
+                  <span className="landing-play">
+                    <Icon name="play" size={16} />
+                  </span>{" "}
+                  Explorar SHEEPLINK
                 </a>
               </div>
               <div className="landing-hero-foot">
-                <span>
-                  Redil: con tarjeta. Después, US$25/mes automáticamente.
-                </span>
-                <span>
-                  Cancela antes de terminar la prueba para evitar el cobro.
-                </span>
+                <span>{PRICING.disclosure}</span>
+                <span>{PRICING.cancellation}</span>
               </div>
             </div>
             <div className="landing-hero-art">
@@ -276,7 +274,7 @@ export default function Landing() {
                 <p>
                   No necesitas tenerlo todo ordenado para dar el primer paso.
                 </p>
-                <MarketingButton href={appPath("/registro?plan=redil")} arrow>
+                <MarketingButton href={appPath(PRICING.registrationPath)} arrow>
                   Crear mi iglesia
                 </MarketingButton>
               </div>
@@ -367,15 +365,14 @@ export default function Landing() {
                 Nosotros te ayudamos a organizar.
               </p>
               <MarketingButton
-                href={appPath("/registro?plan=redil")}
+                href={appPath(PRICING.registrationPath)}
                 variant="light"
                 arrow
               >
-                Empezar mis 7 días gratis
+                {PRICING.cta}
               </MarketingButton>
               <small className="landing-trial-disclosure">
-                Redil · Con tarjeta. Después, US$25/mes. Cancela antes para
-                evitar el cobro.
+                {PRICING.disclosure}
               </small>
               <a
                 href={WHATSAPP_URL}

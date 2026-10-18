@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 export const ICON: Record<string, ReactNode> = {
+  play: <path d="m9 5 10 7-10 7z" />,
   cross: <path d="M10 3h4v6h5v4h-5v8h-4v-8H5V9h5z" />,
   book: (
     <>

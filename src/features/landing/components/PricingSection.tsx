@@ -1,5 +1,5 @@
 import { appPath } from "../../../shared/config/sites";
-import { PLANS } from "../landing.content";
+import { PLANS, PRICING } from "../landing.content";
 import { Icon } from "./LandingIcons";
 import { MarketingButton } from "./MarketingButton";
 export function PricingSection() {
@@ -15,11 +15,7 @@ export function PricingSection() {
               En cada etapa.
             </h2>
           </div>
-          <p>
-            Prueba Redil durante 7 días con tarjeta.
-            <br />
-            Después, US$25 al mes. Cancela antes para evitar el cobro.
-          </p>
+          <p>{PRICING.introduction}</p>
         </div>
         <div className="landing-plan-grid">
           {PLANS.map((plan) => (
@@ -60,13 +56,7 @@ export function PricingSection() {
             </article>
           ))}
         </div>
-        <p className="landing-billing-note">
-          Precios en dólares estadounidenses. Renovación mensual automática con
-          Stripe. La prueba de 7 días está disponible una sola vez y únicamente
-          en Redil, con tarjeta. Al terminar, se cobrarán US$25 al mes; puedes
-          cancelar antes desde Facturación. Viña (US$50) y Mies (US$80) se
-          cobran al contratar.
-        </p>
+        <p className="landing-billing-note">{PRICING.terms}</p>
       </div>
     </section>
   );

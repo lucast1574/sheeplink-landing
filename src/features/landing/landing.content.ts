@@ -1,4 +1,5 @@
-import { BILLING_CATALOG } from "./billing-catalog.generated";
+import { pricingCopy, priceLabel } from "./pricing";
+import BILLING_CATALOG from "./billing-catalog.generated.json";
 export const CONTACT_EMAIL = "krecarfaz@gmail.com";
 export const WHATSAPP_URL =
   "https://wa.me/51981427532?text=Hola%2C%20quiero%20conocer%20SHEEPLINK";
@@ -39,7 +40,7 @@ export const ROLES = [
 ];
 export const PLANS = BILLING_CATALOG.map((p, index) => ({
   ...p,
-  price: `US$ ${p.amount / 100}`,
+  price: priceLabel(p),
   per: "al mes",
   highlight: index === 1,
   cta:
@@ -59,6 +60,7 @@ export const PLANS = BILLING_CATALOG.map((p, index) => ({
     "Cursos, actividades y comunidad",
   ],
 }));
+export const PRICING = pricingCopy(BILLING_CATALOG);
 export const FAQ = [
   {
     q: "¿Necesito instalar algo?",
@@ -70,7 +72,7 @@ export const FAQ = [
   },
   {
     q: "¿Puedo probarlo antes de pagar?",
-    a: "Sí. Redil incluye 7 días gratis al registrar tu tarjeta en Stripe, con los mismos límites del plan. Después se cobran US$25 al mes automáticamente; cancela antes de terminar la prueba para evitar el cobro. Viña y Mies se pagan desde el inicio. Crear una cuenta por sí solo no activa tu iglesia.",
+    a: PRICING.faq,
   },
   {
     q: "¿Funciona bien en el celular?",

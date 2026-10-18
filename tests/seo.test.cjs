@@ -3,6 +3,15 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const root = path.resolve(__dirname, "../dist");
+const catalog = JSON.parse(
+  fs.readFileSync(
+    path.resolve(
+      __dirname,
+      "../src/features/landing/billing-catalog.generated.json",
+    ),
+    "utf8",
+  ),
+);
 const site = "https://sheeplink.nexode.app";
 test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar JavaScript", () => {
   const titles = new Set();
@@ -35,9 +44,11 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     assert.doesNotMatch(JSON.stringify(graph), /aggregateRating|reviewCount/);
   }
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
-  assert.match(
-    home,
-    /<a[^>]+href="https:\/\/dashboard-sheeplink.nexode.app\/registro\?plan=redil"/,
+  const first = catalog.find((p) => p.trialDays > 0) ?? catalog[0];
+  assert.ok(
+    home.includes(
+      `href="https://dashboard-sheeplink.nexode.app/registro?plan=${first.id}"`,
+    ),
   );
   assert.match(home, /gestión para iglesias/);
 });
@@ -68,11 +79,11 @@ test("la portada describe sus precios reales, conserva todas las pestañas y sir
   );
   assert.deepEqual(
     app.offers.map((o) => [o.name, o.price, o.priceCurrency]),
-    [
-      ["Redil", "25", "USD"],
-      ["Viña", "50", "USD"],
-      ["Mies", "80", "USD"],
-    ],
+    catalog.map((p) => [
+      p.name,
+      String(p.amount / 100),
+      p.currency.toUpperCase(),
+    ]),
   );
   assert.match(html, /id="panel-service"/);
   assert.match(html, /id="panel-academy"/);

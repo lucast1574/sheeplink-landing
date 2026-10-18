@@ -1,3 +1,4 @@
+import { PRICING } from "../landing/landing.content";
 export const LEGAL_VERSION = "2026-10-16";
 export const LEGAL_CONTACT = "krecarfaz@gmail.com";
 
@@ -38,7 +39,7 @@ export const LEGAL_DOCUMENTS = {
       {
         title: "4. Prueba, planes y pagos",
         paragraphs: [
-          "Los planes mensuales son Redil (US$25), Viña (US$50) y Mies (US$80). Crear una cuenta no activa el acceso ni genera un cobro por sí solo. Para activar la iglesia debes contratar un plan en Stripe. Redil ofrece una única prueba de 7 días con tarjeta: al terminar, la suscripción se renueva automáticamente a US$25 al mes hasta cancelarla. Si cancelas antes de que termine la prueba, no se cobra la suscripción. Viña y Mies se cobran al contratar y se renuevan mensualmente. Stripe muestra el importe y la periodicidad antes de confirmar.",
+          PRICING.legal,
           "Al vencer un plan, la aplicación puede limitar la cuenta a consulta; una suspensión puede impedir el acceso. Los planes de pago se contratan mediante Stripe y se renuevan mensualmente hasta su cancelación. Antes de confirmar, Stripe muestra el importe y la periodicidad. El responsable de la iglesia puede consultar facturas, actualizar el método de pago y cancelar la renovación desde Facturación. Para aclaraciones o solicitudes de devolución, escribe al contacto del servicio. Se respetarán los derechos y devoluciones exigibles por la normativa aplicable y las condiciones expresamente acordadas.",
         ],
       },
