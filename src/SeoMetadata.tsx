@@ -1,3 +1,4 @@
+import { structuredData } from "./structuredData";
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import { pageMetadata, SITE_URL } from "./shared/config/seo";
@@ -7,6 +8,12 @@ export default function SeoMetadata() {
     const page = pageMetadata(pathname);
     if (!page) return;
     document.title = page.title;
+    const schema = document.querySelector("#public-structured-data");
+    if (schema)
+      schema.textContent = JSON.stringify(structuredData(page.path)).replace(
+        /</g,
+        "\\u003c",
+      );
     for (const [selector, value] of [
       ['meta[name="description"]', page.description],
       ['meta[property="og:title"]', page.title],

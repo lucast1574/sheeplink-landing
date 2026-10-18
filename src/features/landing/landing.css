@@ -1925,3 +1925,7 @@
     font-size: clamp(42px, 13.2vw, 64px);
   }
 }
+
+.tour-stage[hidden] {
+  display: none;
+}

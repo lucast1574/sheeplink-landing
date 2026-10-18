@@ -1,3 +1,4 @@
+@import "./fonts.css";
 /* Tokens y estilos base compartidos. Los estilos de cada pantalla viven en su propio .tsx */
 :root {
   /* Superficies */

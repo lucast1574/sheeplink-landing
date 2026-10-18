@@ -23,7 +23,9 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     assert.match(html, /og:image:width" content="1200"/);
     assert.match(html, /og:image:height" content="630"/);
     const graph = JSON.parse(
-      /<script type="application\/ld\+json">(.*?)<\/script>/.exec(html)[1],
+      /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/.exec(
+        html,
+      )[1],
     );
     assert.ok(
       graph["@graph"].some(
@@ -52,4 +54,34 @@ test("imagen social horizontal ligera, sitemap canónico y página inexistente s
     /Allow: \/\nSitemap: https:/,
   );
   assert.match(fs.readFileSync(path.join(root, "404.html"), "utf8"), /noindex/);
+});
+
+test("la portada describe sus precios reales, conserva todas las pestañas y sirve la fuente desde su propio origen", () => {
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const graph = JSON.parse(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/.exec(
+      html,
+    )[1],
+  );
+  const app = graph["@graph"].find(
+    (node) => node["@type"] === "WebApplication",
+  );
+  assert.deepEqual(
+    app.offers.map((o) => [o.name, o.price, o.priceCurrency]),
+    [
+      ["Prueba", "0", "USD"],
+      ["Crecimiento", "25", "USD"],
+      ["Congregación", "50", "USD"],
+    ],
+  );
+  assert.match(html, /id="panel-service"/);
+  assert.match(html, /id="panel-academy"/);
+  assert.match(html, /id="panel-events"/);
+  assert.match(html, /figtree-latin\.woff2/);
+  assert.doesNotMatch(html, /fonts\.googleapis\.com|fonts\.gstatic\.com/);
+  assert.ok(
+    fs.readFileSync(path.join(root, "fonts/figtree-latin.woff2")).length <
+      30000,
+  );
+  assert.match(html, /devocionales\/publicados/);
 });

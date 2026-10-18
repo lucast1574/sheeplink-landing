@@ -14,3 +14,6 @@ Los pushes a main despliegan la landing mediante el webhook de Dokploy guardado 
 La portada usa `MarketingButton` e `Icon` para sus acciones compartidas, `CommunityScene` para la escena SVG y `ProductTour` para explorar los módulos sin llamadas al backend. `PricingSection` conserva un único catálogo de planes en `landing.content.ts`. La demo responde a teclado y conserva el contenido de entrada en el HTML prerenderizado.
 
 El movimiento usa CSS y un IntersectionObserver que se desconecta tras entrar en pantalla. No hay bucles JavaScript por cuadro ni librerías de vídeo en el navegador. La pausa manual detiene las animaciones; `prefers-reduced-motion` ofrece una presentación estática. Los estados de teclado cambian color y subrayado, sin outlines ni anillos de foco.
+
+
+Los datos estructurados se generan desde `structuredData.ts` tanto al prerenderizar como al navegar entre páginas. Las ofertas describen los precios visibles sin añadir valoraciones de clientes. Todas las pestañas de la demostración conservan su contenido en el HTML; las inactivas usan hidden y quedan fuera de la interacción. La tipografía variable se sirve como WOFF2 local, con precarga de su subconjunto latino y licencia OFL incluida, sin peticiones a Google Fonts. El pie enlaza al catálogo público de lecturas en la aplicación.

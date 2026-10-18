@@ -393,6 +393,9 @@ export default function Landing() {
                   {n.label}
                 </a>
               ))}
+              <a href={appPath("/devocionales/publicados")}>
+                Devocionales públicos
+              </a>
               <a href={appPath("/login")}>Iniciar sesión</a>
               <a href={`mailto:${CONTACT_EMAIL}`}>Contacto por correo</a>
             </nav>

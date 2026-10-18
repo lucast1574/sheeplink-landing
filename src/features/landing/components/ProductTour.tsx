@@ -221,7 +221,6 @@ function ActivityPreview() {
 }
 export function ProductTour() {
   const [active, setActive] = useState(0);
-  const module = modules[active];
   const keyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
     let next = index;
     if (event.key === "ArrowRight") next = (index + 1) % modules.length;
@@ -256,52 +255,56 @@ export function ProductTour() {
           </button>
         ))}
       </div>
-      <div
-        className="tour-stage"
-        role="tabpanel"
-        id={`panel-${module.id}`}
-        aria-labelledby={`tab-${module.id}`}
-        tabIndex={0}
-      >
-        <div className="tour-narrative" key={module.id}>
-          <span className="tour-module-label">
-            <Icon name={module.icon} size={22} />
-            {module.name}
-          </span>
-          <h3>{module.title}</h3>
-          <p>{module.description}</p>
-          <div className="tour-narrative-foot">
-            <span className="tour-small-mark">
-              <img src={mark} alt="" width="25" height="25" />
+      {modules.map((module, index) => (
+        <div
+          key={module.id}
+          hidden={index !== active}
+          className="tour-stage"
+          role="tabpanel"
+          id={`panel-${module.id}`}
+          aria-labelledby={`tab-${module.id}`}
+          tabIndex={0}
+        >
+          <div className="tour-narrative" key={module.id}>
+            <span className="tour-module-label">
+              <Icon name={module.icon} size={22} />
+              {module.name}
             </span>
-            <span>
-              Más claridad para tu equipo.
-              <br />
-              Más cercanía para tu iglesia.
-            </span>
+            <h3>{module.title}</h3>
+            <p>{module.description}</p>
+            <div className="tour-narrative-foot">
+              <span className="tour-small-mark">
+                <img src={mark} alt="" width="25" height="25" />
+              </span>
+              <span>
+                Más claridad para tu equipo.
+                <br />
+                Más cercanía para tu iglesia.
+              </span>
+            </div>
+          </div>
+          <div className="tour-window">
+            <div className="tour-window-bar">
+              <span />
+              <span />
+              <span />
+              <p>SHEEPLINK / {module.name}</p>
+              <Icon name="shield" size={14} />
+            </div>
+            <div className="tour-window-body" key={module.id}>
+              {index === 0 ? (
+                <AttendancePreview />
+              ) : index === 1 ? (
+                <ServicePreview />
+              ) : index === 2 ? (
+                <AcademyPreview />
+              ) : (
+                <ActivityPreview />
+              )}
+            </div>
           </div>
         </div>
-        <div className="tour-window">
-          <div className="tour-window-bar">
-            <span />
-            <span />
-            <span />
-            <p>SHEEPLINK / {module.name}</p>
-            <Icon name="shield" size={14} />
-          </div>
-          <div className="tour-window-body" key={module.id}>
-            {active === 0 ? (
-              <AttendancePreview />
-            ) : active === 1 ? (
-              <ServicePreview />
-            ) : active === 2 ? (
-              <AcademyPreview />
-            ) : (
-              <ActivityPreview />
-            )}
-          </div>
-        </div>
-      </div>
+      ))}
     </div>
   );
 }

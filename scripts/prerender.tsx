@@ -14,3 +14,5 @@ export function renderPage(path: string) {
     </StaticRouter>,
   );
 }
+
+export { structuredData } from "../src/structuredData";

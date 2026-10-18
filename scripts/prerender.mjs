@@ -6,6 +6,7 @@ import {
   SITE_URL,
   APP_URL,
   SOCIAL_IMAGE,
+  structuredData,
 } from "../.prerender/prerender.js";
 const template = await fs.readFile("dist/index.html", "utf8");
 const escape = (value) =>
@@ -36,63 +37,14 @@ for (const page of PUBLIC_PAGES) {
     /<link rel="canonical" href="[^"]*"\s*\/?>/,
     `<link rel="canonical" href="${SITE_URL + page.path}" />`,
   );
-  const graph = [
-    {
-      "@type": "Organization",
-      "@id": SITE_URL + "/#organization",
-      name: "SHEEPLINK",
-      url: SITE_URL,
-      logo: {
-        "@type": "ImageObject",
-        url: SITE_URL + "/brand/sheeplink-mark-green.png",
-        width: 512,
-        height: 512,
-      },
-      email: "krecarfaz@gmail.com",
-    },
-    {
-      "@type": "WebSite",
-      "@id": SITE_URL + "/#website",
-      url: SITE_URL,
-      name: "SHEEPLINK",
-      inLanguage: "es-PE",
-      publisher: { "@id": SITE_URL + "/#organization" },
-    },
-    {
-      "@type": "WebPage",
-      "@id": SITE_URL + page.path + "#webpage",
-      url: SITE_URL + page.path,
-      name: page.title,
-      description: page.description,
-      inLanguage: "es-PE",
-      isPartOf: { "@id": SITE_URL + "/#website" },
-    },
-  ];
-  if (page.path === "/")
-    graph.push({
-      "@type": "WebApplication",
-      name: "SHEEPLINK",
-      url: SITE_URL,
-      applicationCategory: "BusinessApplication",
-      operatingSystem: "Web",
-      inLanguage: "es",
-      description: page.description,
-      featureList: [
-        "Gestión de células e integrantes",
-        "Registro de asistencia",
-        "Organización de ministerios y turnos",
-        "Escuela bíblica y materiales de cursos",
-      ],
-      publisher: { "@id": SITE_URL + "/#organization" },
-    });
-  const json = JSON.stringify({
-    "@context": "https://schema.org",
-    "@graph": graph,
-  }).replaceAll("<", "\\u003c");
+  const json = JSON.stringify(structuredData(page.path)).replaceAll(
+    "<",
+    "\\u003c",
+  );
   html = html
     .replace(
       "</head>",
-      `<script type="application/ld+json">${json}</script></head>`,
+      `<script id="public-structured-data" type="application/ld+json">${json}</script></head>`,
     )
     .replace(
       '<div id="root"></div>',
