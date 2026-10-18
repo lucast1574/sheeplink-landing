@@ -1,3 +1,4 @@
+import { BILLING_CATALOG } from "./billing-catalog.generated";
 export const CONTACT_EMAIL = "krecarfaz@gmail.com";
 export const WHATSAPP_URL =
   "https://wa.me/51981427532?text=Hola%2C%20quiero%20conocer%20SHEEPLINK";
@@ -36,52 +37,28 @@ export const ROLES = [
     text: "Programa turnos y sabe quién sirve en cada actividad.",
   },
 ];
-export const PLANS = [
-  {
-    id: "trial",
-    name: "Prueba",
-    price: "US$ 0",
-    per: "7 días gratis",
-    highlight: false,
-    cta: "Empezar gratis",
-    signup: true,
-    items: [
-      "Hasta 50 integrantes",
-      "3 células",
-      "1 ministerio",
-      "Asistencia semanal",
-    ],
-  },
-  {
-    id: "growth",
-    name: "Crecimiento",
-    price: "US$ 25",
-    per: "al mes",
-    highlight: true,
-    cta: "Elegir Crecimiento",
-    badge: "Más elegido",
-    items: [
-      "Hasta 300 integrantes",
-      "Células y zonas ilimitadas",
-      "Ministerios y turnos",
-      "Mensajes y consultas",
-    ],
-  },
-  {
-    id: "congregation",
-    name: "Congregación",
-    price: "US$ 50",
-    per: "al mes",
-    highlight: false,
-    cta: "Elegir Congregación",
-    items: [
-      "Integrantes ilimitados",
-      "Varios líderes por zona",
-      "Reportes avanzados",
-      "Acompañamiento personalizado",
-    ],
-  },
-];
+export const PLANS = BILLING_CATALOG.map((p, index) => ({
+  ...p,
+  price: `US$ ${p.amount / 100}`,
+  per: "al mes",
+  highlight: index === 1,
+  cta:
+    p.trialDays > 0 ? `Probar ${p.trialDays} días gratis` : `Elegir ${p.name}`,
+  items: [
+    p.maxMembers === null
+      ? "Integrantes ilimitados"
+      : `Hasta ${p.maxMembers} integrantes`,
+    p.maxCells === null ? "Células ilimitadas" : `Hasta ${p.maxCells} células`,
+    p.maxMinistries === null
+      ? "Ministerios ilimitados"
+      : `Hasta ${p.maxMinistries} ministerios`,
+    p.maxUsers === null
+      ? "Cuentas ilimitadas"
+      : `Hasta ${p.maxUsers} cuentas de usuario`,
+    "Asistencia, servicio y devocionales",
+    "Cursos, actividades y comunidad",
+  ],
+}));
 export const FAQ = [
   {
     q: "¿Necesito instalar algo?",
@@ -93,7 +70,7 @@ export const FAQ = [
   },
   {
     q: "¿Puedo probarlo antes de pagar?",
-    a: "Claro. Tienes 7 días de prueba gratis, con hasta 50 integrantes, 3 células y 1 ministerio. Después puedes contratar tu suscripción desde Facturación y pagar a través de Stripe.",
+    a: "Sí. Redil incluye 7 días gratis al registrar tu tarjeta en Stripe, con los mismos límites del plan. Después se cobran US$25 al mes automáticamente; cancela antes de terminar la prueba para evitar el cobro. Viña y Mies se pagan desde el inicio. Crear una cuenta por sí solo no activa tu iglesia.",
   },
   {
     q: "¿Funciona bien en el celular?",

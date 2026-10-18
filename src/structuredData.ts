@@ -72,23 +72,16 @@ export function structuredData(path: string) {
         price: p.price.replace(/[^0-9.]/g, ""),
         priceCurrency: "USD",
         url: SITE_URL + "/#precios",
-        description: p.per,
-        ...(p.id === "trial"
-          ? {
-              eligibleDuration: {
-                "@type": "QuantitativeValue",
-                value: 7,
-                unitCode: "DAY",
-              },
-            }
-          : {
-              priceSpecification: {
-                "@type": "UnitPriceSpecification",
-                price: p.price.replace(/[^0-9.]/g, ""),
-                priceCurrency: "USD",
-                billingDuration: "P1M",
-              },
-            }),
+        description:
+          p.trialDays > 0
+            ? `${p.trialDays} días gratis con tarjeta, después US$${p.amount / 100}/mes. Renovación automática; cancela antes para evitar el cobro.`
+            : p.description,
+        priceSpecification: {
+          "@type": "UnitPriceSpecification",
+          price: p.amount / 100,
+          priceCurrency: p.currency.toUpperCase(),
+          billingDuration: "P1M",
+        },
       })),
     });
   else

@@ -37,7 +37,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(
     home,
-    /<a[^>]+href="https:\/\/dashboard-sheeplink.nexode.app\/registro"/,
+    /<a[^>]+href="https:\/\/dashboard-sheeplink.nexode.app\/registro\?plan=redil"/,
   );
   assert.match(home, /gestión para iglesias/);
 });
@@ -69,9 +69,9 @@ test("la portada describe sus precios reales, conserva todas las pestañas y sir
   assert.deepEqual(
     app.offers.map((o) => [o.name, o.price, o.priceCurrency]),
     [
-      ["Prueba", "0", "USD"],
-      ["Crecimiento", "25", "USD"],
-      ["Congregación", "50", "USD"],
+      ["Redil", "25", "USD"],
+      ["Viña", "50", "USD"],
+      ["Mies", "80", "USD"],
     ],
   );
   assert.match(html, /id="panel-service"/);

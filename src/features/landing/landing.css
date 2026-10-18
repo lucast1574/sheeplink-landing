@@ -1929,3 +1929,12 @@
 .tour-stage[hidden] {
   display: none;
 }
+
+.landing-trial-disclosure {
+  display: block;
+  margin: 16px auto 0;
+  max-width: 440px;
+  color: inherit;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}

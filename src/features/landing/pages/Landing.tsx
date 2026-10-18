@@ -92,7 +92,10 @@ export default function Landing() {
             <a href={appPath("/login")} className="landing-login">
               Iniciar sesión
             </a>
-            <a href={appPath("/registro")} className="landing-nav-trial">
+            <a
+              href={appPath("/registro?plan=redil")}
+              className="landing-nav-trial"
+            >
               Probar gratis <Icon name="arrow" size={16} />
             </a>
             <button
@@ -131,7 +134,9 @@ export default function Landing() {
                 {n.label}
               </a>
             ))}
-            <a href={appPath("/registro")}>Empezar mis 7 días gratis</a>
+            <a href={appPath("/registro?plan=redil")}>
+              Empezar mis 7 días gratis
+            </a>
           </nav>
         )}
       </header>
@@ -159,7 +164,7 @@ export default function Landing() {
               </p>
               <div className="landing-hero-actions">
                 <MarketingButton
-                  href={appPath("/registro")}
+                  href={appPath("/registro?plan=redil")}
                   variant="light"
                   arrow
                 >
@@ -170,8 +175,12 @@ export default function Landing() {
                 </a>
               </div>
               <div className="landing-hero-foot">
-                <span>Para pastores, líderes y toda su comunidad.</span>
-                <span>En español. Desde tu celular.</span>
+                <span>
+                  Redil: con tarjeta. Después, US$25/mes automáticamente.
+                </span>
+                <span>
+                  Cancela antes de terminar la prueba para evitar el cobro.
+                </span>
               </div>
             </div>
             <div className="landing-hero-art">
@@ -267,7 +276,7 @@ export default function Landing() {
                 <p>
                   No necesitas tenerlo todo ordenado para dar el primer paso.
                 </p>
-                <MarketingButton href={appPath("/registro")} arrow>
+                <MarketingButton href={appPath("/registro?plan=redil")} arrow>
                   Crear mi iglesia
                 </MarketingButton>
               </div>
@@ -358,12 +367,16 @@ export default function Landing() {
                 Nosotros te ayudamos a organizar.
               </p>
               <MarketingButton
-                href={appPath("/registro")}
+                href={appPath("/registro?plan=redil")}
                 variant="light"
                 arrow
               >
                 Empezar mis 7 días gratis
               </MarketingButton>
+              <small className="landing-trial-disclosure">
+                Redil · Con tarjeta. Después, US$25/mes. Cancela antes para
+                evitar el cobro.
+              </small>
               <a
                 href={WHATSAPP_URL}
                 className="landing-closing-contact"
