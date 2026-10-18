@@ -1,41 +1,9 @@
-import { useEffect, useRef } from "react";
 import logoGreen from "../../../assets/sheeplink-logo-green.svg";
 import { Icon } from "./LandingIcons";
 import "../entrance.css";
-const storageKey = "sheeplink-brand-entrance-v1";
 export function BrandEntrance() {
-  const root = useRef<HTMLDivElement>(null);
-  const started = useRef(false);
-  useEffect(() => {
-    const element = root.current;
-    const preference = matchMedia("(prefers-reduced-motion: reduce)");
-    if (!element || location.hash || preference.matches) return;
-    try {
-      if (sessionStorage.getItem(storageKey) && !started.current) return;
-      sessionStorage.setItem(storageKey, "seen");
-    } catch {
-      /* Storage is optional; the entrance always dismisses. */
-    }
-    started.current = true;
-    element.hidden = false;
-    const dismiss = () => {
-      element.hidden = true;
-    };
-    const onKey = (event: KeyboardEvent) => {
-      if (event.key === "Escape" || event.key === "Tab") dismiss();
-    };
-    const timer = setTimeout(dismiss, 1850);
-    window.addEventListener("keydown", onKey);
-    preference.addEventListener("change", dismiss);
-    return () => {
-      clearTimeout(timer);
-      dismiss();
-      window.removeEventListener("keydown", onKey);
-      preference.removeEventListener("change", dismiss);
-    };
-  }, []);
   return (
-    <div ref={root} hidden className="brand-arrival arrival-sheeplink">
+    <div className="brand-arrival arrival-sheeplink">
       <div className="brand-arrival-art" aria-hidden="true">
         <svg className="arrival-community" viewBox="0 0 480 360" fill="none">
           <path
@@ -64,9 +32,9 @@ export function BrandEntrance() {
       <button
         type="button"
         className="brand-arrival-skip"
-        onClick={() => {
-          if (root.current) root.current.hidden = true;
-        }}
+        onClick={() =>
+          document.documentElement.removeAttribute("data-brand-arrival")
+        }
       >
         Conoce SheepLink <Icon name="arrow" size={18} />
       </button>
