@@ -3,7 +3,7 @@ const assert = require("node:assert/strict");
 const fs = require("node:fs");
 const path = require("node:path");
 const root = path.resolve(__dirname, "../dist");
-const site = "https://sheeplink-landing-hzn112.nexode.app";
+const site = "https://sheeplink.nexode.app";
 test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar JavaScript", () => {
   const titles = new Set();
   for (const slug of ["", "terminos", "privacidad", "cookies"]) {
@@ -37,7 +37,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(
     home,
-    /<a[^>]+href="https:\/\/iglesia-frontend-r3kyfl.nexode.app\/registro"/,
+    /<a[^>]+href="https:\/\/dashboard.sheeplink.nexode.app\/registro"/,
   );
   assert.match(home, /gestión para iglesias/);
 });
