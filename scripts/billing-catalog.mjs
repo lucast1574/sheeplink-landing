@@ -38,3 +38,39 @@ export function readPublicCatalog(value) {
     throw new Error("Invalid public catalog");
   return plans.map((p) => Object.fromEntries(fields.map((k) => [k, p[k]])));
 }
+
+/** Retry transport failures during API rollouts; malformed catalogs fail immediately. */
+export async function fetchPublicCatalog(
+  url,
+  {
+    fetcher = fetch,
+    wait = (ms) => new Promise((resolve) => setTimeout(resolve, ms)),
+    attempts = 5,
+  } = {},
+) {
+  let lastError;
+  for (let attempt = 0; attempt < attempts; attempt++) {
+    let response;
+    try {
+      response = await fetcher(url, {
+        signal: AbortSignal.timeout(15000),
+        headers: {
+          "User-Agent": "Mozilla/5.0 (compatible; SHEEPLINK-CatalogSync/1.0)",
+          Accept: "application/json",
+        },
+      });
+    } catch (error) {
+      lastError = error;
+    }
+    if (response?.ok) return readPublicCatalog(await response.json());
+    if (response) {
+      lastError = new Error(`Catalog HTTP ${response.status}`);
+      if (![408, 429].includes(response.status) && response.status < 500)
+        throw lastError;
+      await response.body?.cancel();
+    }
+    if (attempt + 1 < attempts)
+      await wait(Math.min(2000 * 2 ** attempt, 10000));
+  }
+  throw lastError ?? new Error("Catalog unavailable");
+}

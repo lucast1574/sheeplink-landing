@@ -6,7 +6,7 @@ Sitio público independiente de la aplicación. Las rutas de registro e inicio d
 
 `PUBLIC_APP_URL` configura el destino de la aplicación al iniciar el contenedor. Si cambia el dominio del sitio, se actualiza `seo.ts` y se recompila para regenerar canonical y sitemap. Los enlaces de acceso no consultan la sesión ni reciben credenciales.
 
-`npm run generate:og` reproduce la imagen social PNG de 1200 × 630 desde el logo vectorial oficial. `npm run build` debe ejecutarse antes de `npm test`, cuyas comprobaciones leen el HTML y los archivos publicados. CI también valida el contenedor real.
+`npm run generate:og` reproduce la imagen social PNG de 1200 × 630 desde el logo vectorial oficial. `npm run build` debe ejecutarse antes de `npm test`, cuyas comprobaciones leen el HTML y los archivos publicados. La validación del contenedor es manual; el repositorio no tiene workflow de CI.
 
 Los pushes a main despliegan la landing mediante el webhook de Dokploy guardado en la configuración privada de GitHub. El servicio permanece registrado y agrupado dentro de SHEEPLINK en Nexode. Las claves de administración no se guardan en este repositorio.
 
@@ -20,4 +20,4 @@ Los datos estructurados se generan desde `structuredData.ts` tanto al prerenderi
 
 ## Catálogo comercial
 
-`npm run build` consulta `/api/billing/plans`, valida su contenido y genera `billing-catalog.generated.json` antes de compilar. Una respuesta inválida o no disponible detiene la compilación para no publicar datos obsoletos. No se exige una cantidad fija de planes. `pricing.ts` genera los textos, precios, condiciones y enlace inicial desde ese catálogo; no mantiene nombres, precios o días de prueba duplicados. `npm run build:offline` sirve únicamente para trabajo local deliberadamente desconectado usando el último catálogo guardado.
+`npm run build` consulta `/api/billing/plans`, valida su contenido y genera `billing-catalog.generated.json` antes de compilar. Los fallos de transporte, 408, 429 y 5xx se reintentan hasta cinco veces con espera creciente; una respuesta inválida o un fallo persistente detiene la compilación. No se exige una cantidad fija de planes. `pricing.ts` genera los textos, precios, condiciones y enlace inicial desde ese catálogo; no mantiene nombres, precios o días de prueba duplicados. `npm run build:offline` sirve únicamente para trabajo local deliberadamente desconectado usando el último catálogo guardado.
