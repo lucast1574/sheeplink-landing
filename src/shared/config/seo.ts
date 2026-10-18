@@ -1,5 +1,5 @@
 export const SITE_URL = "https://sheeplink.nexode.app";
-export const APP_URL = "https://dashboard.sheeplink.nexode.app";
+export const APP_URL = "https://dashboard-sheeplink.nexode.app";
 export const SOCIAL_IMAGE = "/og-sheeplink-20261016.png";
 export const PUBLIC_PAGES = [
   {

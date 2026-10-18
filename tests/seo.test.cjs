@@ -37,7 +37,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
   assert.match(
     home,
-    /<a[^>]+href="https:\/\/dashboard.sheeplink.nexode.app\/registro"/,
+    /<a[^>]+href="https:\/\/dashboard-sheeplink.nexode.app\/registro"/,
   );
   assert.match(home, /gestión para iglesias/);
 });
