@@ -9,3 +9,8 @@ Sitio público independiente de la aplicación. Las rutas de registro e inicio d
 `npm run generate:og` reproduce la imagen social PNG de 1200 × 630 desde el logo vectorial oficial. `npm run build` debe ejecutarse antes de `npm test`, cuyas comprobaciones leen el HTML y los archivos publicados. CI también valida el contenedor real.
 
 Los pushes a main despliegan la landing mediante el webhook de Dokploy guardado en la configuración privada de GitHub. El servicio permanece registrado y agrupado dentro de SHEEPLINK en Nexode. Las claves de administración no se guardan en este repositorio.
+
+
+La portada usa `MarketingButton` e `Icon` para sus acciones compartidas, `CommunityScene` para la escena SVG y `ProductTour` para explorar los módulos sin llamadas al backend. `PricingSection` conserva un único catálogo de planes en `landing.content.ts`. La demo responde a teclado y conserva el contenido de entrada en el HTML prerenderizado.
+
+El movimiento usa CSS y un IntersectionObserver que se desconecta tras entrar en pantalla. No hay bucles JavaScript por cuadro ni librerías de vídeo en el navegador. La pausa manual detiene las animaciones; `prefers-reduced-motion` ofrece una presentación estática. Los estados de teclado cambian color y subrayado, sin outlines ni anillos de foco.
