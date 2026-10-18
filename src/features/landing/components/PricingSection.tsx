@@ -33,12 +33,12 @@ export function PricingSection() {
                 </span>
               )}
               <h3>{plan.name}</h3>
-              <p>{plan.description}</p>
-              {plan.trialDays > 0 && (
-                <p className="landing-plan-trial">
-                  {plan.trialDays} días gratis con tarjeta
-                </p>
-              )}
+              <p className="landing-plan-description">{plan.description}</p>
+              <p className="landing-plan-trial">
+                {plan.trialDays > 0
+                  ? `${plan.trialDays} días gratis con tarjeta`
+                  : "Pago desde el inicio"}
+              </p>
               <p className="landing-plan-price">
                 {plan.price}
                 <span>{plan.per}</span>

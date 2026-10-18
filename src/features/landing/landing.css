@@ -1938,3 +1938,16 @@
   font-size: 0.8rem;
   line-height: 1.6;
 }
+
+.landing-plan .landing-plan-description {
+  min-height: 3.3em;
+}
+.landing-plan .landing-plan-trial {
+  font-size: 0.8rem;
+  margin: 0 0 10px;
+}
+@media (max-width: 900px) {
+  .landing-plan .landing-plan-description {
+    min-height: 0;
+  }
+}
