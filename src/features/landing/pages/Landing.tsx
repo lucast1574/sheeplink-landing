@@ -5,6 +5,7 @@ import logoGreen from "../../../assets/sheeplink-logo-green.svg";
 import markWhite from "../../../assets/sheeplink-mark-white.svg";
 import { LegalLinks } from "../../legal/LegalLinks";
 import { Icon } from "../components/LandingIcons";
+import { BrandEntrance } from "../components/BrandEntrance";
 import { CommunityScene } from "../components/CommunityScene";
 import { ProductTour } from "../components/ProductTour";
 import { PricingSection } from "../components/PricingSection";
@@ -67,6 +68,7 @@ export default function Landing() {
   }, [menuOpen]);
   return (
     <div className={`landing${paused ? " motion-paused" : ""}`}>
+      <BrandEntrance />
       <a className="landing-skip" href="#contenido">
         Ir al contenido
       </a>

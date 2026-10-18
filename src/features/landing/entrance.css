@@ -1,0 +1,174 @@
+/* Brief brand introduction; never waits for assets or blocks content. */
+.brand-arrival[hidden] {
+  display: none;
+}
+.brand-arrival {
+  position: fixed;
+  inset: 0;
+  z-index: 600;
+  display: grid;
+  place-items: center;
+  overflow: clip;
+  pointer-events: none;
+  background: var(--entrance-bg);
+  color: var(--entrance-ink);
+  animation: brand-arrival-exit 0.5s 1.25s cubic-bezier(0.7, 0, 0.3, 1) forwards;
+}
+.brand-arrival-art {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  align-content: center;
+  gap: 26px;
+  width: min(84vw, 520px);
+  text-align: center;
+}
+.brand-arrival-logo {
+  position: relative;
+  z-index: 1;
+  animation: brand-arrival-logo 0.8s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.brand-arrival-caption {
+  position: relative;
+  z-index: 1;
+  font-size: 12px;
+  letter-spacing: 0.04em;
+  margin: 0;
+  animation: brand-arrival-copy 0.6s 0.25s both;
+}
+.brand-arrival-skip {
+  position: absolute;
+  right: max(24px, 5vw);
+  bottom: max(28px, env(safe-area-inset-bottom));
+  pointer-events: auto;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border: 0;
+  border-bottom: 1px solid currentColor;
+  padding: 14px 0;
+  background: transparent;
+  color: inherit;
+  font: inherit;
+  font-size: 12px;
+  cursor: pointer;
+}
+.brand-arrival-skip svg {
+  width: 18px;
+  height: 18px;
+}
+.brand-arrival-skip:focus-visible,
+.brand-arrival-skip:hover {
+  outline: none;
+  box-shadow: none;
+  background: var(--entrance-accent);
+  color: var(--entrance-bg);
+}
+.brand-arrival-line {
+  width: 72px;
+  height: 2px;
+  background: var(--entrance-accent);
+  transform-origin: left;
+  animation: brand-arrival-line 1.2s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+@keyframes brand-arrival-logo {
+  from {
+    opacity: 0;
+    transform: translateY(22px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+@keyframes brand-arrival-copy {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes brand-arrival-line {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scaleX(1);
+  }
+}
+@keyframes brand-arrival-exit {
+  to {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-5%);
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .brand-arrival {
+    display: none !important;
+    animation: none !important;
+  }
+}
+
+.arrival-sheeplink {
+  --entrance-bg: #f4f5ed;
+  --entrance-ink: #164f3b;
+  --entrance-accent: #4e775b;
+}
+.arrival-sheeplink .brand-arrival-logo {
+  width: min(68vw, 300px);
+  height: auto;
+}
+.arrival-sheeplink .brand-arrival-caption {
+  font-size: 18px;
+  line-height: 1.6;
+  letter-spacing: -0.025em;
+}
+.arrival-sheeplink .brand-arrival-caption span {
+  font-size: 12px;
+  letter-spacing: 0;
+  color: #4e6758;
+}
+.arrival-community {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  translate: -50% -50%;
+  width: min(120vw, 600px);
+  height: auto;
+  stroke: #487351;
+  stroke-width: 1;
+  opacity: 0.22;
+}
+.arrival-community-path {
+  stroke-dasharray: 1800;
+  animation: sheeplink-connection 1.3s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+.arrival-community circle {
+  fill: #73966a;
+  stroke: none;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: sheeplink-node 0.7s 0.4s both;
+}
+@keyframes sheeplink-connection {
+  from {
+    stroke-dashoffset: 1800;
+    opacity: 0;
+  }
+  to {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+@keyframes sheeplink-node {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
