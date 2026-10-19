@@ -1056,7 +1056,7 @@
 }
 .landing-plan-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   gap: 20px;
 }
 .landing-plan {
@@ -1314,6 +1314,9 @@
   }
 }
 @media (max-width: 1100px) {
+  .landing-plan-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .landing-container {
     width: calc(100% - 64px);
   }
@@ -1940,7 +1943,7 @@
 }
 
 .landing-plan .landing-plan-description {
-  min-height: 3.3em;
+  min-height: 4.95em;
 }
 .landing-plan .landing-plan-trial {
   font-size: 0.8rem;
