@@ -42,7 +42,6 @@ const moments = [
 ];
 export default function Landing() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [paused, setPaused] = useState(false);
   const rhythm = useRef<HTMLElement>(null);
   useEffect(() => {
     const section = rhythm.current;
@@ -68,7 +67,7 @@ export default function Landing() {
     return () => window.removeEventListener("keydown", close);
   }, [menuOpen]);
   return (
-    <div className={`landing${paused ? " motion-paused" : ""}`}>
+    <div className="landing">
       <BrandEntrance />
       <a className="landing-skip" href="#contenido">
         Ir al contenido
@@ -183,14 +182,6 @@ export default function Landing() {
             </div>
             <div className="landing-hero-art">
               <CommunityScene />
-              <button
-                type="button"
-                className="landing-motion-control"
-                aria-pressed={paused}
-                onClick={() => setPaused(!paused)}
-              >
-                {paused ? "▶ Activar movimiento" : "Ⅱ Pausar movimiento"}
-              </button>
             </div>
           </section>
           <div className="landing-bridge landing-container">

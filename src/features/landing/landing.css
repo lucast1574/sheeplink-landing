@@ -454,21 +454,6 @@
   background: #ffffff15;
   color: var(--leaf);
 }
-.landing-motion-control {
-  display: block;
-  margin: 35px auto 0;
-  padding: 6px 10px;
-  border: 0;
-  background: transparent;
-  font-size: 11px;
-  color: #c6d8c5;
-  border-radius: 4px;
-}
-.landing-motion-control:hover,
-.landing-motion-control:focus-visible {
-  background: #ffffff15;
-  color: #fff;
-}
 .landing-bridge {
   display: flex;
   align-items: center;
@@ -1248,9 +1233,6 @@
   padding: 0;
   border: 0;
 }
-.motion-paused .community-signals path {
-  animation-play-state: paused;
-}
 @keyframes connection-enter {
   from {
     stroke-dashoffset: 450;
@@ -1403,9 +1385,6 @@
   }
   .community-node small {
     font-size: 10px;
-  }
-  .landing-motion-control {
-    margin-top: 30px;
   }
   .landing-section {
     padding: 80px 0;
@@ -1611,10 +1590,6 @@
   .community-note {
     font-size: 9px;
     left: 22%;
-  }
-  .landing-motion-control {
-    margin-top: 28px;
-    font-size: 10px;
   }
   .landing-bridge {
     font-size: 10px;
@@ -1906,21 +1881,6 @@
 .landing-header {
   background: var(--forest);
   color: white;
-}
-.motion-paused *,
-.motion-paused *:before,
-.motion-paused *:after {
-  animation: none !important;
-  transition: none !important;
-}
-.motion-paused .community-signals,
-.motion-paused .landing-moments:after {
-  display: none;
-}
-@media (prefers-reduced-motion: reduce) {
-  .landing-motion-control {
-    display: none;
-  }
 }
 
 @media (max-width: 600px) {
