@@ -3,6 +3,8 @@ import BILLING_CATALOG from "./billing-catalog.generated.json";
 export const CONTACT_EMAIL = "krecarfaz@gmail.com";
 export const WHATSAPP_URL =
   "https://wa.me/51981427532?text=Hola%2C%20quiero%20conocer%20SHEEPLINK";
+export const GOOGLE_PLAY_SEARCH_URL =
+  "https://play.google.com/store/search?q=SHEEPLINK&c=apps";
 export const STEPS = [
   {
     n: "1",
@@ -81,6 +83,7 @@ export const FAQ = [
 ];
 export const NAV = [
   { href: "#funciones", label: "Funciones" },
+  { href: "#app-movil", label: "App móvil" },
   { href: "#como-funciona", label: "Cómo funciona" },
   { href: "#precios", label: "Precios" },
   { href: "#contacto", label: "Contacto" },

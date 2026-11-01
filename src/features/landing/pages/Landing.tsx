@@ -11,6 +11,7 @@ import { CommunityScene } from "../components/CommunityScene";
 import { ProductTour } from "../components/ProductTour";
 import { PricingSection } from "../components/PricingSection";
 import { MarketingButton } from "../components/MarketingButton";
+import { MobileAppSection } from "../components/MobileAppSection";
 import {
   CONTACT_EMAIL,
   FAQ,
@@ -309,6 +310,7 @@ export default function Landing() {
               </div>
             </div>
           </section>
+          <MobileAppSection />
           <PricingSection />
           <section className="landing-section landing-faq">
             <div className="landing-container landing-faq-layout">
