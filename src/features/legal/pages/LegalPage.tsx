@@ -31,13 +31,19 @@ export default function LegalPage({
       </header>
       <main className="legal-main">
         <div className="legal-intro">
-          <span>INFORMACIÓN LEGAL</span>
+          <span>
+            {kind === "support" ? "AYUDA Y CONTACTO" : "INFORMACIÓN LEGAL"}
+          </span>
           <h1>{content.title}</h1>
           <p>{content.summary}</p>
           <small>
             Última actualización:{" "}
-            <time dateTime={LEGAL_VERSION}>16 de octubre de 2026</time> ·
-            Versión {LEGAL_VERSION}
+            <time dateTime={kind === "support" ? "2026-10-31" : LEGAL_VERSION}>
+              {kind === "support"
+                ? "31 de octubre de 2026"
+                : "16 de octubre de 2026"}
+            </time>{" "}
+            · Versión {kind === "support" ? "2026-10-31" : LEGAL_VERSION}
           </small>
         </div>
         <LegalLinks />

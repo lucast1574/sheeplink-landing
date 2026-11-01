@@ -26,6 +26,12 @@ export const PUBLIC_PAGES = [
     description:
       "Información sobre las cookies de sesión, autenticación y tecnologías del navegador que utiliza SHEEPLINK.",
   },
+  {
+    path: "/soporte",
+    title: "Soporte de la app | SHEEPLINK",
+    description:
+      "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.",
+  },
 ] as const;
 export const pageMetadata = (path: string) =>
   PUBLIC_PAGES.find((page) => page.path === (path.replace(/\/$/, "") || "/"));

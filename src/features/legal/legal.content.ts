@@ -9,6 +9,41 @@ export interface LegalDocument {
 }
 
 export const LEGAL_DOCUMENTS = {
+  support: {
+    title: "Soporte de SheepLink",
+    summary:
+      "Ayuda para acceder a tu comunidad, usar la aplicación y gestionar tus datos.",
+    sections: [
+      {
+        title: "1. Contacta con soporte",
+        paragraphs: [
+          "Escribe a krecarfaz@gmail.com con una descripción del problema, el nombre de tu iglesia y, si corresponde, la versión de la app y el modelo de tu teléfono. No envíes contraseñas, códigos de verificación ni fotografías con datos de otras personas.",
+          "Para cambios de permisos, integrantes, células o responsabilidades, contacta primero con la persona que administra SheepLink en tu iglesia. El equipo de soporte puede ayudarte con incidencias técnicas y solicitudes de privacidad.",
+        ],
+      },
+      {
+        title: "2. Acceso a la aplicación móvil",
+        paragraphs: [
+          "La app móvil está destinada a personas que ya tienen una cuenta activa asignada por su iglesia. Usa tu correo y contraseña de SheepLink. El acceso con Google funciona cuando el correo coincide con una cuenta de SheepLink autorizada; no crea una iglesia ni concede nuevos permisos.",
+          "Si olvidaste tu contraseña o ya no tienes acceso, pide a la persona administradora de tu iglesia que revise tu cuenta. No compartas la cuenta de otro integrante.",
+        ],
+      },
+      {
+        title: "3. Notificaciones y fotografías",
+        paragraphs: [
+          "Los avisos se activan desde Mi perfil y requieren el permiso del teléfono. Si no llegan, revisa ese permiso, la conexión y las preferencias de cumpleaños y servicio. Abre la app para actualizar tus recordatorios; el sistema operativo puede retrasar su entrega.",
+          "La cámara y la galería se usan cuando eliges añadir una fotografía a tu perfil o al registro de una reunión. Puedes retirar sus permisos desde los ajustes del teléfono y seguir usando las funciones que no necesitan fotografías.",
+        ],
+      },
+      {
+        title: "4. Privacidad, cuenta y eliminación de datos",
+        paragraphs: [
+          "Puedes solicitar acceso, corrección o eliminación de tus datos escribiendo a krecarfaz@gmail.com desde el correo asociado a tu cuenta. Indica qué datos o acceso deseas eliminar. Verificaremos tu identidad y coordinaremos con la iglesia cuando corresponda; no adjuntes documentos sensibles sin que se te soliciten.",
+          "Retirar tu acceso no elimina automáticamente los registros que tu iglesia deba conservar. La respuesta depende de la relación con la iglesia y de las obligaciones aplicables. La Política de privacidad explica el tratamiento, los proveedores y los criterios de conservación.",
+        ],
+      },
+    ],
+  },
   terms: {
     title: "Términos y condiciones",
     summary:

@@ -15,7 +15,7 @@ const catalog = JSON.parse(
 const site = "https://sheeplink.app";
 test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar JavaScript", () => {
   const titles = new Set();
-  for (const slug of ["", "terminos", "privacidad", "cookies"]) {
+  for (const slug of ["", "terminos", "privacidad", "cookies", "soporte"]) {
     const html = fs.readFileSync(path.join(root, slug, "index.html"), "utf8");
     const title = /<title>(.*?)<\/title>/.exec(html)[1];
     assert.ok(!titles.has(title));
@@ -46,9 +46,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
   const home = fs.readFileSync(path.join(root, "index.html"), "utf8");
   const first = catalog.find((p) => p.trialDays > 0) ?? catalog[0];
   assert.ok(
-    home.includes(
-      `href="https://app.sheeplink.app/registro?plan=${first.id}"`,
-    ),
+    home.includes(`href="https://app.sheeplink.app/registro?plan=${first.id}"`),
   );
   assert.match(home, /gestión para iglesias/);
 });
@@ -58,7 +56,7 @@ test("imagen social horizontal ligera, sitemap canónico y página inexistente s
   assert.equal(bytes.readUInt32BE(20), 630);
   assert.ok(bytes.length < 300000);
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 4);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 5);
   assert.doesNotMatch(sitemap, /login|registro|dashboard/);
   assert.match(
     fs.readFileSync(path.join(root, "robots.txt"), "utf8"),

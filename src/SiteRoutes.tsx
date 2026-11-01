@@ -11,6 +11,7 @@ export default function SiteRoutes() {
         <Route path="/terminos" element={<LegalPage document="terms" />} />
         <Route path="/privacidad" element={<LegalPage document="privacy" />} />
         <Route path="/cookies" element={<LegalPage document="cookies" />} />
+        <Route path="/soporte" element={<LegalPage document="support" />} />
         <Route path="*" element={<Navigate to="/" replace />} />
       </Routes>
     </>
