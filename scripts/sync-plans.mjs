@@ -3,7 +3,7 @@ import { format } from "prettier";
 import { fetchPublicCatalog } from "./billing-catalog.mjs";
 const url = new URL(
   "/api/billing/plans",
-  process.env.CATALOG_API_URL || "https://api-sheeplink.nexode.app",
+  process.env.CATALOG_API_URL || "https://api.sheeplink.app",
 );
 const rows = await fetchPublicCatalog(url);
 await writeFile(

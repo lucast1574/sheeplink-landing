@@ -12,7 +12,7 @@ const catalog = JSON.parse(
     "utf8",
   ),
 );
-const site = "https://sheeplink.nexode.app";
+const site = "https://sheeplink.app";
 test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar JavaScript", () => {
   const titles = new Set();
   for (const slug of ["", "terminos", "privacidad", "cookies"]) {
@@ -47,7 +47,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
   const first = catalog.find((p) => p.trialDays > 0) ?? catalog[0];
   assert.ok(
     home.includes(
-      `href="https://dashboard-sheeplink.nexode.app/registro?plan=${first.id}"`,
+      `href="https://app.sheeplink.app/registro?plan=${first.id}"`,
     ),
   );
   assert.match(home, /gestión para iglesias/);
