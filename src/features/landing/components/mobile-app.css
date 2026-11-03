@@ -19,10 +19,6 @@
   letter-spacing: -0.055em;
   font-weight: 600;
 }
-.pocket-copy h2 em {
-  font-style: normal;
-  color: var(--forest);
-}
 .landing .pocket-intro {
   font-size: 18px;
   line-height: 1.65;
@@ -41,7 +37,6 @@
   gap: 12px;
   color: var(--page);
   background: var(--forest);
-  border-radius: 14px;
   padding: 15px 18px;
   min-height: 76px;
   transition:
@@ -49,6 +44,7 @@
     background 0.25s;
   flex: 1 1 195px;
   max-width: 240px;
+  border-radius: 8px;
 }
 .pocket-store span {
   flex: 1;
@@ -86,14 +82,13 @@
   gap: 6px;
   margin-top: 34px;
   background: var(--soft);
-  border-radius: 12px;
   padding: 5px;
   width: fit-content;
   max-width: 100%;
+  border-radius: 8px;
 }
 .pocket-selector button {
   border: 0;
-  border-radius: 8px;
   background: transparent;
   color: var(--text);
   font: inherit;
@@ -103,6 +98,9 @@
   transition:
     background 0.25s,
     color 0.25s;
+  border-radius: 5px;
+  position: relative;
+  overflow: hidden;
 }
 .pocket-selector button[aria-selected="true"] {
   background: var(--forest);
@@ -134,35 +132,38 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
   min-width: 0;
   background: var(--leaf);
-  border-radius: 130px 130px 28px 28px;
-  padding: 40px 24px 24px;
   overflow: clip;
+  min-height: 740px;
+  border-radius: 8px;
+  padding: 28px 24px 22px;
+  justify-content: space-between;
 }
 .pocket-stage-word {
   position: absolute;
-  top: 42%;
   left: 0;
   right: 0;
-  text-align: center;
   color: var(--forest);
-  font-size: clamp(75px, 11vw, 170px);
   font-weight: 600;
   letter-spacing: -0.07em;
-  opacity: 0.12;
   z-index: -1;
+  top: 18%;
+  font-size: clamp(62px, 7.5vw, 112px);
+  opacity: 0.2;
+  text-align: left;
+  padding-left: 22px;
 }
 .pocket-phone {
   position: relative;
-  width: min(278px, 100%);
   aspect-ratio: 1206/2622;
   border: 7px solid var(--deep);
   border-radius: 36px;
   background: var(--page);
   overflow: hidden;
-  transform: translateY(0);
+  width: min(270px, 66%);
+  border-width: 6px;
+  transform: rotate(-6deg);
 }
 .pocket-phone img {
   position: absolute;
@@ -173,31 +174,22 @@
   object-fit: cover;
   opacity: 0;
   transition:
-    opacity 0.65s,
-    transform 0.8s;
-  transform: translateY(10px);
+    opacity 0.55s ease,
+    transform 0.8s cubic-bezier(0.2, 0.7, 0.2, 1);
+  transform: translateX(18px) scale(1.025);
 }
 .pocket-phone img.is-current {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0) scale(1);
 }
 .is-in-view .pocket-phone {
-  animation: pocket-breathe 7s ease-in-out infinite;
+  animation: pocket-float 8s ease-in-out infinite;
 }
 .landing .pocket-caption {
   font-size: 13px;
   margin-top: 23px;
   text-align: center;
   line-height: 1.5;
-}
-@keyframes pocket-breathe {
-  0%,
-  100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-7px);
-  }
 }
 @media (max-width: 1000px) {
   .pocket-layout {
@@ -206,12 +198,6 @@
   .pocket-store {
     max-width: 100%;
     flex-basis: 100%;
-  }
-  .pocket-stage {
-    padding-inline: 20px;
-  }
-  .pocket-phone {
-    width: min(258px, 100%);
   }
 }
 @media (max-width: 700px) {
@@ -259,27 +245,8 @@
   .pocket-explanation {
     min-height: 106px;
   }
-  .pocket-stage {
-    padding-top: 30px;
-    border-radius: 80px 80px 24px 24px;
-  }
-  .pocket-phone {
-    width: min(270px, 87%);
-  }
-  .pocket-stage-word {
-    font-size: 110px;
-  }
   .landing .pocket-caption {
     margin-top: 19px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  .pocket-phone,
-  .pocket-phone img,
-  .pocket-store,
-  .pocket-selector button {
-    animation: none !important;
-    transition: none !important;
   }
 }
 
@@ -300,5 +267,220 @@
   }
   .pocket-store small {
     font-size: 11px;
+  }
+}
+
+/* A living product scene, built around the real app screens. */
+.pocket-stage-heading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  align-self: flex-start;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--forest);
+}
+.pocket-device-scene {
+  position: relative;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  padding: 35px 0 18px;
+  perspective: 1100px;
+}
+.pocket-note {
+  position: absolute;
+  right: 0;
+  bottom: 85px;
+  width: min(260px, 78%);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: var(--deep);
+  color: var(--page);
+  padding: 20px;
+  border-radius: 16px;
+  animation: pocket-note-in 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+.pocket-note > svg {
+  flex-shrink: 0;
+  color: var(--leaf);
+}
+.pocket-note strong {
+  display: block;
+  font-size: 16px;
+}
+.pocket-note span {
+  display: block;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-top: 5px;
+}
+.pocket-community {
+  position: absolute;
+  left: 0;
+  top: 120px;
+  display: flex;
+  align-items: center;
+  padding: 13px 15px;
+  background: var(--page);
+  color: var(--forest);
+  border-radius: 14px;
+  transform: rotate(-4deg);
+}
+.pocket-community > span {
+  display: grid;
+  place-items: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--soft);
+  border: 3px solid var(--page);
+  font-size: 11px;
+  margin-left: -9px;
+}
+.pocket-community > span:first-child {
+  margin-left: 0;
+  background: var(--leaf);
+}
+.pocket-community > span:nth-child(2) {
+  background: var(--forest);
+  color: var(--page);
+}
+.landing .pocket-community p {
+  font-size: 12px;
+  line-height: 1.35;
+  margin-left: 9px;
+}
+.pocket-explanation-content {
+  animation: pocket-copy-in 0.45s ease both;
+}
+.pocket-explanation:focus-visible {
+  outline: none;
+  background: var(--soft);
+}
+.is-in-view .pocket-stage-heading {
+  animation: pocket-copy-in 0.7s ease both;
+}
+.is-in-view .pocket-community {
+  animation: pocket-community-in 0.9s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+@keyframes pocket-float {
+  0%,
+  100% {
+    transform: translateY(0) rotate(-6deg) rotateY(-5deg);
+  }
+  50% {
+    transform: translateY(-13px) rotate(-3deg) rotateY(5deg);
+  }
+}
+@keyframes pocket-note-in {
+  from {
+    opacity: 0;
+    transform: translate(24px, 18px) rotate(4deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(0);
+  }
+}
+@keyframes pocket-copy-in {
+  from {
+    opacity: 0.2;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes pocket-community-in {
+  from {
+    opacity: 0;
+    transform: translate(-24px, 14px) rotate(-9deg);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0) rotate(-4deg);
+  }
+}
+@media (min-width: 701px) and (max-width: 1000px) {
+  .pocket-stage {
+    min-height: 650px;
+    padding-inline: 16px;
+  }
+  .pocket-phone {
+    width: 78%;
+  }
+  .pocket-community {
+    top: 70px;
+  }
+  .pocket-note {
+    bottom: 35px;
+  }
+}
+@media (max-width: 700px) {
+  .pocket-stage {
+    min-height: 690px;
+    padding: 22px 18px;
+  }
+  .pocket-device-scene {
+    padding-top: 30px;
+  }
+  .pocket-phone {
+    width: min(250px, 72%);
+  }
+  .pocket-stage-word {
+    top: 14%;
+    font-size: clamp(52px, 14vw, 90px);
+  }
+  .pocket-community {
+    top: 90px;
+  }
+  .pocket-note {
+    bottom: 65px;
+    width: 230px;
+  }
+}
+@media (max-width: 380px) {
+  .pocket-stage {
+    min-height: 600px;
+  }
+  .pocket-note {
+    padding: 15px;
+    width: 210px;
+    bottom: 28px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pocket-section *,
+  .pocket-section *::before,
+  .pocket-section *::after {
+    animation: none !important;
+    transition: none !important;
+  }
+  .pocket-phone {
+    transform: none;
+  }
+}
+.pocket-selector button::after {
+  content: "";
+  position: absolute;
+  left: 12px;
+  right: 12px;
+  bottom: 4px;
+  height: 2px;
+  background: var(--leaf);
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.pocket-section[data-cycling="true"]
+  .pocket-selector
+  button[aria-selected="true"]::after {
+  animation: pocket-progress 6.5s linear forwards;
+}
+@keyframes pocket-progress {
+  to {
+    transform: scaleX(1);
   }
 }

@@ -53,9 +53,7 @@ export const PLANS = BILLING_CATALOG.map((p, index) => ({
     p.maxMembers === null
       ? "Integrantes ilimitados"
       : `Hasta ${p.maxMembers} integrantes`,
-    p.maxCells === null
-      ? "Células ilimitadas"
-      : `Hasta ${p.maxCells} células`,
+    p.maxCells === null ? "Células ilimitadas" : `Hasta ${p.maxCells} células`,
     p.maxMinistries === null
       ? "Ministerios ilimitados"
       : `Hasta ${p.maxMinistries} ministerios`,
@@ -69,8 +67,20 @@ export const PLANS = BILLING_CATALOG.map((p, index) => ({
 export const PRICING = pricingCopy(BILLING_CATALOG);
 export const FAQ = [
   {
+    q: "¿Qué es SheepLink y para quién es?",
+    a: "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.",
+  },
+  {
+    q: "¿Qué puedo hacer con las células y la asistencia?",
+    a: "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.",
+  },
+  {
+    q: "¿SheepLink permite organizar ministerios y escuela bíblica?",
+    a: "Sí. La plataforma web permite organizar ministerios y turnos de servicio, gestionar cursos y materiales de escuela bíblica, y preparar actividades con inscripciones y presupuesto. También reúne devocionales para la iglesia y sus células.",
+  },
+  {
     q: "¿Necesito instalar algo?",
-    a: "No. SHEEPLINK funciona desde el navegador, en computadora o celular, sin instalar nada.",
+    a: "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. También existe una app para iPhone; la versión Android está en preparación. Para entrar a la app necesitas una cuenta activa de tu iglesia.",
   },
   {
     q: "¿Mis datos están seguros?",
@@ -82,7 +92,7 @@ export const FAQ = [
   },
   {
     q: "¿Funciona bien en el celular?",
-    a: "Sí. Los líderes de célula suelen marcar asistencia desde el teléfono, por eso la versión móvil está pensada para eso.",
+    a: "Sí. Puedes usar la plataforma web desde el teléfono. La app móvil de SheepLink reúne cumpleaños próximos, turnos de servicio, tu célula, registro de asistencia y tu perfil, según los permisos de tu cuenta.",
   },
 ];
 export const NAV = [

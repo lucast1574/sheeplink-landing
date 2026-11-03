@@ -9,18 +9,30 @@ const screens = [
     image: "hoy",
     title: "Lo importante, a la mano.",
     text: "Cumpleaños próximos y tus turnos de servicio, en un mismo lugar.",
+    note: "Tu próximo servicio",
+    detail: "Prepárate para servir con tu equipo.",
+    icon: "star",
+    word: "sirve.",
   },
   {
     name: "Mi célula",
     image: "celula",
     title: "Cada persona cuenta.",
     text: "Consulta a tu grupo y registra la asistencia de cada encuentro.",
+    note: "Cada encuentro cuenta",
+    detail: "Tu grupo y su asistencia, siempre cerca.",
+    icon: "layers",
+    word: "conecta.",
   },
   {
     name: "Perfil",
     image: "perfil",
     title: "Tu lugar en la comunidad.",
     text: "Tus responsabilidades, ministerios y preferencias, siempre contigo.",
+    note: "Un lugar para ti",
+    detail: "Tu célula. Tus ministerios. Tu comunidad.",
+    icon: "user",
+    word: "pertenece.",
   },
 ];
 function StoreIcon({ apple }: { apple?: boolean }) {
@@ -56,6 +68,7 @@ export function MobileAppSection() {
   const section = useRef<HTMLElement>(null);
   const [visible, setVisible] = useState(false);
   useEffect(() => {
+    if (!("IntersectionObserver" in window)) return;
     const observer = new IntersectionObserver(
       ([entry]) => setVisible(entry.isIntersecting),
       { threshold: 0.2 },
@@ -87,17 +100,21 @@ export function MobileAppSection() {
       className={`pocket-section${visible ? " is-in-view" : ""}`}
       id="app-movil"
       aria-labelledby="landing-app-title"
+      data-screen={screens[active].image}
+      data-cycling={visible && !manual ? "true" : "false"}
+      onFocusCapture={() => setManual(true)}
+      onPointerEnter={() => setManual(true)}
     >
       <div className="landing-container pocket-layout">
         <div className="pocket-copy">
           <h2 id="landing-app-title">
             Tu comunidad.
             <br />
-            <em>En tu bolsillo.</em>
+            En tu bolsillo.
           </h2>
           <p className="pocket-intro">
-            El cuidado continúa después de la reunión. Lleva contigo a tu
-            célula, recuerda los cumpleaños y prepárate para servir.
+            La app de SheepLink lleva tu iglesia contigo. Tu célula, los
+            cumpleaños y tus turnos de servicio, más cerca que nunca.
           </p>
           <div className="pocket-stores">
             <a
@@ -177,34 +194,67 @@ export function MobileAppSection() {
             id="pocket-panel"
             role="tabpanel"
             aria-labelledby={`pocket-tab-${active}`}
+            tabIndex={0}
           >
-            <h3>{screens[active].title}</h3>
-            <p>{screens[active].text}</p>
+            <div key={active} className="pocket-explanation-content">
+              <h3>{screens[active].title}</h3>
+              <p>{screens[active].text}</p>
+            </div>
           </div>
         </div>
         <div className="pocket-stage">
           <div className="pocket-stage-word" aria-hidden="true">
-            cerca.
+            {screens[active].word}
           </div>
-          <div className="pocket-phone">
-            {screens.map((screen, i) => (
-              <img
-                key={screen.image}
-                className={active === i ? "is-current" : ""}
-                src={`/app/${screen.image}.webp`}
-                alt={
-                  active === i
-                    ? `Pantalla real de SheepLink: ${screen.name}, con datos de demostración`
-                    : ""
-                }
-                aria-hidden={active !== i}
-                width="1206"
-                height="2622"
-                loading="lazy"
-              />
-            ))}
+          <div className="pocket-stage-heading" aria-hidden="true">
+            <img
+              src="/brand/sheeplink-mark-green.svg"
+              alt=""
+              width="28"
+              height="28"
+            />
+            <span>La iglesia va contigo.</span>
           </div>
-          <p className="pocket-caption">Personas reales. Un mismo propósito.</p>
+          <div className="pocket-device-scene">
+            <div className="pocket-phone">
+              {screens.map((screen, i) => (
+                <img
+                  key={screen.image}
+                  className={active === i ? "is-current" : ""}
+                  src={`/app/${screen.image}.webp`}
+                  alt={
+                    active === i
+                      ? `Pantalla real de SheepLink: ${screen.name}, con datos de demostración`
+                      : ""
+                  }
+                  aria-hidden={active !== i}
+                  width="1206"
+                  height="2622"
+                  loading="lazy"
+                />
+              ))}
+            </div>
+            <div key={active} className="pocket-note" aria-hidden="true">
+              <Icon name={screens[active].icon} size={23} />
+              <div>
+                <strong>{screens[active].note}</strong>
+                <span>{screens[active].detail}</span>
+              </div>
+            </div>
+            <div className="pocket-community" aria-hidden="true">
+              <span>LT</span>
+              <span>MC</span>
+              <span>AV</span>
+              <p>
+                Un mismo
+                <br />
+                <strong>propósito.</strong>
+              </p>
+            </div>
+          </div>
+          <p className="pocket-caption">
+            Explora las pantallas reales de la app.
+          </p>
         </div>
       </div>
     </section>

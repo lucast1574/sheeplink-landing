@@ -4,9 +4,15 @@ export const SOCIAL_IMAGE = "/og-sheeplink-20261016.png";
 export const PUBLIC_PAGES = [
   {
     path: "/",
-    title: "SHEEPLINK | Software de gestión para iglesias",
+    title: "SheepLink | Software de gestión para iglesias",
     description:
-      "Organiza tu iglesia con SHEEPLINK: células, asistencia, ministerios, turnos y escuela bíblica. Más tiempo para servir y cuidar a tu comunidad.",
+      "SheepLink: software de gestión para iglesias. Organiza células, asistencia, ministerios, turnos y escuela bíblica. Conoce los planes y la app para iPhone.",
+  },
+  {
+    path: "/software-para-iglesias",
+    title: "Qué es SheepLink: funciones y app para iglesias",
+    description:
+      "Conoce qué ofrece SheepLink a pastores y líderes: gestión de células, asistencia, ministerios, escuela bíblica, devocionales y app móvil para tu iglesia.",
   },
   {
     path: "/terminos",

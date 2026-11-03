@@ -15,7 +15,14 @@ const catalog = JSON.parse(
 const site = "https://sheeplink.app";
 test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar JavaScript", () => {
   const titles = new Set();
-  for (const slug of ["", "terminos", "privacidad", "cookies", "soporte"]) {
+  for (const slug of [
+    "",
+    "software-para-iglesias",
+    "terminos",
+    "privacidad",
+    "cookies",
+    "soporte",
+  ]) {
     const html = fs.readFileSync(path.join(root, slug, "index.html"), "utf8");
     const title = /<title>(.*?)<\/title>/.exec(html)[1];
     assert.ok(!titles.has(title));
@@ -56,7 +63,7 @@ test("imagen social horizontal ligera, sitemap canónico y página inexistente s
   assert.equal(bytes.readUInt32BE(20), 630);
   assert.ok(bytes.length < 300000);
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 5);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 6);
   assert.doesNotMatch(sitemap, /login|registro|dashboard/);
   assert.match(
     fs.readFileSync(path.join(root, "robots.txt"), "utf8"),
@@ -93,4 +100,35 @@ test("la portada describe sus precios reales, conserva todas las pestañas y sir
       30000,
   );
   assert.match(html, /devocionales\/publicados/);
+});
+
+test("la guía es descubrible y la app móvil describe su disponibilidad real", () => {
+  const html = fs.readFileSync(path.join(root, "index.html"), "utf8");
+  const guide = fs.readFileSync(
+    path.join(root, "software-para-iglesias/index.html"),
+    "utf8",
+  );
+  assert.match(html, /href="\/software-para-iglesias"/);
+  for (const topic of [
+    "Células y asistencia",
+    "Ministerios y servicio",
+    "Escuela bíblica",
+    "Actividades y devocionales",
+    "Roles y acceso",
+  ])
+    assert.ok(guide.includes(topic), topic);
+  const graph = JSON.parse(
+    /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/.exec(
+      html,
+    )[1],
+  )["@graph"];
+  const mobile = graph.find((n) => n["@type"] === "MobileApplication");
+  assert.equal(mobile.operatingSystem, "iOS");
+  assert.match(mobile.installUrl, /^https:\/\/apps.apple.com\//);
+  assert.equal(mobile.screenshot.length, 3);
+  assert.match(mobile.description, /cuenta activa/);
+  assert.equal(
+    graph.find((n) => n["@type"] === "Organization").name,
+    "SheepLink",
+  );
 });

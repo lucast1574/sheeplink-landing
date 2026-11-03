@@ -158,7 +158,8 @@ export default function Landing() {
                 Una iglesia unida. Más tiempo para servir.
               </p>
               <p className="landing-hero-description">
-                Células, ministerios y formación en un mismo lugar. Menos listas
+                SheepLink es el software de gestión para iglesias que reúne
+                células, asistencia, ministerios y escuela bíblica. Menos listas
                 sueltas, más tiempo para cuidar a tu comunidad.
               </p>
               <div className="landing-hero-actions">
@@ -213,7 +214,13 @@ export default function Landing() {
                 </div>
                 <p>
                   La información que necesita tu equipo, en su lugar. Explora
-                  cómo se organiza el día a día de tu iglesia.
+                  cómo se organiza el día a día de tu iglesia.{" "}
+                  <a
+                    className="landing-text-link"
+                    href="/software-para-iglesias"
+                  >
+                    Conoce qué ofrece SheepLink
+                  </a>
                 </p>
               </div>
               <ProductTour />
@@ -312,7 +319,10 @@ export default function Landing() {
             </div>
           </section>
           <PricingSection />
-          <section className="landing-section landing-faq">
+          <section
+            className="landing-section landing-faq"
+            id="preguntas-frecuentes"
+          >
             <div className="landing-container landing-faq-layout">
               <div>
                 <p className="section-caption">Estamos para ayudarte</p>
@@ -402,6 +412,7 @@ export default function Landing() {
                 Devocionales públicos
               </a>
               <a href={appPath("/login")}>Iniciar sesión</a>
+              <a href="/software-para-iglesias">Qué es SheepLink</a>
               <a href={`mailto:${CONTACT_EMAIL}`}>Contacto por correo</a>
             </nav>
           </div>
