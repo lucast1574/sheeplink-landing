@@ -1,98 +1,210 @@
-import markGreen from "../../../assets/sheeplink-mark-green.svg";
-import { GOOGLE_PLAY_SEARCH_URL } from "../landing.content";
+import { useEffect, useRef, useState } from "react";
+import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../landing.content";
 import { Icon } from "./LandingIcons";
+import "./mobile-app.css";
 
-const mobileFeatures = [
-  { icon: "layers", title: "Células", detail: "Personas y encuentros" },
-  { icon: "star", title: "Servicio", detail: "Turnos de tu ministerio" },
-  { icon: "book", title: "Formación", detail: "Crece junto a tu iglesia" },
+const screens = [
+  {
+    name: "Hoy",
+    image: "hoy",
+    title: "Lo importante, a la mano.",
+    text: "Cumpleaños próximos y tus turnos de servicio, en un mismo lugar.",
+  },
+  {
+    name: "Mi célula",
+    image: "celula",
+    title: "Cada persona cuenta.",
+    text: "Consulta a tu grupo y registra la asistencia de cada encuentro.",
+  },
+  {
+    name: "Perfil",
+    image: "perfil",
+    title: "Tu lugar en la comunidad.",
+    text: "Tus responsabilidades, ministerios y preferencias, siempre contigo.",
+  },
 ];
-
+function StoreIcon({ apple }: { apple?: boolean }) {
+  return apple ? (
+    <svg
+      viewBox="0 0 24 24"
+      width="27"
+      height="30"
+      fill="currentColor"
+      aria-hidden="true"
+    >
+      <path d="M17.1 12.7c0-2 1.6-3 1.7-3.1-1-1.5-2.6-1.7-3.2-1.7-1.4-.1-2.7.8-3.4.8-.7 0-1.8-.8-2.9-.8-1.5 0-3 .9-3.8 2.2-1.6 2.7-.4 6.8 1.2 9 .8 1.1 1.6 2.2 2.8 2.1 1.1 0 1.6-.7 3-.7 1.3 0 1.8.7 3 .7s1.9-1.1 2.7-2.2c.9-1.3 1.3-2.5 1.3-2.6-.1 0-2.4-.9-2.4-3.7ZM14.8 6.4c.6-.8 1.1-1.9 1-3-.9 0-2 .6-2.7 1.4-.6.7-1.2 1.8-1 2.9 1 .1 2-.5 2.7-1.3Z" />
+    </svg>
+  ) : (
+    <svg
+      viewBox="0 0 24 24"
+      width="27"
+      height="30"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="1.5"
+      strokeLinejoin="round"
+      aria-hidden="true"
+    >
+      <path d="m4 3 16 9-16 9V3Z" />
+      <path d="m4 3 10 12m-10 6 10-12" />
+    </svg>
+  );
+}
 export function MobileAppSection() {
+  const [active, setActive] = useState(0);
+  const [manual, setManual] = useState(false);
+  const section = useRef<HTMLElement>(null);
+  const [visible, setVisible] = useState(false);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => setVisible(entry.isIntersecting),
+      { threshold: 0.2 },
+    );
+    if (section.current) observer.observe(section.current);
+    return () => observer.disconnect();
+  }, []);
+  useEffect(() => {
+    const motion = window.matchMedia("(prefers-reduced-motion: reduce)");
+    let timer: ReturnType<typeof setInterval> | undefined;
+    const sync = () => {
+      clearInterval(timer);
+      if (visible && !manual && !motion.matches)
+        timer = setInterval(
+          () => setActive((a) => (a + 1) % screens.length),
+          6500,
+        );
+    };
+    sync();
+    motion.addEventListener("change", sync);
+    return () => {
+      clearInterval(timer);
+      motion.removeEventListener("change", sync);
+    };
+  }, [visible, manual]);
   return (
     <section
-      className="landing-app-section"
+      ref={section}
+      className={`pocket-section${visible ? " is-in-view" : ""}`}
       id="app-movil"
       aria-labelledby="landing-app-title"
     >
-      <div className="landing-container landing-app">
-        <div className="landing-app-copy">
-          <p className="section-caption">SHEEPLINK EN TU CELULAR</p>
+      <div className="landing-container pocket-layout">
+        <div className="pocket-copy">
           <h2 id="landing-app-title">
-            Tu iglesia,
+            Tu comunidad.
             <br />
-            más cerca cada día.
+            <em>En tu bolsillo.</em>
           </h2>
-          <p className="landing-app-description">
-            Acompaña a tu comunidad estés donde estés. Lleva células, servicio y
-            formación contigo en la app móvil de SHEEPLINK.
+          <p className="pocket-intro">
+            El cuidado continúa después de la reunión. Lleva contigo a tu
+            célula, recuerda los cumpleaños y prepárate para servir.
           </p>
-          <div className="landing-app-platforms">
+          <div className="pocket-stores">
             <a
-              className="landing-app-play"
-              href={GOOGLE_PLAY_SEARCH_URL}
+              className="pocket-store"
+              href={APP_STORE_URL}
               target="_blank"
               rel="noreferrer"
-              aria-label="Buscar SHEEPLINK en Google Play"
+              aria-label="Descargar SheepLink en App Store"
             >
+              <StoreIcon apple />
+              <span>
+                <small>Descárgala en</small>
+                <strong>App Store</strong>
+              </span>
+              <Icon name="arrow" size={18} />
+            </a>
+            <a
+              className="pocket-store pocket-store--android"
+              href={GOOGLE_PLAY_URL}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Ver SheepLink en Google Play, lanzamiento en preparación"
+            >
+              <StoreIcon />
+              <span>
+                <small>Próximamente en</small>
+                <strong>Google Play</strong>
+              </span>
+              <Icon name="arrow" size={18} />
+            </a>
+          </div>
+          <p className="pocket-access">
+            Para entrar necesitas una cuenta activa de tu iglesia.
+            <br />
+            iOS disponible · Android en preparación.
+          </p>
+          <div
+            className="pocket-selector"
+            role="tablist"
+            aria-label="Explora la app móvil"
+          >
+            {screens.map((screen, i) => (
+              <button
+                key={screen.image}
+                id={`pocket-tab-${i}`}
+                role="tab"
+                aria-selected={active === i}
+                aria-controls="pocket-panel"
+                tabIndex={active === i ? 0 : -1}
+                onClick={() => {
+                  setActive(i);
+                  setManual(true);
+                }}
+                onKeyDown={(e) => {
+                  if (
+                    ["ArrowLeft", "ArrowRight", "Home", "End"].includes(e.key)
+                  ) {
+                    e.preventDefault();
+                    const next =
+                      e.key === "Home"
+                        ? 0
+                        : e.key === "End"
+                          ? 2
+                          : (i + (e.key === "ArrowRight" ? 1 : 2)) % 3;
+                    setActive(next);
+                    setManual(true);
+                    document.getElementById(`pocket-tab-${next}`)?.focus();
+                  }
+                }}
+              >
+                {screen.name}
+              </button>
+            ))}
+          </div>
+          <div
+            className="pocket-explanation"
+            id="pocket-panel"
+            role="tabpanel"
+            aria-labelledby={`pocket-tab-${active}`}
+          >
+            <h3>{screens[active].title}</h3>
+            <p>{screens[active].text}</p>
+          </div>
+        </div>
+        <div className="pocket-stage">
+          <div className="pocket-stage-word" aria-hidden="true">
+            cerca.
+          </div>
+          <div className="pocket-phone">
+            {screens.map((screen, i) => (
               <img
-                src="https://play.google.com/intl/en_us/badges/static/images/badges/es_badge_web_generic.png"
-                alt="Abrir Google Play"
-                width="646"
-                height="250"
+                key={screen.image}
+                className={active === i ? "is-current" : ""}
+                src={`/app/${screen.image}.webp`}
+                alt={
+                  active === i
+                    ? `Pantalla real de SheepLink: ${screen.name}, con datos de demostración`
+                    : ""
+                }
+                aria-hidden={active !== i}
+                width="1206"
+                height="2622"
                 loading="lazy"
               />
-            </a>
-            <div className="landing-app-ios" aria-label="Versión para iOS en desarrollo">
-              <span className="landing-app-ios-icon" aria-hidden="true">
-                iOS
-              </span>
-              <span>
-                <small>Versión para</small>
-                <strong>iOS en desarrollo</strong>
-              </span>
-            </div>
+            ))}
           </div>
-          <p className="landing-app-note">
-            Para iniciar sesión necesitas una cuenta activa de SHEEPLINK.
-          </p>
-        </div>
-
-        <div className="landing-app-art" role="img" aria-label="Vista ilustrativa de la app SHEEPLINK">
-          <div className="landing-app-orbit landing-app-orbit--one" />
-          <div className="landing-app-orbit landing-app-orbit--two" />
-          <div className="landing-app-phone">
-            <div className="landing-app-phone-camera" />
-            <div className="landing-app-phone-header">
-              <img src={markGreen} alt="" width="34" height="34" />
-              <span>SHEEPLINK</span>
-              <span className="landing-app-avatar" aria-hidden="true">✦</span>
-            </div>
-            <div className="landing-app-phone-welcome">
-              <small>TODO LO QUE IMPORTA</small>
-              <strong>Tu comunidad,<br />en movimiento.</strong>
-            </div>
-            <div className="landing-app-phone-list">
-              {mobileFeatures.map((feature) => (
-                <div className="landing-app-phone-row" key={feature.title}>
-                  <span className="landing-app-phone-icon">
-                    <Icon name={feature.icon} size={17} />
-                  </span>
-                  <span>
-                    <strong>{feature.title}</strong>
-                    <small>{feature.detail}</small>
-                  </span>
-                  <span className="landing-app-phone-arrow" aria-hidden="true">›</span>
-                </div>
-              ))}
-            </div>
-            <div className="landing-app-phone-footer">
-              <span className="is-active"><Icon name="home" size={16} /> Inicio</span>
-              <span><Icon name="user" size={16} /> Perfil</span>
-              <span><Icon name="layers" size={16} /> Comunidad</span>
-            </div>
-          </div>
-          <span className="landing-app-art-note">Una comunidad. Siempre conectada.</span>
+          <p className="pocket-caption">Personas reales. Un mismo propósito.</p>
         </div>
       </div>
     </section>

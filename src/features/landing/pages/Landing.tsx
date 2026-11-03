@@ -197,6 +197,7 @@ export default function Landing() {
           </div>
         </div>
         <div className="landing-main-content">
+          <MobileAppSection />
           <section className="landing-section landing-product" id="funciones">
             <div className="landing-container">
               <div className="landing-section-heading">
@@ -310,7 +311,6 @@ export default function Landing() {
               </div>
             </div>
           </section>
-          <MobileAppSection />
           <PricingSection />
           <section className="landing-section landing-faq">
             <div className="landing-container landing-faq-layout">
