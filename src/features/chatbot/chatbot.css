@@ -1,0 +1,19 @@
+.sl-chat { position: fixed; z-index: 1000; right: 20px; bottom: 20px; font-family: inherit; }
+.sl-chat__launcher { display: flex; align-items: center; gap: 9px; min-height: 50px; padding: 0 18px; border: 0; border-radius: 999px; background: #245747; color: #fff; box-shadow: 0 8px 28px #14201b38; font-weight: 650; cursor: pointer; }
+.sl-chat__launcher span { font-size: 20px; }
+.sl-chat__panel { position: absolute; right: 0; bottom: 62px; display: flex; flex-direction: column; width: min(360px, calc(100vw - 32px)); height: min(500px, calc(100dvh - 110px)); overflow: hidden; border: 1px solid #dce5de; border-radius: 16px; background: #fff; box-shadow: 0 12px 42px #14201b30; }
+.sl-chat__header { display: flex; align-items: center; gap: 10px; padding: 15px; background: #245747; color: #fff; }
+.sl-chat__header span:nth-child(2) { display: grid; gap: 2px; }
+.sl-chat__header small { color: #e3f1e8; font-size: 12px; }
+.sl-chat__avatar { display: grid; width: 36px; height: 36px; place-items: center; border-radius: 50%; background: #e3f1e8; color: #245747; font-weight: 800; }
+.sl-chat__close { margin-left: auto; border: 0; background: transparent; color: #fff; font-size: 26px; cursor: pointer; }
+.sl-chat__messages { flex: 1; overflow: auto; display: flex; flex-direction: column; gap: 10px; padding: 14px; background: #f7faf7; }
+.sl-chat__message { max-width: 88%; margin: 0; padding: 10px 12px; border-radius: 13px; font-size: 14px; line-height: 1.45; white-space: pre-wrap; overflow-wrap: anywhere; }
+.sl-chat__message--assistant { align-self: flex-start; border: 1px solid #e2e9e3; background: #fff; color: #17231d; border-bottom-left-radius: 4px; }
+.sl-chat__message--user { align-self: flex-end; background: #e4efe7; color: #17231d; border-bottom-right-radius: 4px; }
+.sl-chat__form { display: flex; gap: 8px; padding: 12px; border-top: 1px solid #e2e9e3; }
+.sl-chat__form input { min-width: 0; flex: 1; padding: 10px 11px; border: 1px solid #cbd7cd; border-radius: 10px; font: inherit; font-size: 14px; }
+.sl-chat__form button { padding: 0 13px; border: 0; border-radius: 10px; background: #245747; color: #fff; font-weight: 650; cursor: pointer; }
+.sl-chat__form button:disabled { opacity: .55; cursor: not-allowed; }
+.sl-chat__notice { margin: 0; padding: 0 12px 10px; color: #66736a; font-size: 11px; line-height: 1.35; }
+@media (max-width: 480px) { .sl-chat { right: 12px; bottom: 12px; } .sl-chat__panel { position: fixed; inset: auto 8px 74px; width: auto; height: min(72dvh, 520px); } .sl-chat__launcher { min-height: 46px; padding-inline: 15px; } }

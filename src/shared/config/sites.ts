@@ -1,7 +1,7 @@
 import { APP_URL } from "./seo";
 declare global {
   interface Window {
-    __SHEEPLINK_CONFIG__?: { appUrl?: string };
+    __SHEEPLINK_CONFIG__?: { appUrl?: string; apiUrl?: string };
   }
 }
 export const appPath = (path: string) =>
