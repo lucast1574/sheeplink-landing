@@ -10,7 +10,10 @@ declare global {
 type Message = { role: "assistant" | "user"; text: string };
 
 function renderMessage(text: string) {
-  return text.split(/(https:\/\/wa\.me\/[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g).map((part, index) => {
+  return text.split(/(https:\/\/app\.sheeplink\.app\/soporte|https:\/\/wa\.me\/[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g).map((part, index) => {
+    if (part === "https://app.sheeplink.app/soporte") {
+      return <a key={index} href={part} target="_blank" rel="noreferrer">Contactar soporte</a>;
+    }
     if (part.startsWith("https://wa.me/")) {
       return <a key={index} href={part} target="_blank" rel="noreferrer">Abrir WhatsApp</a>;
     }
@@ -53,7 +56,7 @@ export default function ChatbotWidget() {
       if (!response.ok || typeof data.reply !== "string") throw new Error("Chat request failed");
       setMessages((current) => [...current, { role: "assistant", text: data.reply }]);
     } catch {
-        setMessages((current) => [...current, { role: "assistant", text: "No pude conectar ahora. Si usas SHEEPLINK, ve a Cuenta y ayuda → Contactar soporte. También puedes escribirnos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532." }]);
+        setMessages((current) => [...current, { role: "assistant", text: "No pude conectar ahora. Contacta soporte aquí: https://app.sheeplink.app/soporte. También puedes escribirnos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532." }]);
     } finally {
       setSending(false);
     }
