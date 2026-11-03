@@ -24,7 +24,7 @@ function renderMessage(text: string) {
 export default function ChatbotWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
-    { role: "assistant", text: "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre funciones, grupos, asistencia, planes y contacto. ¿Qué necesitas saber?" },
+    { role: "assistant", text: "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?" },
   ]);
   const [draft, setDraft] = useState("");
   const [sending, setSending] = useState(false);
@@ -53,7 +53,7 @@ export default function ChatbotWidget() {
       if (!response.ok || typeof data.reply !== "string") throw new Error("Chat request failed");
       setMessages((current) => [...current, { role: "assistant", text: data.reply }]);
     } catch {
-      setMessages((current) => [...current, { role: "assistant", text: "No pude conectar ahora. Escríbenos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532." }]);
+        setMessages((current) => [...current, { role: "assistant", text: "No pude conectar ahora. Si usas SHEEPLINK, ve a Cuenta y ayuda → Contactar soporte. También puedes escribirnos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532." }]);
     } finally {
       setSending(false);
     }
