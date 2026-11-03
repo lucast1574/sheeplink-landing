@@ -9,6 +9,18 @@ declare global {
 
 type Message = { role: "assistant" | "user"; text: string };
 
+function renderMessage(text: string) {
+  return text.split(/(https:\/\/wa\.me\/[^\s]+|[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,})/g).map((part, index) => {
+    if (part.startsWith("https://wa.me/")) {
+      return <a key={index} href={part} target="_blank" rel="noreferrer">Abrir WhatsApp</a>;
+    }
+    if (part === "krecarfaz@gmail.com") {
+      return <a key={index} href="mailto:krecarfaz@gmail.com">{part}</a>;
+    }
+    return part;
+  });
+}
+
 export default function ChatbotWidget() {
   const [open, setOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([
@@ -57,7 +69,7 @@ export default function ChatbotWidget() {
             <button className="sl-chat__close" type="button" onClick={() => setOpen(false)} aria-label="Cerrar chat">×</button>
           </header>
           <div className="sl-chat__messages" ref={listRef} aria-live="polite">
-            {messages.map((item, index) => <p className={`sl-chat__message sl-chat__message--${item.role}`} key={`${item.role}-${index}`}>{item.text}</p>)}
+            {messages.map((item, index) => <p className={`sl-chat__message sl-chat__message--${item.role}`} key={`${item.role}-${index}`}>{renderMessage(item.text)}</p>)}
             {sending && <p className="sl-chat__message sl-chat__message--assistant">Escribiendo…</p>}
           </div>
           <form className="sl-chat__form" onSubmit={send}>
