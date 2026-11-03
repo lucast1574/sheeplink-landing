@@ -3,8 +3,10 @@ import BILLING_CATALOG from "./billing-catalog.generated.json";
 export const CONTACT_EMAIL = "krecarfaz@gmail.com";
 export const WHATSAPP_URL =
   "https://wa.me/51981427532?text=Hola%2C%20quiero%20conocer%20SHEEPLINK";
-export const GOOGLE_PLAY_SEARCH_URL =
-  "https://play.google.com/store/search?q=SHEEPLINK&c=apps";
+export const GOOGLE_PLAY_URL =
+  "https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink";
+export const APP_STORE_URL =
+  "https://apps.apple.com/pe/app/sheeplink/id6829374579";
 export const STEPS = [
   {
     n: "1",
@@ -51,7 +53,9 @@ export const PLANS = BILLING_CATALOG.map((p, index) => ({
     p.maxMembers === null
       ? "Integrantes ilimitados"
       : `Hasta ${p.maxMembers} integrantes`,
-    p.maxCells === null ? "Células ilimitadas" : `Hasta ${p.maxCells} células`,
+    p.maxCells === null
+      ? "Células ilimitadas"
+      : `Hasta ${p.maxCells} células`,
     p.maxMinistries === null
       ? "Ministerios ilimitados"
       : `Hasta ${p.maxMinistries} ministerios`,

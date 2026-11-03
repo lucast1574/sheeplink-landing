@@ -41,7 +41,7 @@ test("el destino de la app se configura al iniciar sin recompilar ni consultar l
     assert.equal(result.status, 0, result.stderr);
     assert.equal(
       result.content,
-      `window.__SHEEPLINK_CONFIG__={"appUrl":"${origin.replace(/\/$/, "")}"};\n`,
+      `window.__SHEEPLINK_CONFIG__={"appUrl":"${origin.replace(/\/$/, "")}","apiUrl":"https://api.sheeplink.app"};\n`,
     );
   }
 });
