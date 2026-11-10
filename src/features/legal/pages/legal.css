@@ -108,3 +108,20 @@
     padding-top: 32px;
   }
 }
+
+.legal-delete-action {
+  display: inline-block;
+  padding: 12px 20px;
+  border-radius: 8px;
+  background: #235746;
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.legal-delete-action:hover,
+.legal-delete-action:focus-visible {
+  outline: none;
+  background: #183e32;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}

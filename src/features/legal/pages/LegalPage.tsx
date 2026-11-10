@@ -51,6 +51,16 @@ export default function LegalPage({
           {content.sections.map((section, index) => (
             <section key={section.title} id={`seccion-${index + 1}`}>
               <h2>{section.title}</h2>
+              {kind === "privacy" && index === 5 && (
+                <p>
+                  <a
+                    className="legal-delete-action"
+                    href={appPath("/eliminar-cuenta")}
+                  >
+                    Eliminar mi cuenta en SheepLink
+                  </a>
+                </p>
+              )}
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
