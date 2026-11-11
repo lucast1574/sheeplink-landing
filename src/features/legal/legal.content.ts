@@ -1,5 +1,5 @@
 import { PRICING } from "../landing/landing.content";
-export const LEGAL_VERSION = "2026-10-16";
+export const LEGAL_VERSION = "2026-11-11";
 export const LEGAL_CONTACT = "krecarfaz@gmail.com";
 
 export interface LegalDocument {
@@ -181,8 +181,8 @@ export const LEGAL_DOCUMENTS = {
       {
         title: "2. Cookie session",
         paragraphs: [
-          "La cookie session identifica la sesión autenticada. Se entrega con httpOnly y SameSite=Lax y, en producción, Secure. El JavaScript de la página no puede leerla. Se elimina al cerrar la sesión y su vigencia se renueva con las peticiones autenticadas; el tiempo depende de la configuración del servicio.",
-          "El control de inactividad del frontend cierra la sesión tras aproximadamente 15 minutos sin actividad. Esto es distinto de la renovación técnica del token y puede depender de que el navegador ejecute sus temporizadores.",
+          "La cookie session identifica la sesión autenticada. Se entrega con httpOnly y SameSite=Lax y, en producción, Secure. El JavaScript de la página no puede leerla. Se elimina al cerrar la sesión. Su vigencia predeterminada es de siete días y se renueva con las solicitudes autenticadas; esta duración puede variar según la configuración del servicio.",
+          "Por separado, en la configuración predeterminada el navegador cierra la sesión tras aproximadamente siete días sin actividad. Este control de inactividad depende de que el navegador ejecute sus temporizadores y es distinto de la renovación técnica de la cookie con las solicitudes autenticadas.",
         ],
       },
       {
