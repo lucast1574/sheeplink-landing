@@ -24,10 +24,10 @@
     "maxMinistries": 10
   },
   {
-    "id": "olivo-50",
+    "id": "olivo-35",
     "name": "Olivo",
     "description": "Para coordinar una iglesia con varios equipos y comunidades.",
-    "amount": 5000,
+    "amount": 3500,
     "currency": "usd",
     "trialDays": 0,
     "maxUsers": 200,
@@ -36,10 +36,10 @@
     "maxMinistries": 20
   },
   {
-    "id": "mies-70",
+    "id": "mies-50",
     "name": "Mies",
     "description": "Para coordinar una congregación sin topes de integrantes ni equipos.",
-    "amount": 7000,
+    "amount": 5000,
     "currency": "usd",
     "trialDays": 0,
     "maxUsers": null,
