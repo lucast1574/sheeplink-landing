@@ -59,7 +59,7 @@ for (const page of PUBLIC_PAGES) {
 }
 await fs.writeFile(
   "dist/robots.txt",
-  `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\n`,
+  `User-agent: *\nAllow: /\nSitemap: ${SITE_URL}/sitemap.xml\nSitemap: ${SITE_URL}/blog/sitemap.xml\n`,
 );
 await fs.writeFile(
   "dist/sitemap.xml",

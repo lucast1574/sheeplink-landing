@@ -413,6 +413,7 @@ export default function Landing() {
               </a>
               <a href={appPath("/login")}>Iniciar sesión</a>
               <a href="/software-para-iglesias">Qué es SheepLink</a>
+              <a href="/blog">Blog para iglesias</a>
               <a href={`mailto:${CONTACT_EMAIL}`}>Contacto por correo</a>
             </nav>
           </div>
