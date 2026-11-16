@@ -1,8 +1,49 @@
 export default {
+  "SheepLink | Software para iglesias y app multilingüe":
+    "SheepLink | Church management software and mobile app",
+  "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.":
+    "Manage small groups, attendance, ministries, Bible school, finances and inventory with SheepLink. Web platform and app in English, Spanish and Portuguese.",
+  "SheepLink: funciones, idiomas y app para tu iglesia":
+    "SheepLink: church software features, languages and app",
+  "Conoce las funciones de SheepLink: seguimiento pastoral, programación, cursos, tesorería, inventario y app móvil. Tres idiomas automáticos para tu iglesia.":
+    "Explore SheepLink: pastoral care, scheduling, courses, finances, inventory and a mobile app. Automatic English, Spanish and Portuguese for your church.",
+  "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
+    "SheepLink is church management software in English, Spanish and Portuguese. Bring members, small groups, attendance, ministries, Bible school, activities and devotionals together on one web platform.",
+  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
+    "The web platform works in a desktop or mobile browser with no installation. The iPhone app is available on the App Store, and Android is in closed testing. You need an active account with your church to sign in to the app.",
+  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
+    "The platform, app and this website automatically detect your browser or device language: English, Spanish or Portuguese. Unsupported languages fall back to Spanish. There is no language selector to configure.",
+  "¿En qué idiomas está disponible SheepLink?":
+    "Which languages does SheepLink support?",
+  "Tesorería e inventario": "Finances and inventory",
+  "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.":
+    "Organize treasury accounts, income, expenses and reports. Manage church inventory, loans and asset condition. Each account’s permissions determine access to these tools.",
+  "Programación y seguimiento pastoral": "Scheduling and pastoral care",
+  "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
+    "View the church schedule and coordinate team responsibilities. Pastors can select the small group they oversee to view its information and follow up with their community.",
+  "Tres idiomas automáticos": "Three automatic languages",
+  "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
+    "The SheepLink app brings together birthdays, service shifts, your small group, attendance and profile, according to your permissions. An active church account is required. iPhone is available on the App Store; Android is in closed testing. Store updates may arrive on different dates.",
+  "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":
+    "The web platform also works in a mobile browser and includes courses, materials, activities, budgets, finances and inventory. Features available in the app depend on permissions and the installed version.",
+  "iOS disponible · Android en pruebas cerradas.":
+    "iOS available · Android in closed testing.",
+  "SheepLink para Android: pruebas cerradas, aún sin descarga pública":
+    "SheepLink for Android: closed testing, no public download yet",
+  "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.":
+    "Church management software in English, Spanish and Portuguese: small groups, attendance, ministries, Bible school, finances and inventory.",
+  "Pastores y líderes de iglesias": "Church pastors and leaders",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.":
+    "App for church members and leaders: birthdays, service shifts, small groups, attendance and profiles. Requires an active church account. Available for iPhone; Android in closed testing.",
+  anual: "annual",
+  mensual: "monthly",
+  "SheepLink: tecnología al servicio de tu iglesia.":
+    "SheepLink: technology serving your church.",
+
   "Contactar soporte": "Contact support",
   "Abrir WhatsApp": "Open WhatsApp",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?":
-    "Hello! I am the SHEEPLINK assistant. I can guide you about Dashboard, My space, messages, community, organization, training, activities, plans and use from your small group phone. If you find a bug or error, I will tell you how to contact support. What do you need to know?",
+    "Hello! I am the SHEEPLINK assistant. I can guide you about Dashboard, My space, messages, community, organization, training, activities, plans and use from your mobile phone. If you find a bug or error, I will tell you how to contact support. What do you need to know?",
   "No pude conectar ahora. Contacta soporte aquí: https://app.sheeplink.app/soporte. También puedes escribirnos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532.":
     "I couldn't connect now. Contact support here: https://app.sheeplink.app/soporte. You can also write to us at krecarfaz@gmail.com or by WhatsApp at +51 981 427 532.",
   "Chat de SHEEPLINK": "SHEEPLINK Chat",
@@ -214,7 +255,7 @@ export default {
   "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.":
     "SheepLink is management software for Spanish-speaking churches. Helps pastors and leaders organize members, zones, small groups, attendance, ministries, shifts of service, Bible school, activities and devotionals from a web platform.",
   "¿Qué puedo hacer con las células y la asistencia?":
-    "What can I do with small groups and assistance?",
+    "What can I do with small groups and attendance?",
   "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.":
     "You can organize the small groups of your church by zones, register its members and mark the attendance of each meeting. The small group leaders accompany their group and the zone leaders review the information of the small groups under their charge.",
   "¿SheepLink permite organizar ministerios y escuela bíblica?":
@@ -223,15 +264,14 @@ export default {
     "Yes. The web platform allows you to organize ministries and service shifts, manage Bible school courses and materials, and prepare activities with registrations and budget. It also brings together devotionals for the church and its small groups.",
   "¿Necesito instalar algo?": "Do I need to install something?",
   "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. También existe una app para iPhone; la versión Android está en preparación. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
-    "The web platform works from the browser on a computer or small group phone, without installing anything. There is also an iPhone app; Android version is in preparation. To enter the app you need an active account from your church.",
+    "The web platform works from the browser on a computer or mobile phone, without installing anything. There is also an iPhone app; Android version is in preparation. To enter the app you need an active account from your church.",
   "¿Mis datos están seguros?": "Is my data safe?",
   "Cada usuario accede según sus roles y responsabilidades dentro de su iglesia. Puedes cerrar tu sesión desde tu perfil.":
     "Each user accesses according to their roles and responsibilities within their church. You can log out from your profile.",
   "¿Puedo probarlo antes de pagar?": "Can I try it before paying?",
-  "¿Funciona bien en el celular?":
-    "Does it work well on the small group phone?",
+  "¿Funciona bien en el celular?": "Does it work well on the mobile phone?",
   "Sí. Puedes usar la plataforma web desde el teléfono. La app móvil de SheepLink reúne cumpleaños próximos, turnos de servicio, tu célula, registro de asistencia y tu perfil, según los permisos de tu cuenta.":
-    "Yes. You can use the web platform from your phone. The SheepLink mobile app brings together upcoming birthdays, duty shifts, your small group phone, attendance record, and your profile, depending on your account permissions.",
+    "Yes. You can use the web platform from your phone. The SheepLink mobile app brings together upcoming birthdays, service shifts, your small group, attendance and your profile, depending on your account permissions.",
   Funciones: "Functions",
   "App móvil": "Mobile app",
   "Cómo funciona": "How it works",
@@ -309,7 +349,7 @@ export default {
   "Blog para iglesias": "Blog for churches",
   "Contacto por correo": "Contact by email",
   "© 2026 SHEEPLINK": "© 2026 SHEEPLINK",
-  "Células y asistencia": "Small groups and assistance",
+  "Células y asistencia": "Small groups and attendance",
   "Organiza integrantes, zonas y células en una estructura compartida. El líder de célula registra la asistencia de cada encuentro y el líder de zona revisa los grupos que acompaña. Así, la información de las reuniones queda vinculada a cada comunidad.":
     "Organize members, zones and small groups in a shared structure. The small group leader records the attendance of each meeting and the zone leader reviews the groups he accompanies. Thus, the information from the meetings is linked to each community.",
   "Ver la gestión de células": "View small group management",
@@ -336,11 +376,11 @@ export default {
   "Está pensado para pastores y líderes que necesitan organizar a su comunidad y dar seguimiento a las personas. Su app móvil acerca las tareas del día a día a quienes sirven en la iglesia.":
     "It is designed for pastors and leaders who need to organize their community and follow up with people. Its mobile app brings day-to-day tasks closer to those who serve in the church.",
   "Funciones de SheepLink": "SheepLink Features",
-  "Tu iglesia en el celular.": "Your church on your small group phone.",
+  "Tu iglesia en el celular.": "Your church on your mobile phone.",
   "La app de SheepLink para iPhone reúne cumpleaños próximos, turnos de servicio, tu célula, asistencia y perfil. Necesitas una cuenta activa de tu iglesia y las funciones disponibles dependen de tus permisos. Android está en preparación.":
-    "The SheepLink app for iPhone brings together upcoming birthdays, duty shifts, your small group phone, attendance and profile. You need an active account from your church and the features available depend on your permissions. Android is in preparation.",
+    "The SheepLink app for iPhone brings together upcoming birthdays, duty shifts, your mobile phone, attendance and profile. You need an active account from your church and the features available depend on your permissions. Android is in preparation.",
   "La plataforma web también se puede usar desde el navegador del celular. La gestión de cursos, actividades y presupuesto se presenta en la plataforma web; la app móvil se centra en el acompañamiento diario.":
-    "The web platform can also be used from the small group phone browser. The management of courses, activities and budget is presented on the web platform; The mobile app focuses on daily support.",
+    "The web platform can also be used from the mobile phone browser. The management of courses, activities and budget is presented on the web platform; The mobile app focuses on daily support.",
   "Ver la app y descargar para iPhone": "View the app and download for iPhone",
   "Roles y acceso.": "Roles and access.",
   "El pastor principal tiene una visión de toda la iglesia. Los líderes de zona acompañan a sus células; los líderes de célula registran integrantes y asistencia; los líderes de ministerio organizan el servicio. Una misma persona puede tener varios roles.":
@@ -996,7 +1036,7 @@ export default {
   "Si encuentras un bug o error, envía una solicitud desde Cuenta y ayuda → Contactar soporte o abre esta página: https://app.sheeplink.app/soporte. Si no puedes entrar, escríbenos a krecarfaz@gmail.com o por WhatsApp al +51 981 427 532: https://wa.me/51981427532?text=Hola%2C%20necesito%20ayuda%20con%20SHEEPLINK":
     "If you find a bug or error, submit a request from Account and help → Contact support or open this page: https://app.sheeplink.app/soporte. If you cannot enter, write to us at krecarfaz@gmail.com or by WhatsApp at +51 981 427 532: https://wa.me/51981427532?text=Hola%2C%20necesito%20ayuda%20con%20SHEEPLINK",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización de la iglesia, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?":
-    "Hello! I am the SHEEPLINK assistant. I can guide you about Dashboard, My space, messages, community, church organization, training, activities, plans and use from your small group phone. If you find a bug or error, I will tell you how to contact support. What do you need to know?",
+    "Hello! I am the SHEEPLINK assistant. I can guide you about Dashboard, My space, messages, community, church organization, training, activities, plans and use from your mobile phone. If you find a bug or error, I will tell you how to contact support. What do you need to know?",
   "SHEEPLINK tiene planes para distintas necesidades y tamaños de iglesia. Los límites de integrantes, células, ministerios y usuarios dependen del plan. Puedes comparar los precios y revisar qué incluye cada uno aquí: https://sheeplink.app/#precios ":
     "SHEEPLINK has plans for different needs and church sizes. The limits of members, small groups, ministries and users depend on the plan. You can compare prices and review what each one includes here: https://sheeplink.app/#precios ",
   "En “Facturación” puedes consultar tu plan, la fecha de próxima renovación y los pagos procesados con Stripe. Para revisar o resolver un cobro de tu cuenta, contacta a soporte desde Cuenta y ayuda → Contactar soporte.":
@@ -1010,21 +1050,21 @@ export default {
   "“Estructura de la iglesia” organiza las zonas y las células que pertenecen a cada sector, para que el liderazgo pueda ver cómo están agrupados los equipos y acompañarlos según sus permisos.":
     "“Church Structure” organizes the zones and small groups that belong to each sector, so that the leadership can see how the teams are grouped and accompany them according to their permissions.",
   "Los líderes de célula pueden registrar a sus integrantes y marcar la asistencia cada semana. El líder de zona puede revisar la asistencia de su zona, y el pastor principal puede ver la iglesia completa. Se puede usar desde el navegador del celular, sin instalar nada.":
-    "Small group leaders can register their members and mark attendance each week. The zone leader can review attendance for his or her zone, and the senior pastor can view the entire church. It can be used from the small group phone browser, without installing anything.",
+    "Small group leaders can register their members and mark attendance each week. The zone leader can review attendance for his or her zone, and the senior pastor can view the entire church. It can be used from the mobile phone browser, without installing anything.",
   "Con SHEEPLINK puedes organizar zonas y células, registrar integrantes, revisar asistencias semanales y coordinar turnos de servicio. También reúne devocionales, cursos, actividades y comunidad. Los líderes acceden con su propio usuario y cada rol ve lo que le corresponde. La plataforma web funciona en el navegador de la computadora o del celular.":
-    "With SHEEPLINK you can organize zones and small groups, register members, review weekly attendance and coordinate service shifts. It also brings together devotionals, courses, activities and community. Leaders access with their own user and each role sees what corresponds to it. The web platform works in the computer or small group phone browser.",
+    "With SHEEPLINK you can organize zones and small groups, register members, review weekly attendance and coordinate service shifts. It also brings together devotionals, courses, activities and community. Leaders access with their own user and each role sees what corresponds to it. The web platform works in the computer or mobile phone browser.",
   "Puedes usar SHEEPLINK desde el navegador de tu celular, sin instalar nada: consultar grupos, registrar asistencia y gestionar tus tareas según tu rol. También está disponible la app para iPhone y iPad en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación y se anunciará cuando esté lista.":
-    "You can use SHEEPLINK from your small group phone browser, without installing anything: consult groups, register attendance and manage your tasks according to your role. The app for iPhone and iPad is also available in the App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. The Android app is in preparation and will be announced when it is ready.",
+    "You can use SHEEPLINK from your mobile phone browser, without installing anything: consult groups, register attendance and manage your tasks according to your role. The app for iPhone and iPad is also available in the App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. The Android app is in preparation and will be announced when it is ready.",
   "SHEEPLINK se puede usar desde el navegador del celular. La app para iPhone y iPad ya está disponible en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación; todavía no hay un enlace de descarga de Google Play.":
-    "SHEEPLINK can be used from the small group phone browser. The app for iPhone and iPad is now available in the App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. The Android app is in preparation; There is no Google Play download link yet.",
+    "SHEEPLINK can be used from the mobile phone browser. The app for iPhone and iPad is now available in the App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. The Android app is in preparation; There is no Google Play download link yet.",
   "SHEEPLINK permite registrar y dar seguimiento a los devocionales diarios de los cargos de servicio y liderazgo, incluidos los pastores. Si pasan tres días completos consecutivos sin registro, el responsable directo recibe un aviso para acompañar a la persona. El seguimiento queda a criterio del liderazgo y no suspende automáticamente el servicio.":
     "SHEEPLINK allows you to record and track daily devotionals for service and leadership positions, including pastors. If three full consecutive days pass without registration, the person directly responsible receives a notice to accompany the person. Monitoring is at the discretion of leadership and does not automatically suspend service.",
   "En Mis cursos, cada alumno encuentra sus aulas, materiales y resultados. Los cursos pueden mostrar horarios, fechas, modalidad y ubicación o enlace de reunión; el responsable comparte el formulario de inscripción, que también se puede completar desde el celular. El acceso depende de la inscripción o asignación del responsable.":
-    "In My courses, each student finds their classrooms, materials and results. Courses can show times, dates, modality and location or meeting link; The person in charge shares the registration form, which can also be completed from your small group phone. Access depends on the registration or assignment of the person responsible.",
+    "In My courses, each student finds their classrooms, materials and results. Courses can show times, dates, modality and location or meeting link; The person in charge shares the registration form, which can also be completed from your mobile phone. Access depends on the registration or assignment of the person responsible.",
   "La sección Formación reúne Mis cursos y Academia Bíblica. Los alumnos pueden acceder a sus aulas, materiales y resultados; quienes administran cursos pueden organizar alumnos, asistencia semanal y calificaciones. Al terminar, los alumnos aprobados quedan en su historial.":
     "The Training section brings together My courses and Bible Academy. Students can access their classrooms, materials and results; Course administrators can organize students, weekly attendance, and grades. Upon completion, the approved students remain in your record.",
   "En Actividades puedes consultar encuentros de la iglesia como retiros, campamentos, viajes y otras actividades. Los organizadores pueden crear la actividad y compartir un formulario para que las personas se inscriban, incluso desde el celular y sin crear una cuenta. Según los permisos, también pueden gestionar inscripciones, tareas y presupuesto.":
-    "In Activities you can consult church meetings such as retreats, camps, trips and other activities. Organizers can create the activity and share a form for people to sign up, even from their small group phone and without creating an account. Depending on the permissions, they can also manage registrations, tasks and budget.",
+    "In Activities you can consult church meetings such as retreats, camps, trips and other activities. Organizers can create the activity and share a form for people to sign up, even from their mobile phone and without creating an account. Depending on the permissions, they can also manage registrations, tasks and budget.",
   "El Dashboard muestra un resumen del mes con cifras, asistencia, mensajes y cumpleaños. La información visible depende de tu rol y permisos en la iglesia.":
     "The Dashboard shows a summary of the month with figures, attendance, messages and birthdays. The information visible depends on your role and permissions in the church.",
   "“Mi espacio” reúne tu calendario personal y tus devocionales. El contenido disponible depende de tu cuenta y responsabilidades en la iglesia.":
@@ -1044,7 +1084,7 @@ export default {
   "Tesorería reúne diezmos, ofrendas, cuentas, ingresos y gastos en un solo lugar. Los usuarios autorizados pueden registrar y corregir movimientos, revisar períodos y consultar informes; el acceso depende del rol: owner y tesorero registran movimientos y el pastor puede consultar. Para dudas sobre permisos o configuración, contáctanos.":
     "Treasury brings together tithes, offerings, accounts, income and expenses in one place. Authorized users can record and correct transactions, review periods and view reports; Access depends on the role: owner and treasurer record movements and the pastor can consult. For questions about permissions or configuration, contact us.",
   "Puedo orientarte sobre Dashboard, Mi espacio, mensajes, devocionales, comunidad y redes, células, integrantes, asistencias, ministerios y turnos, invitaciones, estructura de la iglesia, tesorería, consultas, formación, cursos, actividades, facturación, uso desde el celular y planes. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué tema necesitas?":
-    "I can guide you about Dashboard, My space, messages, devotionals, community and networks, small groups, members, attendance, ministries and shifts, invitations, church structure, treasury, consultations, training, courses, activities, billing, small group phone use and plans. If you find a bug or error, I will tell you how to contact support. What theme do you need?",
+    "I can guide you about Dashboard, My space, messages, devotionals, community and networks, small groups, members, attendance, ministries and shifts, invitations, church structure, treasury, consultations, training, courses, activities, billing, mobile phone use and plans. If you find a bug or error, I will tell you how to contact support. What theme do you need?",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre funciones, grupos, asistencia, planes y contacto. ¿Qué necesitas saber?":
     "Hello! I am the SHEEPLINK assistant. I can guide you about functions, groups, assistance, plans and contact. What do you need to know?",
   "Puedes reportar bugs y errores al equipo de soporte.":

@@ -7,6 +7,33 @@ import "./product-guide.css";
 
 const capabilities = [
   {
+    id: "administracion",
+    title: translate("Tesorería e inventario"),
+    text: translate(
+      "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.",
+    ),
+    link: translate("Conocer la plataforma web"),
+    href: "/#funciones",
+  },
+  {
+    id: "programacion",
+    title: translate("Programación y seguimiento pastoral"),
+    text: translate(
+      "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.",
+    ),
+    link: translate("Conocer la plataforma web"),
+    href: "/#funciones",
+  },
+  {
+    id: "idiomas",
+    title: translate("Tres idiomas automáticos"),
+    text: translate(
+      "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.",
+    ),
+    link: translate("Conocer la plataforma web"),
+    href: "/#funciones",
+  },
+  {
     id: "celulas",
     title: translate("Células y asistencia"),
     text: translate(
@@ -78,7 +105,7 @@ export default function ProductGuide() {
           <div>
             <p>
               {translate(
-                "SheepLink es un software de gestión para iglesias de habla hispana. Conecta integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
+                "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
               )}
             </p>
             <p>
@@ -122,12 +149,12 @@ export default function ProductGuide() {
           <div>
             <p>
               {translate(
-                "La app de SheepLink para iPhone reúne cumpleaños próximos, turnos de servicio, tu célula, asistencia y perfil. Necesitas una cuenta activa de tu iglesia y las funciones disponibles dependen de tus permisos. Android está en preparación.",
+                "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.",
               )}
             </p>
             <p>
               {translate(
-                "La plataforma web también se puede usar desde el navegador del celular. La gestión de cursos, actividades y presupuesto se presenta en la plataforma web; la app móvil se centra en el acompañamiento diario.",
+                "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.",
               )}
             </p>
             <a

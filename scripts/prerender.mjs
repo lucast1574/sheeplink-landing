@@ -8,6 +8,8 @@ import {
   APP_URL,
   SOCIAL_IMAGE,
   structuredData,
+  SOCIAL_IMAGE_ALT,
+  pageAlternates,
 } from "../.prerender/prerender.js";
 const template = await fs.readFile("dist/index.html", "utf8");
 const escape = (value) =>
@@ -31,7 +33,10 @@ for (const page of PUBLIC_PAGES) {
     'name="description"': page.description,
     'property="og:title"': page.title,
     'property="og:description"': page.description,
-    'property="og:url"': SITE_URL + page.path,
+    'property="og:url"':
+      SITE_URL + "/es" + (page.path === "/" ? "" : page.path),
+    'property="og:image:alt"': SOCIAL_IMAGE_ALT,
+    'name="twitter:image:alt"': SOCIAL_IMAGE_ALT,
     'name="twitter:title"': page.title,
     'name="twitter:description"': page.description,
   };
@@ -42,16 +47,23 @@ for (const page of PUBLIC_PAGES) {
     );
   html = html.replace(
     /<link rel="canonical" href="[^"]*"\s*\/?>/,
-    `<link rel="canonical" href="${SITE_URL + page.path}" />`,
+    `<link rel="canonical" href="${SITE_URL}/es${page.path === "/" ? "" : page.path}" />`,
   );
-  const json = JSON.stringify(structuredData(page.path)).replaceAll(
+  const json = JSON.stringify(structuredData(page.path, true)).replaceAll(
     "<",
     "\\u003c",
   );
   html = html
     .replace(
       "</head>",
-      `<script id="public-structured-data" type="application/ld+json">${json}</script></head>`,
+      `${pageAlternates(page.path)
+        .map(
+          (alternate) =>
+            `<link rel="alternate" hreflang="${alternate.language}" href="${alternate.href}" />`,
+        )
+        .join(
+          "",
+        )}<script id="public-structured-data" type="application/ld+json">${json}</script></head>`,
     )
     .replace(
       '<div id="root"></div>',

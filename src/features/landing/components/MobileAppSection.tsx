@@ -145,7 +145,7 @@ export function MobileAppSection() {
               target="_blank"
               rel="noreferrer"
               aria-label={translate(
-                "Ver SheepLink en Google Play, lanzamiento en preparación",
+                "SheepLink para Android: pruebas cerradas, aún sin descarga pública",
               )}
             >
               <StoreIcon />
@@ -161,7 +161,7 @@ export function MobileAppSection() {
               "Para entrar necesitas una cuenta activa de tu iglesia.",
             )}
             <br />
-            iOS disponible · Android en preparación.
+            {translate("iOS disponible · Android en pruebas cerradas.")}
           </p>
           <div
             className="pocket-selector"

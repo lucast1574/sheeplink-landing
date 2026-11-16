@@ -22,8 +22,14 @@ test("all language versions have prerendered content, canonical, alternates and 
       assert.ok(html.includes(`<link rel="canonical" href="${url}"`));
       assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1);
       assert.doesNotMatch(html, /\{\{p\d+\}\}/);
-      for (const code of ["es", "en", "pt", "x-default"])
-        assert.ok(html.includes(`hreflang="${code}"`));
+      for (const code of ["es", "en", "pt", "x-default"]) {
+        const target = `https://sheeplink.app${code === "x-default" ? "" : "/" + code}${slug ? "/" + slug : code === "x-default" ? "/" : ""}`;
+        assert.ok(html.includes(`hreflang="${code}" href="${target}"`));
+      }
+      assert.doesNotMatch(
+        html,
+        /de habla hispana|Android (?:está )?en preparación/,
+      );
       const schema = JSON.parse(
         /<script[^>]*type="application\/ld\+json"[^>]*>(.*?)<\/script>/.exec(
           html,
@@ -45,12 +51,26 @@ test("all language versions have prerendered content, canonical, alternates and 
           (node) => node["@type"] === "WebApplication",
         );
         assert.ok(app.offers.every((offer) => offer["@type"] === "Offer"));
+        assert.equal(app.mainEntityOfPage["@id"], url + "#webpage");
+        assert.deepEqual(app.inLanguage, ["es", "en", "pt"]);
+        assert.ok(app.featureList.length >= 9);
         const mobile = schema["@graph"].find(
           (node) => node["@type"] === "MobileApplication",
         );
         assert.deepEqual(
           mobile.screenshot.map((url) => url.split("/").at(-1)),
           ["hoy.webp", "celula.webp", "perfil.webp"],
+        );
+      }
+      if (slug === "software-para-iglesias") {
+        for (const id of ["administracion", "programacion", "idiomas"])
+          assert.ok(html.includes(`id="${id}"`));
+        const breadcrumbs = schema["@graph"].find(
+          (node) => node["@type"] === "BreadcrumbList",
+        );
+        assert.equal(
+          breadcrumbs.itemListElement[0].item,
+          `https://sheeplink.app/${language}`,
         );
       }
     }

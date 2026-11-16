@@ -7,6 +7,9 @@ export {
   SITE_URL,
   APP_URL,
   SOCIAL_IMAGE,
+  SOCIAL_IMAGE_ALT,
+  OG_LOCALE,
+  pageAlternates,
 } from "../src/shared/config/seo";
 export function renderPage(path: string, localized = false) {
   return renderToString(

@@ -31,7 +31,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     assert.ok(/<h2/.test(html));
     assert.doesNotMatch(html, /<div id="root"><\/div>/);
     const canonical = /<link rel="canonical" href="([^"]+)"/.exec(html)[1];
-    assert.equal(canonical, site + (slug ? "/" + slug : "/"));
+    assert.equal(canonical, site + "/es" + (slug ? "/" + slug : ""));
     assert.match(html, /<meta name="description" content="[^"]{40,180}"/);
     assert.ok(html.includes(`<meta property="og:url" content="${canonical}"`));
     assert.match(html, /summary_large_image/);

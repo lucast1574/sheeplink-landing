@@ -1,4 +1,45 @@
 export default {
+  "SheepLink | Software para iglesias y app multilingüe":
+    "SheepLink | Software para iglesias y app multilingüe",
+  "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.":
+    "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.",
+  "SheepLink: funciones, idiomas y app para tu iglesia":
+    "SheepLink: funciones, idiomas y app para tu iglesia",
+  "Conoce las funciones de SheepLink: seguimiento pastoral, programación, cursos, tesorería, inventario y app móvil. Tres idiomas automáticos para tu iglesia.":
+    "Conoce las funciones de SheepLink: seguimiento pastoral, programación, cursos, tesorería, inventario y app móvil. Tres idiomas automáticos para tu iglesia.",
+  "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
+    "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
+  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
+    "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.",
+  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
+    "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.",
+  "¿En qué idiomas está disponible SheepLink?":
+    "¿En qué idiomas está disponible SheepLink?",
+  "Tesorería e inventario": "Tesorería e inventario",
+  "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.":
+    "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.",
+  "Programación y seguimiento pastoral": "Programación y seguimiento pastoral",
+  "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
+    "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.",
+  "Tres idiomas automáticos": "Tres idiomas automáticos",
+  "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
+    "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.",
+  "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":
+    "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.",
+  "iOS disponible · Android en pruebas cerradas.":
+    "iOS disponible · Android en pruebas cerradas.",
+  "SheepLink para Android: pruebas cerradas, aún sin descarga pública":
+    "SheepLink para Android: pruebas cerradas, aún sin descarga pública",
+  "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.":
+    "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.",
+  "Pastores y líderes de iglesias": "Pastores y líderes de iglesias",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.":
+    "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.",
+  anual: "anual",
+  mensual: "mensual",
+  "SheepLink: tecnología al servicio de tu iglesia.":
+    "SheepLink: tecnología al servicio de tu iglesia.",
+
   "Contactar soporte": "Contactar soporte",
   "Abrir WhatsApp": "Abrir WhatsApp",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?":

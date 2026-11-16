@@ -1,4 +1,46 @@
 export default {
+  "SheepLink | Software para iglesias y app multilingüe":
+    "SheepLink | Software para igrejas e app multilíngue",
+  "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.":
+    "Gerencie células, presença, ministérios, escola bíblica, tesouraria e inventário com SheepLink. Plataforma e app em português, espanhol e inglês.",
+  "SheepLink: funciones, idiomas y app para tu iglesia":
+    "SheepLink: recursos, idiomas e app para sua igreja",
+  "Conoce las funciones de SheepLink: seguimiento pastoral, programación, cursos, tesorería, inventario y app móvil. Tres idiomas automáticos para tu iglesia.":
+    "Conheça SheepLink: acompanhamento pastoral, programação, cursos, tesouraria, inventário e app. Português, espanhol e inglês automáticos para sua igreja.",
+  "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
+    "SheepLink é um software de gestão de igrejas em português, espanhol e inglês. Reúne membros, células, presença, ministérios, escola bíblica, atividades e devocionais em uma plataforma web.",
+  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
+    "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store e o Android está em testes fechados. Para entrar no app, você precisa de uma conta ativa da sua igreja.",
+  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
+    "A plataforma, o app e este site detectam automaticamente o idioma do navegador ou dispositivo: português, espanhol ou inglês. Para idiomas não compatíveis, o conteúdo aparece em espanhol. Não é preciso configurar um seletor de idioma.",
+  "¿En qué idiomas está disponible SheepLink?":
+    "Em quais idiomas SheepLink está disponível?",
+  "Tesorería e inventario": "Tesouraria e inventário",
+  "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.":
+    "Organize contas, receitas, despesas e relatórios da tesouraria. Gerencie o inventário da igreja, os empréstimos e o estado dos bens. As permissões de cada conta determinam o acesso a essas ferramentas.",
+  "Programación y seguimiento pastoral":
+    "Programação e acompanhamento pastoral",
+  "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
+    "Consulte a programação da igreja e coordene as responsabilidades da equipe. Os pastores podem selecionar a célula que acompanham para consultar suas informações e acompanhar a comunidade.",
+  "Tres idiomas automáticos": "Três idiomas automáticos",
+  "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
+    "O app SheepLink reúne aniversários, escalas, célula, presença e perfil, conforme suas permissões. É necessária uma conta ativa da sua igreja. iPhone está disponível na App Store; Android está em testes fechados. As atualizações das lojas podem chegar em datas diferentes.",
+  "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":
+    "A plataforma web também funciona no navegador do celular e reúne cursos, materiais, atividades, orçamento, tesouraria e inventário. Os recursos disponíveis no app dependem das permissões e da versão instalada.",
+  "iOS disponible · Android en pruebas cerradas.":
+    "iOS disponível · Android em testes fechados.",
+  "SheepLink para Android: pruebas cerradas, aún sin descarga pública":
+    "SheepLink para Android: testes fechados, ainda sem download público",
+  "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.":
+    "Software de gestão de igrejas em português, espanhol e inglês: células, presença, ministérios, escola bíblica, tesouraria e inventário.",
+  "Pastores y líderes de iglesias": "Pastores e líderes de igrejas",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.":
+    "App para membros e líderes de igrejas: aniversários, escalas, célula, presença e perfil. Requer uma conta ativa da sua igreja. Disponível para iPhone; Android em testes fechados.",
+  anual: "anual",
+  mensual: "mensal",
+  "SheepLink: tecnología al servicio de tu iglesia.":
+    "SheepLink: tecnologia a serviço da sua igreja.",
+
   "Contactar soporte": "Contate o suporte",
   "Abrir WhatsApp": "Abra o WhatsApp",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?":
@@ -216,7 +258,7 @@ export default {
   "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.":
     "SheepLink é um software de gerenciamento para igrejas de língua espanhola. Ajuda pastores e líderes a organizar membros, zonas, células, frequência, ministérios, turnos de serviço, escola bíblica, atividades e devocionais a partir de uma plataforma web.",
   "¿Qué puedo hacer con las células y la asistencia?":
-    "O que posso fazer com células e assistência?",
+    "O que posso fazer com células e presença?",
   "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.":
     "Você pode organizar as células de sua igreja por zonas, cadastrar seus membros e marcar a frequência de cada reunião. Os líderes de célula acompanham o seu grupo e os líderes de zona analisam as informações das células sob sua responsabilidade.",
   "¿SheepLink permite organizar ministerios y escuela bíblica?":
@@ -311,7 +353,7 @@ export default {
   "Blog para iglesias": "Blog para igrejas",
   "Contacto por correo": "Contato por e-mail",
   "© 2026 SHEEPLINK": "© 2026 SHEEPLINK",
-  "Células y asistencia": "Células e assistência",
+  "Células y asistencia": "Células e presença",
   "Organiza integrantes, zonas y células en una estructura compartida. El líder de célula registra la asistencia de cada encuentro y el líder de zona revisa los grupos que acompaña. Así, la información de las reuniones queda vinculada a cada comunidad.":
     "Organize membros, zonas e células em uma estrutura compartilhada. O líder de célula registra a participação em cada reunião e o líder de zona analisa os grupos que acompanha. Assim, as informações dos encontros ficam vinculadas a cada comunidade.",
   "Ver la gestión de células": "Ver gerenciamento de células",
@@ -538,7 +580,7 @@ export default {
     "Para dúvidas sobre cookies ou dados pessoais, escreva para krecarfaz@gmail.com ou consulte a Política de Privacidade.",
   "Información legal": "Informações legais",
   Privacidad: "Privacidade",
-  Cookies: "Biscoitos",
+  Cookies: "Cookies",
   Soporte: "Suporte",
   "INFORMACIÓN LEGAL": "INFORMAÇÕES LEGAIS",
   "Última actualización:": "Última atualização:",

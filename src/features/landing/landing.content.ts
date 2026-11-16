@@ -85,9 +85,15 @@ export const PLANS = BILLING_CATALOG.map((p) => ({
 export const PRICING = pricingCopy(BILLING_CATALOG);
 export const FAQ = [
   {
+    q: translate("¿En qué idiomas está disponible SheepLink?"),
+    a: translate(
+      "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.",
+    ),
+  },
+  {
     q: translate("¿Qué es SheepLink y para quién es?"),
     a: translate(
-      "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.",
+      "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
     ),
   },
   {
@@ -105,7 +111,7 @@ export const FAQ = [
   {
     q: translate("¿Necesito instalar algo?"),
     a: translate(
-      "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. También existe una app para iPhone; la versión Android está en preparación. Para entrar a la app necesitas una cuenta activa de tu iglesia.",
+      "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.",
     ),
   },
   {

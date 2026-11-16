@@ -24,14 +24,14 @@ export function structuredData(path: string, localized = false) {
       },
       email: CONTACT_EMAIL,
       description: translate(
-        "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.",
+        "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.",
       ),
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
         email: CONTACT_EMAIL,
         availableLanguage: "es",
-        url: SITE_URL + "/soporte",
+        url: SITE_URL + localizedPath("/soporte"),
       },
     },
     {
@@ -40,7 +40,7 @@ export function structuredData(path: string, localized = false) {
       url: SITE_URL,
       name: "SheepLink",
       alternateName: "SHEEPLINK",
-      inLanguage: language,
+      inLanguage: ["es", "en", "pt"],
       publisher: { "@id": SITE_URL + "/#organization" },
     },
     {
@@ -71,15 +71,13 @@ export function structuredData(path: string, localized = false) {
       url: SITE_URL,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      inLanguage: language,
+      inLanguage: ["es", "en", "pt"],
       description: page.description,
       image: SITE_URL + SOCIAL_IMAGE,
-      mainEntityOfPage: { "@id": SITE_URL + "/#webpage" },
+      mainEntityOfPage: { "@id": pageUrl + "#webpage" },
       audience: {
         "@type": "Audience",
-        audienceType: translate(
-          "Pastores y líderes de iglesias de habla hispana",
-        ),
+        audienceType: translate("Pastores y líderes de iglesias"),
       },
       isAccessibleForFree: false,
       featureList: [
@@ -89,11 +87,14 @@ export function structuredData(path: string, localized = false) {
         translate("Escuela bíblica y materiales de cursos"),
         translate("Actividades, inscripciones y presupuesto"),
         translate("Devocionales de iglesia y célula"),
+        translate("Tesorería e inventario"),
+        translate("Programación y seguimiento pastoral"),
+        translate("Tres idiomas automáticos"),
       ],
       publisher: { "@id": SITE_URL + "/#organization" },
       offers: PLANS.map((p) => ({
         "@type": "Offer",
-        name: `${p.name} ${p.interval === "year" ? "anual" : "mensual"}`,
+        name: `${p.name} ${p.interval === "year" ? translate("anual") : translate("mensual")}`,
         price: p.price.replace(/[^0-9.]/g, ""),
         priceCurrency: "USD",
         url: SITE_URL + "/#precios",
@@ -126,9 +127,9 @@ export function structuredData(path: string, localized = false) {
       applicationCategory: "BusinessApplication",
       operatingSystem: "iOS",
       installUrl: APP_STORE_URL,
-      inLanguage: language,
+      inLanguage: ["es", "en", "pt"],
       description: translate(
-        "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Android en preparación.",
+        "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.",
       ),
       screenshot: ["hoy", "celula", "perfil"].map(
         (name) => SITE_URL + "/app/" + name + ".webp",
@@ -144,7 +145,7 @@ export function structuredData(path: string, localized = false) {
           "@type": "ListItem",
           position: 1,
           name: "SHEEPLINK",
-          item: SITE_URL + "/",
+          item: SITE_URL + (localized ? localizedPath("/") : "/"),
         },
         {
           "@type": "ListItem",

@@ -19,9 +19,15 @@ if (!process.env.SHEEPLINK_PRERENDER_CHILD) {
     if (result.status !== 0) process.exit(result.status ?? 1);
   }
 } else {
-  const { renderPage, PUBLIC_PAGES, SITE_URL, structuredData } = await import(
-    "../.prerender/prerender.js"
-  );
+  const {
+    renderPage,
+    PUBLIC_PAGES,
+    SITE_URL,
+    structuredData,
+    SOCIAL_IMAGE_ALT,
+    OG_LOCALE,
+    pageAlternates,
+  } = await import("../.prerender/prerender.js");
   const language = process.env.SHEEPLINK_LANGUAGE;
   const template = await fs.readFile("dist/index.html", "utf8");
   const escape = (value) =>
@@ -33,14 +39,12 @@ if (!process.env.SHEEPLINK_PRERENDER_CHILD) {
   for (const page of PUBLIC_PAGES) {
     const localizedPath = "/" + language + (page.path === "/" ? "" : page.path);
     const canonical = SITE_URL + localizedPath;
-    const alternates =
-      ["es", "en", "pt"]
-        .map(
-          (code) =>
-            `<link rel="alternate" hreflang="${code}" href="${SITE_URL}/${code}${page.path === "/" ? "" : page.path}" />`,
-        )
-        .join("") +
-      `<link rel="alternate" hreflang="x-default" href="${SITE_URL + page.path}" />`;
+    const alternates = pageAlternates(page.path)
+      .map(
+        (alternate) =>
+          `<link rel="alternate" hreflang="${alternate.language}" href="${alternate.href}" />`,
+      )
+      .join("");
     let html = template
       .replace(/<html lang="[^"]*"/, `<html lang="${language}"`)
       .replace(/<title>.*?<\/title>/, `<title>${escape(page.title)}</title>`);
@@ -49,9 +53,9 @@ if (!process.env.SHEEPLINK_PRERENDER_CHILD) {
       'property="og:title"': page.title,
       'property="og:description"': page.description,
       'property="og:url"': canonical,
-      'property="og:locale"': { es: "es_PE", en: "en_US", pt: "pt_BR" }[
-        language
-      ],
+      'property="og:locale"': OG_LOCALE,
+      'property="og:image:alt"': SOCIAL_IMAGE_ALT,
+      'name="twitter:image:alt"': SOCIAL_IMAGE_ALT,
       'name="twitter:title"': page.title,
       'name="twitter:description"': page.description,
     }))
@@ -63,15 +67,7 @@ if (!process.env.SHEEPLINK_PRERENDER_CHILD) {
       /<link rel="canonical" href="[^"]*"\s*\/?>/,
       `<link rel="canonical" href="${canonical}" />`,
     );
-    const graph = structuredData(page.path);
-    for (const node of graph["@graph"]) {
-      if (node["@type"] === "WebPage") {
-        node.url = canonical;
-        node["@id"] = canonical + "#webpage";
-      }
-      if (node["@type"] === "BreadcrumbList")
-        node.itemListElement.at(-1).item = canonical;
-    }
+    const graph = structuredData(page.path, true);
     const json = JSON.stringify(graph).replaceAll("<", "\\u003c");
     html = html
       .replace(
