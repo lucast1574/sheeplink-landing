@@ -88,19 +88,21 @@ export function structuredData(path: string) {
       publisher: { "@id": SITE_URL + "/#organization" },
       offers: PLANS.map((p) => ({
         "@type": "Offer",
-        name: p.name,
+        name: `${p.name} ${p.interval === "year" ? "anual" : "mensual"}`,
         price: p.price.replace(/[^0-9.]/g, ""),
         priceCurrency: "USD",
         url: SITE_URL + "/#precios",
         description:
           p.trialDays > 0
             ? `${p.trialDays} días gratis con tarjeta, después US$${p.amount / 100}/mes. Renovación automática; cancela antes para evitar el cobro.`
-            : p.description,
+            : p.interval === "year"
+              ? `${p.description} Pago anual al contratar, sin prueba gratuita.`
+              : p.description,
         priceSpecification: {
           "@type": "UnitPriceSpecification",
           price: p.amount / 100,
           priceCurrency: p.currency.toUpperCase(),
-          billingDuration: "P1M",
+          billingDuration: p.interval === "year" ? "P1Y" : "P1M",
         },
       })),
     });

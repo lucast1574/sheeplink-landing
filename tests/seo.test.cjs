@@ -85,7 +85,7 @@ test("la portada describe sus precios reales, conserva todas las pestañas y sir
   assert.deepEqual(
     app.offers.map((o) => [o.name, o.price, o.priceCurrency]),
     catalog.map((p) => [
-      p.name,
+      `${p.name} ${p.interval === "year" ? "anual" : "mensual"}`,
       String(p.amount / 100),
       p.currency.toUpperCase(),
     ]),
@@ -131,4 +131,22 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
     graph.find((n) => n["@type"] === "Organization").name,
     "SheepLink",
   );
+});
+
+test("ofertas anuales publican duración anual y excluyen prueba en datos estructurados", () => {
+  const fs = require("node:fs");
+  const home = fs.readFileSync("dist/index.html", "utf8");
+  const scripts = [
+    ...home.matchAll(
+      /<script[^>]*type="application\/ld\+json"[^>]*>([\s\S]*?)<\/script>/g,
+    ),
+  ].map((m) => JSON.parse(m[1]));
+  const graph = scripts.flatMap((s) => s["@graph"] || [s]);
+  const offers = graph.flatMap((n) => n.offers || []);
+  const annual = offers.filter(
+    (o) => o.priceSpecification?.billingDuration === "P1Y",
+  );
+  assert.equal(annual.length, 4);
+  for (const offer of annual)
+    assert.match(offer.description, /sin prueba gratuita/);
 });

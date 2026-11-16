@@ -1914,3 +1914,59 @@
     min-height: 0;
   }
 }
+
+.landing-billing-choice {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 16px 24px;
+  margin: 24px 0 32px;
+}
+.landing-billing-choice p {
+  margin: 0;
+  max-width: 48ch;
+  line-height: 1.6;
+}
+.landing-billing-toggle {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding: 6px;
+  border-radius: 12px;
+  background: #ebece6;
+}
+.landing-billing-toggle button {
+  font: inherit;
+  font-weight: 600;
+  color: #26483b;
+  background: transparent;
+  border: 0;
+  border-radius: 8px;
+  padding: 12px 16px;
+  cursor: pointer;
+  outline: none;
+}
+.landing-billing-toggle button[aria-pressed="true"] {
+  color: #fff;
+  background: #26483b;
+}
+.landing-billing-toggle button:hover,
+.landing-billing-toggle button:focus-visible {
+  background: #d4dfd5;
+  color: #193c2b;
+}
+@media (max-width: 480px) {
+  .landing-billing-toggle {
+    display: flex;
+    width: 100%;
+  }
+  .landing-billing-toggle button {
+    flex: 1;
+    padding: 12px 8px;
+    font-size: 14px;
+  }
+}
+
+.landing-plan .landing-plan-trial {
+  margin-top: 16px;
+}

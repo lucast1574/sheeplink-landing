@@ -75,7 +75,7 @@ export const LEGAL_DOCUMENTS = {
         title: "4. Prueba, planes y pagos",
         paragraphs: [
           PRICING.legal,
-          "Al vencer un plan, la aplicación puede limitar la cuenta a consulta; una suspensión puede impedir el acceso. Los planes de pago se contratan mediante Stripe y se renuevan mensualmente hasta su cancelación. Antes de confirmar, Stripe muestra el importe y la periodicidad. El responsable de la iglesia puede consultar facturas, actualizar el método de pago y cancelar la renovación desde Facturación. Para aclaraciones o solicitudes de devolución, escribe al contacto del servicio. Se respetarán los derechos y devoluciones exigibles por la normativa aplicable y las condiciones expresamente acordadas.",
+          "Al vencer un plan, la aplicación puede limitar la cuenta a consulta; una suspensión puede impedir el acceso. Los planes de pago se contratan mediante Stripe y se renuevan mensual o anualmente, según la modalidad elegida, hasta su cancelación. Los planes anuales se cobran completos al contratar y no incluyen prueba gratuita. Antes de confirmar, Stripe muestra el importe y la periodicidad. El responsable de la iglesia puede consultar facturas, actualizar el método de pago y cancelar la renovación desde Facturación. Para aclaraciones o solicitudes de devolución, escribe al contacto del servicio. Se respetarán los derechos y devoluciones exigibles por la normativa aplicable y las condiciones expresamente acordadas.",
         ],
       },
       {

@@ -4,6 +4,7 @@ const fields = [
   "description",
   "amount",
   "currency",
+  "interval",
   "trialDays",
   "maxUsers",
   "maxMembers",
@@ -30,6 +31,8 @@ export function readPublicCatalog(value) {
         !Number.isInteger(p.trialDays) ||
         p.trialDays < 0 ||
         p.trialDays > 30 ||
+        (p.interval !== undefined && !["month", "year"].includes(p.interval)) ||
+        (p.interval === "year" && p.trialDays !== 0) ||
         ["maxUsers", "maxMembers", "maxCells", "maxMinistries"].some(
           (k) => p[k] !== null && (!Number.isSafeInteger(p[k]) || p[k] < 1),
         ),

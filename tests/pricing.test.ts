@@ -31,3 +31,12 @@ test("sin pruebas el registro y las condiciones indican pago desde el inicio", (
   assert.doesNotMatch(copy.faq, /gratis|Sí/);
   assert.equal(copy.navCta, "Elegir plan");
 });
+
+test("anuales muestran cobro anual sin ofrecer prueba", () => {
+  const copy = pricingCopy([
+    { ...plan, interval: "year", amount: 37500, trialDays: 0 },
+  ]);
+  assert.match(copy.terms, /US\$375\/año/);
+  assert.match(copy.terms, /Sin prueba gratuita/);
+  assert.equal(copy.navCta, "Elegir plan");
+});

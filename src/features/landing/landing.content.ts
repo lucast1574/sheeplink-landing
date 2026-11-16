@@ -42,11 +42,11 @@ export const ROLES = [
     text: "Programa turnos y sabe quién sirve en cada actividad.",
   },
 ];
-export const PLANS = BILLING_CATALOG.map((p, index) => ({
+export const PLANS = BILLING_CATALOG.map((p) => ({
   ...p,
   price: priceLabel(p),
-  per: "al mes",
-  highlight: index === 1,
+  per: p.interval === "year" ? "al año" : "al mes",
+  highlight: p.id.startsWith("vina-"),
   cta:
     p.trialDays > 0 ? `Probar ${p.trialDays} días gratis` : `Elegir ${p.name}`,
   items: [

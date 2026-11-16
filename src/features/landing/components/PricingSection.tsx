@@ -1,8 +1,14 @@
+import { useState } from "react";
 import { appPath } from "../../../shared/config/sites";
-import { PLANS, PRICING } from "../landing.content";
+import { PLANS } from "../landing.content";
+import { pricingCopy } from "../pricing";
 import { Icon } from "./LandingIcons";
 import { MarketingButton } from "./MarketingButton";
 export function PricingSection() {
+  const [interval, setInterval] = useState<"month" | "year">("month");
+  const visiblePlans = PLANS.filter(
+    (p) => (p.interval ?? "month") === interval,
+  );
   return (
     <section className="landing-section landing-pricing" id="precios">
       <div className="landing-container">
@@ -15,10 +21,40 @@ export function PricingSection() {
               En cada etapa.
             </h2>
           </div>
-          <p>{PRICING.introduction}</p>
+          <p>
+            Elige tu plan y cómo pagarlo: mensual o anual con dos meses de
+            ahorro.
+          </p>
+        </div>
+        <div className="landing-billing-choice">
+          <div
+            className="landing-billing-toggle"
+            role="group"
+            aria-label="Periodicidad de pago"
+          >
+            <button
+              type="button"
+              aria-pressed={interval === "month"}
+              onClick={() => setInterval("month")}
+            >
+              Mensual
+            </button>
+            <button
+              type="button"
+              aria-pressed={interval === "year"}
+              onClick={() => setInterval("year")}
+            >
+              Anual · Ahorra 2 meses
+            </button>
+          </div>
+          <p aria-live="polite">
+            {interval === "year"
+              ? "Paga 10 meses y disfruta 12. Un solo cobro anual, sin prueba gratuita."
+              : "Pago mes a mes. Redil incluye 7 días de prueba con tarjeta."}
+          </p>
         </div>
         <div className="landing-plan-grid">
-          {PLANS.map((plan) => (
+          {visiblePlans.map((plan) => (
             <article
               key={plan.id}
               className={`landing-plan${plan.highlight ? " landing-plan--featured" : ""}`}
@@ -56,7 +92,9 @@ export function PricingSection() {
             </article>
           ))}
         </div>
-        <p className="landing-billing-note">{PRICING.terms}</p>
+        <p className="landing-billing-note">
+          {pricingCopy(visiblePlans).terms}
+        </p>
       </div>
     </section>
   );

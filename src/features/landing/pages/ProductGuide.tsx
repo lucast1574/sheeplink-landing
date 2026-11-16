@@ -139,10 +139,10 @@ export default function ProductGuide() {
           <h2>Planes para tu comunidad.</h2>
           <div>
             <p>
-              Los planes mensuales se muestran en dólares estadounidenses y
-              varían según los límites de integrantes, células, ministerios y
-              cuentas de usuario. Consulta los precios y condiciones vigentes
-              antes de registrar tu iglesia.
+              Los planes mensuales y anuales se muestran en dólares
+              estadounidenses y varían según los límites de integrantes,
+              células, ministerios y cuentas de usuario. Consulta los precios y
+              condiciones vigentes antes de registrar tu iglesia.
             </p>
             <p>
               {PRICING.disclosure} {PRICING.cancellation}
