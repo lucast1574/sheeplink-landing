@@ -19,6 +19,7 @@ test("all language versions have prerendered content, canonical, alternates and 
       );
       const url = `https://sheeplink.app/${language}${slug ? "/" + slug : ""}`;
       assert.ok(html.includes(`<html lang="${language}"`));
+      assert.match(/<title>(.*?)<\/title>/.exec(html)[1], /sheeplink/i);
       assert.ok(html.includes(`<link rel="canonical" href="${url}"`));
       assert.equal((html.match(/<h1(?:\s|>)/g) || []).length, 1);
       assert.doesNotMatch(html, /\{\{p\d+\}\}/);

@@ -294,7 +294,7 @@ export default {
   "Ir al contenido": "Ir para o conteúdo",
   Principal: "Principal",
   "SHEEPLINK, inicio": "SHEEPLINK, iniciar",
-  SHEEPLINK: "LINK DE OVELHA",
+  SHEEPLINK: "SHEEPLINK",
   "Iniciar sesión": "Entrar",
   "Cerrar menú": "Fechar menu",
   "Abrir menú": "Abrir menu",
@@ -604,17 +604,16 @@ export default {
     "O que é SheepLink: funções e aplicativo para igrejas",
   "Conoce qué ofrece SheepLink a pastores y líderes: gestión de células, asistencia, ministerios, escuela bíblica, devocionales y app móvil para tu iglesia.":
     "Conheça o que o SheepLink oferece aos pastores e líderes: gerenciamento de células, atendimento, ministérios, escola bíblica, devocionais e aplicativo mobile para sua igreja.",
-  "Términos y condiciones | SHEEPLINK": "Termos e condições | LINK DE OVELHA",
+  "Términos y condiciones | SHEEPLINK": "Termos e condições | SHEEPLINK",
   "Condiciones de uso de SHEEPLINK, gestión de cuentas, responsabilidades de las iglesias, planes y contacto del servicio.":
     "Termos de Uso do SHEEPLINK, Gerenciamento de Conta, Responsabilidades da Igreja, Planos de Serviço e Contato.",
-  "Política de privacidad | SHEEPLINK":
-    "Política de privacidade | LINK DE OVELHA",
+  "Política de privacidad | SHEEPLINK": "Política de privacidade | SHEEPLINK",
   "Conoce qué datos utiliza SHEEPLINK, cómo protege la información de tu iglesia, sus proveedores y cómo solicitar atención de privacidad.":
     "Saiba quais dados o SHEEPLINK utiliza, como ele protege as informações de sua igreja, de seus fornecedores e como solicitar atenção de privacidade.",
-  "Política de cookies | SHEEPLINK": "Política de cookies | LINK DE OVELHA",
+  "Política de cookies | SHEEPLINK": "Política de cookies | SHEEPLINK",
   "Información sobre las cookies de sesión, autenticación y tecnologías del navegador que utiliza SHEEPLINK.":
     "Informações sobre cookies de sessão, autenticação e tecnologias de navegador utilizadas pelo SHEEPLINK.",
-  "Soporte de la app | SHEEPLINK": "Suporte a aplicativos | LINK DE OVELHA",
+  "Soporte de la app | SHEEPLINK": "Suporte a aplicativos | SHEEPLINK",
   "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.":
     "Ajuda com acesso ao aplicativo SheepLink, notificações, fotos e solicitações de privacidade.",
   "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.":
