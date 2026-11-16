@@ -1,3 +1,4 @@
+import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import { useState } from "react";
 import { appPath } from "../../../shared/config/sites";
 import { PLANS } from "../landing.content";
@@ -14,43 +15,50 @@ export function PricingSection() {
       <div className="landing-container">
         <div className="landing-section-heading">
           <div>
-            <p className="section-caption">Planes de SHEEPLINK</p>
+            <p className="section-caption">
+              {translate("Planes de SHEEPLINK")}
+            </p>
             <h2>
-              Espacio para tu iglesia.
+              {translate("Espacio para tu iglesia.")}
               <br />
-              En cada etapa.
+              {translate("En cada etapa.")}
             </h2>
           </div>
           <p>
-            Elige tu plan y cómo pagarlo: mensual o anual con dos meses de
-            ahorro.
+            {translate(
+              "Elige tu plan y cómo pagarlo: mensual o anual con dos meses de ahorro.",
+            )}
           </p>
         </div>
         <div className="landing-billing-choice">
           <div
             className="landing-billing-toggle"
             role="group"
-            aria-label="Periodicidad de pago"
+            aria-label={translate("Periodicidad de pago")}
           >
             <button
               type="button"
               aria-pressed={interval === "month"}
               onClick={() => setInterval("month")}
             >
-              Mensual
+              {translate("Mensual")}
             </button>
             <button
               type="button"
               aria-pressed={interval === "year"}
               onClick={() => setInterval("year")}
             >
-              Anual · Ahorra 2 meses
+              {translate("Anual · Ahorra 2 meses")}
             </button>
           </div>
           <p aria-live="polite">
             {interval === "year"
-              ? "Paga 10 meses y disfruta 12. Un solo cobro anual, sin prueba gratuita."
-              : "Pago mes a mes. Redil incluye 7 días de prueba con tarjeta."}
+              ? translate(
+                  "Paga 10 meses y disfruta 12. Un solo cobro anual, sin prueba gratuita.",
+                )
+              : translate(
+                  "Pago mes a mes. Redil incluye 7 días de prueba con tarjeta.",
+                )}
           </p>
         </div>
         <div className="landing-plan-grid">
@@ -61,22 +69,26 @@ export function PricingSection() {
             >
               {plan.highlight && (
                 <span className="plan-recommendation">
-                  Para seguir creciendo
+                  {translate("Para seguir creciendo")}
                 </span>
               )}
               <h3>{plan.name}</h3>
               <p className="landing-plan-description">{plan.description}</p>
               <p className="landing-plan-trial">
                 {plan.trialDays > 0
-                  ? `${plan.trialDays} días gratis con tarjeta`
-                  : "Pago desde el inicio"}
+                  ? translate("{{p0}} días gratis con tarjeta", {
+                      p0: plan.trialDays,
+                    })
+                  : translate("Pago desde el inicio")}
               </p>
               <p className="landing-plan-price">
                 {plan.price}
                 <span>{plan.per}</span>
               </p>
               <MarketingButton
-                href={appPath(`/registro?plan=${encodeURIComponent(plan.id)}`)}
+                href={localizedPath(
+                  appPath(`/registro?plan=${encodeURIComponent(plan.id)}`),
+                )}
                 variant={plan.highlight ? "light" : "solid"}
               >
                 {plan.cta}

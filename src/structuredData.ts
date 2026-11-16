@@ -1,12 +1,14 @@
+import { translate, language, localizedPath } from "./shared/i18n/index.ts";
 import { SITE_URL, SOCIAL_IMAGE, pageMetadata } from "./shared/config/seo";
 import {
   PLANS,
   CONTACT_EMAIL,
   APP_STORE_URL,
 } from "./features/landing/landing.content";
-export function structuredData(path: string) {
+export function structuredData(path: string, localized = false) {
   const page = pageMetadata(path);
   if (!page) return null;
+  const pageUrl = SITE_URL + (localized ? localizedPath(page.path) : page.path);
   const graph: object[] = [
     {
       "@type": "Organization",
@@ -21,8 +23,9 @@ export function structuredData(path: string) {
         height: 512,
       },
       email: CONTACT_EMAIL,
-      description:
+      description: translate(
         "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.",
+      ),
       contactPoint: {
         "@type": "ContactPoint",
         contactType: "customer support",
@@ -37,16 +40,16 @@ export function structuredData(path: string) {
       url: SITE_URL,
       name: "SheepLink",
       alternateName: "SHEEPLINK",
-      inLanguage: "es",
+      inLanguage: language,
       publisher: { "@id": SITE_URL + "/#organization" },
     },
     {
       "@type": "WebPage",
-      "@id": SITE_URL + page.path + "#webpage",
-      url: SITE_URL + page.path,
+      "@id": pageUrl + "#webpage",
+      url: pageUrl,
       name: page.title,
       description: page.description,
-      inLanguage: "es",
+      inLanguage: language,
       isPartOf: { "@id": SITE_URL + "/#website" },
       ...(path === "/" || path === "/software-para-iglesias"
         ? { about: { "@id": SITE_URL + "/#application" } }
@@ -68,22 +71,24 @@ export function structuredData(path: string) {
       url: SITE_URL,
       applicationCategory: "BusinessApplication",
       operatingSystem: "Web",
-      inLanguage: "es",
+      inLanguage: language,
       description: page.description,
       image: SITE_URL + SOCIAL_IMAGE,
       mainEntityOfPage: { "@id": SITE_URL + "/#webpage" },
       audience: {
         "@type": "Audience",
-        audienceType: "Pastores y líderes de iglesias de habla hispana",
+        audienceType: translate(
+          "Pastores y líderes de iglesias de habla hispana",
+        ),
       },
       isAccessibleForFree: false,
       featureList: [
-        "Gestión de células e integrantes",
-        "Registro de asistencia",
-        "Organización de ministerios y turnos",
-        "Escuela bíblica y materiales de cursos",
-        "Actividades, inscripciones y presupuesto",
-        "Devocionales de iglesia y célula",
+        translate("Gestión de células e integrantes"),
+        translate("Registro de asistencia"),
+        translate("Organización de ministerios y turnos"),
+        translate("Escuela bíblica y materiales de cursos"),
+        translate("Actividades, inscripciones y presupuesto"),
+        translate("Devocionales de iglesia y célula"),
       ],
       publisher: { "@id": SITE_URL + "/#organization" },
       offers: PLANS.map((p) => ({
@@ -94,9 +99,15 @@ export function structuredData(path: string) {
         url: SITE_URL + "/#precios",
         description:
           p.trialDays > 0
-            ? `${p.trialDays} días gratis con tarjeta, después US$${p.amount / 100}/mes. Renovación automática; cancela antes para evitar el cobro.`
+            ? translate(
+                "{{p0}} días gratis con tarjeta, después US${{p1}}/mes. Renovación automática; cancela antes para evitar el cobro.",
+                { p0: p.trialDays, p1: p.amount / 100 },
+              )
             : p.interval === "year"
-              ? `${p.description} Pago anual al contratar, sin prueba gratuita.`
+              ? translate(
+                  "{{p0}} Pago anual al contratar, sin prueba gratuita.",
+                  { p0: p.description },
+                )
               : p.description,
         priceSpecification: {
           "@type": "UnitPriceSpecification",
@@ -115,9 +126,10 @@ export function structuredData(path: string) {
       applicationCategory: "BusinessApplication",
       operatingSystem: "iOS",
       installUrl: APP_STORE_URL,
-      inLanguage: "es",
-      description:
+      inLanguage: language,
+      description: translate(
         "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Android en preparación.",
+      ),
       screenshot: ["hoy", "celula", "perfil"].map(
         (name) => SITE_URL + "/app/" + name + ".webp",
       ),
@@ -138,7 +150,7 @@ export function structuredData(path: string) {
           "@type": "ListItem",
           position: 2,
           name: page.title.split(" | ")[0],
-          item: SITE_URL + page.path,
+          item: pageUrl,
         },
       ],
     });

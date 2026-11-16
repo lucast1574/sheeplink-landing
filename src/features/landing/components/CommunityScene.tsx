@@ -1,28 +1,29 @@
+import { translate } from "../../../shared/i18n/index.ts";
 import mark from "../../../assets/sheeplink-mark-white.svg";
 import { Icon } from "./LandingIcons";
 const connections = [
   {
-    name: "Células",
+    name: translate("Células"),
     icon: "layers",
-    text: "Cada persona, acompañada",
+    text: translate("Cada persona, acompañada"),
     className: "cells",
   },
   {
-    name: "Servicio",
+    name: translate("Servicio"),
     icon: "star",
-    text: "Un equipo con propósito",
+    text: translate("Un equipo con propósito"),
     className: "service",
   },
   {
-    name: "Formación",
+    name: translate("Formación"),
     icon: "book",
-    text: "La fe que sigue creciendo",
+    text: translate("La fe que sigue creciendo"),
     className: "study",
   },
   {
-    name: "Encuentros",
+    name: translate("Encuentros"),
     icon: "home",
-    text: "Más momentos juntos",
+    text: translate("Más momentos juntos"),
     className: "gather",
   },
 ];
@@ -30,7 +31,9 @@ export function CommunityScene() {
   return (
     <div
       className="community-scene"
-      aria-label="Células, servicio, formación y encuentros conectados con tu iglesia"
+      aria-label={translate(
+        "Células, servicio, formación y encuentros conectados con tu iglesia",
+      )}
       role="img"
     >
       <svg
@@ -59,8 +62,8 @@ export function CommunityScene() {
       </svg>
       <div className="community-center">
         <img src={mark} width="76" height="76" alt="" />
-        <span>Tu iglesia</span>
-        <small>Un mismo cuerpo</small>
+        <span>{translate("Tu iglesia")}</span>
+        <small>{translate("Un mismo cuerpo")}</small>
       </div>
       {connections.map((c) => (
         <div
@@ -76,14 +79,14 @@ export function CommunityScene() {
           </div>
         </div>
       ))}
-      <span className="community-person person-one">AV</span>
-      <span className="community-person person-two">NR</span>
-      <span className="community-person person-three">EL</span>
+      <span className="community-person person-one">{translate("AV")}</span>
+      <span className="community-person person-two">{translate("NR")}</span>
+      <span className="community-person person-three">{translate("EL")}</span>
       <div className="community-note">
         <span className="scene-check">
-          <Icon name="check" size={15} />
+          <Icon name={"check"} size={15} />
         </span>{" "}
-        Hay un lugar para cada persona.
+        {translate("Hay un lugar para cada persona.")}
       </div>
     </div>
   );

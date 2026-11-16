@@ -1,3 +1,4 @@
+import { translate } from "../../../shared/i18n/index.ts";
 import logoGreen from "../../../assets/sheeplink-logo-green.svg";
 import { Icon } from "./LandingIcons";
 import "../entrance.css";
@@ -23,9 +24,9 @@ export function BrandEntrance() {
           height="82"
         />
         <p className="brand-arrival-caption">
-          Cada persona, cerca.
+          {translate("Cada persona, cerca.")}
           <br />
-          <span>Una comunidad que camina junta.</span>
+          <span>{translate("Una comunidad que camina junta.")}</span>
         </p>
         <span className="brand-arrival-line" />
       </div>
@@ -36,7 +37,8 @@ export function BrandEntrance() {
           document.documentElement.removeAttribute("data-brand-arrival")
         }
       >
-        Conoce SheepLink <Icon name="arrow" size={18} />
+        {translate("Conoce SheepLink ")}
+        <Icon name={"arrow"} size={18} />
       </button>
     </div>
   );

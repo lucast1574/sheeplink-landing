@@ -1,3 +1,4 @@
+import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import type { ReactNode } from "react";
 import { Icon } from "./LandingIcons";
 export function MarketingButton({
@@ -12,9 +13,12 @@ export function MarketingButton({
   arrow?: boolean;
 }) {
   return (
-    <a className={`marketing-button marketing-button--${variant}`} href={href}>
+    <a
+      className={`marketing-button marketing-button--${variant}`}
+      href={localizedPath(href)}
+    >
       {children}
-      {arrow && <Icon name="arrow" size={19} />}
+      {arrow && <Icon name={"arrow"} size={19} />}
     </a>
   );
 }

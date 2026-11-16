@@ -1,5 +1,6 @@
 import fs from "node:fs/promises";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import {
   renderPage,
   PUBLIC_PAGES,
@@ -15,6 +16,12 @@ const escape = (value) =>
     .replaceAll('"', "&quot;")
     .replaceAll("<", "&lt;")
     .replaceAll(">", "&gt;");
+const localized = spawnSync(
+  process.execPath,
+  ["scripts/prerender-locales.mjs"],
+  { stdio: "inherit" },
+);
+if (localized.status !== 0) process.exit(localized.status ?? 1);
 for (const page of PUBLIC_PAGES) {
   let html = template.replace(
     /<title>.*?<\/title>/,
@@ -63,7 +70,7 @@ await fs.writeFile(
 );
 await fs.writeFile(
   "dist/sitemap.xml",
-  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${PUBLIC_PAGES.map((page) => `<url><loc>${SITE_URL + page.path}</loc></url>`).join("")}</urlset>`,
+  `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">${PUBLIC_PAGES.flatMap((page) => ["es", "en", "pt"].map((language) => `<url><loc>${SITE_URL}/${language}${page.path === "/" ? "" : page.path}</loc>${["es", "en", "pt"].map((code) => `<xhtml:link rel="alternate" hreflang="${code}" href="${SITE_URL}/${code}${page.path === "/" ? "" : page.path}"/>`).join("")}<xhtml:link rel="alternate" hreflang="x-default" href="${SITE_URL + page.path}"/></url>`)).join("")}</urlset>`,
 );
 await fs.writeFile(
   "dist/404.html",

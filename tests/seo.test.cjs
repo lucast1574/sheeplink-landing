@@ -63,7 +63,9 @@ test("imagen social horizontal ligera, sitemap canónico y página inexistente s
   assert.equal(bytes.readUInt32BE(20), 630);
   assert.ok(bytes.length < 300000);
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 6);
+  assert.equal((sitemap.match(/<loc>/g) || []).length, 18);
+  for (const language of ["es", "en", "pt"])
+    assert.ok(sitemap.includes(`hreflang="${language}"`));
   assert.doesNotMatch(sitemap, /login|registro|dashboard/);
   assert.match(
     fs.readFileSync(path.join(root, "robots.txt"), "utf8"),
@@ -108,7 +110,7 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
     path.join(root, "software-para-iglesias/index.html"),
     "utf8",
   );
-  assert.match(html, /href="\/software-para-iglesias"/);
+  assert.match(html, /href="\/es\/software-para-iglesias"/);
   for (const topic of [
     "Células y asistencia",
     "Ministerios y servicio",

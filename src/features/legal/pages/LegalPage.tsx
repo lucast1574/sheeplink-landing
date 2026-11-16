@@ -1,3 +1,4 @@
+import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import { appPath } from "../../../shared/config/sites";
 import { useEffect } from "react";
 import { Link } from "react-router-dom";
@@ -27,23 +28,28 @@ export default function LegalPage({
           <img src={mark} alt="" width={34} height={34} />
           SHEEPLINK
         </Link>
-        <a href={appPath("/login")}>Iniciar sesión</a>
+        <a href={localizedPath(appPath("/login"))}>
+          {translate("Iniciar sesión")}
+        </a>
       </header>
       <main className="legal-main">
         <div className="legal-intro">
           <span>
-            {kind === "support" ? "AYUDA Y CONTACTO" : "INFORMACIÓN LEGAL"}
+            {kind === "support"
+              ? translate("AYUDA Y CONTACTO")
+              : translate("INFORMACIÓN LEGAL")}
           </span>
           <h1>{content.title}</h1>
           <p>{content.summary}</p>
           <small>
-            Última actualización:{" "}
+            {translate("Última actualización:")}{" "}
             <time dateTime={kind === "support" ? "2026-10-31" : LEGAL_VERSION}>
               {kind === "support"
-                ? "31 de octubre de 2026"
-                : "16 de octubre de 2026"}
+                ? translate("31 de octubre de 2026")
+                : translate("16 de octubre de 2026")}
             </time>{" "}
-            · Versión {kind === "support" ? "2026-10-31" : LEGAL_VERSION}
+            {translate("· Versión ")}
+            {kind === "support" ? "2026-10-31" : LEGAL_VERSION}
           </small>
         </div>
         <LegalLinks />
@@ -55,9 +61,9 @@ export default function LegalPage({
                 <p>
                   <a
                     className="legal-delete-action"
-                    href={appPath("/eliminar-cuenta")}
+                    href={localizedPath(appPath("/eliminar-cuenta"))}
                   >
-                    Eliminar mi cuenta en SheepLink
+                    {translate("Eliminar mi cuenta en SheepLink")}
                   </a>
                 </p>
               )}
@@ -69,13 +75,13 @@ export default function LegalPage({
         </div>
         {kind === "privacy" && (
           <p className="legal-source">
-            Referencias para Perú:{" "}
+            {translate("Referencias para Perú:")}{" "}
             <a
               href="https://www.gob.pe/institucion/congreso-de-la-republica/normas-legales/243470"
               target="_blank"
               rel="noreferrer"
             >
-              Ley N.º 29733
+              {translate("Ley N.º 29733")}
             </a>
             ,{" "}
             <a
@@ -83,27 +89,31 @@ export default function LegalPage({
               target="_blank"
               rel="noreferrer"
             >
-              reglamento vigente
+              {translate("reglamento vigente")}
             </a>{" "}
-            y{" "}
+            {translate("y")}{" "}
             <a href="https://www.gob.pe/anpd" target="_blank" rel="noreferrer">
-              ANPD
+              {translate("ANPD")}
             </a>
             .
           </p>
         )}
         <aside className="legal-contact">
-          <h2>¿Necesitas ayuda?</h2>
+          <h2>{translate("¿Necesitas ayuda?")}</h2>
           <p>
-            Para consultas del servicio o solicitudes relacionadas con tus
-            datos, escribe a{" "}
-            <a href={`mailto:${LEGAL_CONTACT}`}>{LEGAL_CONTACT}</a>.
+            {translate(
+              "Para consultas del servicio o solicitudes relacionadas con tus datos, escribe a",
+            )}{" "}
+            <a href={localizedPath(`mailto:${LEGAL_CONTACT}`)}>
+              {LEGAL_CONTACT}
+            </a>
+            .
           </p>
         </aside>
       </main>
       <footer className="legal-footer">
         <LegalLinks />
-        <Link to="/">Volver a SHEEPLINK</Link>
+        <Link to="/">{translate("Volver a SHEEPLINK")}</Link>
       </footer>
     </div>
   );

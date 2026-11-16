@@ -1,3 +1,4 @@
+import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import { PRICING } from "../landing.content";
 import { useEffect, useRef, useState } from "react";
 import { appPath } from "../../../shared/config/sites";
@@ -23,21 +24,27 @@ import {
 import "../landing.css";
 const moments = [
   {
-    day: "En la semana",
-    title: "Cada persona, cerca.",
-    text: "Tu célula se reúne, comparte la Palabra y registra su asistencia. El acompañamiento continúa cada día.",
+    day: translate("En la semana"),
+    title: translate("Cada persona, cerca."),
+    text: translate(
+      "Tu célula se reúne, comparte la Palabra y registra su asistencia. El acompañamiento continúa cada día.",
+    ),
     icon: "layers",
   },
   {
-    day: "Antes del domingo",
-    title: "Cada equipo, preparado.",
-    text: "Los ministerios organizan su servicio. Cada siervo sabe dónde y cuándo le toca participar.",
+    day: translate("Antes del domingo"),
+    title: translate("Cada equipo, preparado."),
+    text: translate(
+      "Los ministerios organizan su servicio. Cada siervo sabe dónde y cuándo le toca participar.",
+    ),
     icon: "star",
   },
   {
-    day: "Durante el camino",
-    title: "Cada paso, acompañado.",
-    text: "Devocionales, formación y encuentros. Una comunidad que crece en la fe y camina junta.",
+    day: translate("Durante el camino"),
+    title: translate("Cada paso, acompañado."),
+    text: translate(
+      "Devocionales, formación y encuentros. Una comunidad que crece en la fe y camina junta.",
+    ),
     icon: "book",
   },
 ];
@@ -71,30 +78,41 @@ export default function Landing() {
     <div className="landing">
       <BrandEntrance />
       <a className="landing-skip" href="#contenido">
-        Ir al contenido
+        {translate("Ir al contenido")}
       </a>
       <header className="landing-header">
-        <nav className="landing-container landing-nav" aria-label="Principal">
+        <nav
+          className="landing-container landing-nav"
+          aria-label={translate("Principal")}
+        >
           <a
             className="landing-brand"
             href="#inicio"
-            aria-label="SHEEPLINK, inicio"
+            aria-label={translate("SHEEPLINK, inicio")}
           >
-            <img src={logoWhite} alt="SHEEPLINK" width="170" height="44" />
+            <img
+              src={logoWhite}
+              alt={translate("SHEEPLINK")}
+              width="170"
+              height="44"
+            />
           </a>
           <div className="landing-nav-links">
             {NAV.map((n) => (
-              <a key={n.href} href={n.href}>
+              <a key={n.href} href={localizedPath(n.href)}>
                 {n.label}
               </a>
             ))}
           </div>
           <div className="landing-nav-actions">
-            <a href={appPath("/login")} className="landing-login">
-              Iniciar sesión
+            <a
+              href={localizedPath(appPath("/login"))}
+              className="landing-login"
+            >
+              {translate("Iniciar sesión")}
             </a>
             <a
-              href={appPath(PRICING.registrationPath)}
+              href={localizedPath(appPath(PRICING.registrationPath))}
               className="landing-nav-trial"
             >
               {PRICING.navCta} <Icon name="arrow" size={16} />
@@ -102,7 +120,9 @@ export default function Landing() {
             <button
               type="button"
               className="landing-menu-toggle"
-              aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+              aria-label={
+                menuOpen ? translate("Cerrar menú") : translate("Abrir menú")
+              }
               aria-expanded={menuOpen}
               aria-controls="landing-mobile-menu"
               onClick={() => setMenuOpen(!menuOpen)}
@@ -127,15 +147,17 @@ export default function Landing() {
           <nav
             id="landing-mobile-menu"
             className="landing-mobile-menu"
-            aria-label="Menú móvil"
+            aria-label={translate("Menú móvil")}
             onClick={() => setMenuOpen(false)}
           >
             {NAV.map((n) => (
-              <a key={n.href} href={n.href}>
+              <a key={n.href} href={localizedPath(n.href)}>
                 {n.label}
               </a>
             ))}
-            <a href={appPath(PRICING.registrationPath)}>{PRICING.cta}</a>
+            <a href={localizedPath(appPath(PRICING.registrationPath))}>
+              {PRICING.cta}
+            </a>
           </nav>
         )}
       </header>
@@ -147,24 +169,24 @@ export default function Landing() {
           >
             <div className="landing-hero-copy">
               <p className="landing-hero-intro">
-                <span /> Tecnología al servicio de tu iglesia
+                <span /> {translate(" Tecnología al servicio de tu iglesia")}
               </p>
               <h1 id="hero-title">
-                Cada persona
+                {translate("Cada persona")}
                 <br />
-                cuenta.
+                {translate("cuenta.")}
               </h1>
               <p className="landing-hero-subtitle">
-                Una iglesia unida. Más tiempo para servir.
+                {translate("Una iglesia unida. Más tiempo para servir.")}
               </p>
               <p className="landing-hero-description">
-                SheepLink es el software de gestión para iglesias que reúne
-                células, asistencia, ministerios y escuela bíblica. Menos listas
-                sueltas, más tiempo para cuidar a tu comunidad.
+                {translate(
+                  "SheepLink es el software de gestión para iglesias que reúne células, asistencia, ministerios y escuela bíblica. Menos listas sueltas, más tiempo para cuidar a tu comunidad.",
+                )}
               </p>
               <div className="landing-hero-actions">
                 <MarketingButton
-                  href={appPath(PRICING.registrationPath)}
+                  href={localizedPath(appPath(PRICING.registrationPath))}
                   variant="light"
                   arrow
                 >
@@ -174,7 +196,7 @@ export default function Landing() {
                   <span className="landing-play">
                     <Icon name="play" size={16} />
                   </span>{" "}
-                  Explorar SHEEPLINK
+                  {translate("Explorar SHEEPLINK")}
                 </a>
               </div>
               <div className="landing-hero-foot">
@@ -187,12 +209,12 @@ export default function Landing() {
             </div>
           </section>
           <div className="landing-bridge landing-container">
-            <span>Una comunidad. Muchas manos para servir.</span>
+            <span>{translate("Una comunidad. Muchas manos para servir.")}</span>
             <a
               href="#funciones"
-              aria-label="Descubrir las funciones de SHEEPLINK"
+              aria-label={translate("Descubrir las funciones de SHEEPLINK")}
             >
-              <span>Descubre cómo</span>
+              <span>{translate("Descubre cómo")}</span>
               <span className="landing-scroll-arrow">↓</span>
             </a>
           </div>
@@ -204,22 +226,23 @@ export default function Landing() {
               <div className="landing-section-heading">
                 <div>
                   <p className="section-caption">
-                    Software de gestión para iglesias
+                    {translate("Software de gestión para iglesias")}
                   </p>
                   <h2>
-                    Todo se conecta.
+                    {translate("Todo se conecta.")}
                     <br />
-                    Nadie se pierde.
+                    {translate("Nadie se pierde.")}
                   </h2>
                 </div>
                 <p>
-                  La información que necesita tu equipo, en su lugar. Explora
-                  cómo se organiza el día a día de tu iglesia.{" "}
+                  {translate(
+                    "La información que necesita tu equipo, en su lugar. Explora cómo se organiza el día a día de tu iglesia.",
+                  )}{" "}
                   <a
                     className="landing-text-link"
-                    href="/software-para-iglesias"
+                    href={localizedPath("/software-para-iglesias")}
                   >
-                    Conoce qué ofrece SheepLink
+                    {translate("Conoce qué ofrece SheepLink")}
                   </a>
                 </p>
               </div>
@@ -233,13 +256,14 @@ export default function Landing() {
                   <img src={markWhite} alt="" width="48" height="48" />
                 </span>
                 <h2>
-                  La iglesia vive
+                  {translate("La iglesia vive")}
                   <br />
-                  más allá del domingo.
+                  {translate("más allá del domingo.")}
                 </h2>
                 <p>
-                  SHEEPLINK acompaña lo que sucede entre una reunión y la
-                  siguiente.
+                  {translate(
+                    "SHEEPLINK acompaña lo que sucede entre una reunión y la siguiente.",
+                  )}
                 </p>
               </div>
               <div className="landing-moments">
@@ -264,18 +288,23 @@ export default function Landing() {
             <div className="landing-container landing-get-started">
               <div className="landing-start-heading">
                 <p className="section-caption">
-                  Una forma más sencilla de organizarse
+                  {translate("Una forma más sencilla de organizarse")}
                 </p>
                 <h2>
-                  Empieza con
+                  {translate("Empieza con")}
                   <br />
-                  tu gente.
+                  {translate("tu gente.")}
                 </h2>
                 <p>
-                  No necesitas tenerlo todo ordenado para dar el primer paso.
+                  {translate(
+                    "No necesitas tenerlo todo ordenado para dar el primer paso.",
+                  )}
                 </p>
-                <MarketingButton href={appPath(PRICING.registrationPath)} arrow>
-                  Crear mi iglesia
+                <MarketingButton
+                  href={localizedPath(appPath(PRICING.registrationPath))}
+                  arrow
+                >
+                  {translate("Crear mi iglesia")}
                 </MarketingButton>
               </div>
               <ol className="landing-steps">
@@ -294,15 +323,18 @@ export default function Landing() {
           <section className="landing-roles-section">
             <div className="landing-container landing-roles">
               <div>
-                <p className="section-caption">Responsabilidades claras</p>
+                <p className="section-caption">
+                  {translate("Responsabilidades claras")}
+                </p>
                 <h2>
-                  Un mismo propósito.
+                  {translate("Un mismo propósito.")}
                   <br />
-                  Un lugar para cada uno.
+                  {translate("Un lugar para cada uno.")}
                 </h2>
                 <p>
-                  Cada persona puede tener varios roles y seguir siendo parte de
-                  su célula. Los permisos acompañan su responsabilidad.
+                  {translate(
+                    "Cada persona puede tener varios roles y seguir siendo parte de su célula. Los permisos acompañan su responsabilidad.",
+                  )}
                 </p>
               </div>
               <div className="landing-role-list">
@@ -325,19 +357,22 @@ export default function Landing() {
           >
             <div className="landing-container landing-faq-layout">
               <div>
-                <p className="section-caption">Estamos para ayudarte</p>
+                <p className="section-caption">
+                  {translate("Estamos para ayudarte")}
+                </p>
                 <h2>
-                  Conversemos
+                  {translate("Conversemos")}
                   <br />
-                  tus dudas.
+                  {translate("tus dudas.")}
                 </h2>
                 <a
-                  href={WHATSAPP_URL}
+                  href={localizedPath(WHATSAPP_URL)}
                   target="_blank"
                   rel="noreferrer"
                   className="landing-text-link"
                 >
-                  Escríbenos por WhatsApp <Icon name="arrow" size={18} />
+                  {translate("Escríbenos por WhatsApp ")}
+                  <Icon name="arrow" size={18} />
                 </a>
               </div>
               <div className="landing-faq-list">
@@ -363,12 +398,12 @@ export default function Landing() {
                 height="72"
               />
               <p>
-                Tu vocación es cuidar.
+                {translate("Tu vocación es cuidar.")}
                 <br />
-                Nosotros te ayudamos a organizar.
+                {translate("Nosotros te ayudamos a organizar.")}
               </p>
               <MarketingButton
-                href={appPath(PRICING.registrationPath)}
+                href={localizedPath(appPath(PRICING.registrationPath))}
                 variant="light"
                 arrow
               >
@@ -378,12 +413,12 @@ export default function Landing() {
                 {PRICING.disclosure}
               </small>
               <a
-                href={WHATSAPP_URL}
+                href={localizedPath(WHATSAPP_URL)}
                 className="landing-closing-contact"
                 target="_blank"
                 rel="noreferrer"
               >
-                Quiero conocer más
+                {translate("Quiero conocer más")}
               </a>
             </div>
           </section>
@@ -393,32 +428,48 @@ export default function Landing() {
         <div className="landing-container">
           <div className="landing-footer-top">
             <div>
-              <a href="#inicio" aria-label="SHEEPLINK, volver al inicio">
-                <img src={logoGreen} alt="SHEEPLINK" width="190" height="46" />
+              <a
+                href="#inicio"
+                aria-label={translate("SHEEPLINK, volver al inicio")}
+              >
+                <img
+                  src={logoGreen}
+                  alt={translate("SHEEPLINK")}
+                  width="190"
+                  height="46"
+                />
               </a>
               <p>
-                Personas, vocación y propósito.
+                {translate("Personas, vocación y propósito.")}
                 <br />
-                Tecnología al servicio de tu iglesia.
+                {translate("Tecnología al servicio de tu iglesia.")}
               </p>
             </div>
-            <nav aria-label="Enlaces del sitio">
+            <nav aria-label={translate("Enlaces del sitio")}>
               {NAV.map((n) => (
-                <a key={n.href} href={n.href}>
+                <a key={n.href} href={localizedPath(n.href)}>
                   {n.label}
                 </a>
               ))}
-              <a href={appPath("/devocionales/publicados")}>
-                Devocionales públicos
+              <a href={localizedPath(appPath("/devocionales/publicados"))}>
+                {translate("Devocionales públicos")}
               </a>
-              <a href={appPath("/login")}>Iniciar sesión</a>
-              <a href="/software-para-iglesias">Qué es SheepLink</a>
-              <a href="/blog">Blog para iglesias</a>
-              <a href={`mailto:${CONTACT_EMAIL}`}>Contacto por correo</a>
+              <a href={localizedPath(appPath("/login"))}>
+                {translate("Iniciar sesión")}
+              </a>
+              <a href={localizedPath("/software-para-iglesias")}>
+                {translate("Qué es SheepLink")}
+              </a>
+              <a href={localizedPath("/blog")}>
+                {translate("Blog para iglesias")}
+              </a>
+              <a href={localizedPath(`mailto:${CONTACT_EMAIL}`)}>
+                {translate("Contacto por correo")}
+              </a>
             </nav>
           </div>
           <div className="landing-footer-bottom">
-            <span>© 2026 SHEEPLINK</span>
+            <span>{translate("© 2026 SHEEPLINK")}</span>
             <LegalLinks />
           </div>
         </div>

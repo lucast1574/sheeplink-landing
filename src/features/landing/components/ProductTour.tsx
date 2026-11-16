@@ -1,57 +1,67 @@
+import { translate } from "../../../shared/i18n/index.ts";
 import { useState, type KeyboardEvent } from "react";
 import mark from "../../../assets/sheeplink-mark-white.svg";
 import { Icon } from "./LandingIcons";
 const modules = [
   {
     id: "cells",
-    name: "Células",
+    name: translate("Células"),
     icon: "layers",
-    title: "Conoce a cada persona.",
-    description:
+    title: translate("Conoce a cada persona."),
+    description: translate(
       "Registra asistencias, acompaña los devocionales y mantén cerca a tu célula.",
+    ),
   },
   {
     id: "service",
-    name: "Servicio",
+    name: translate("Servicio"),
     icon: "star",
-    title: "El domingo empieza con orden.",
-    description:
+    title: translate("El domingo empieza con orden."),
+    description: translate(
       "Un calendario compartido para saber quién sirve, dónde y a qué hora.",
+    ),
   },
   {
     id: "academy",
-    name: "Academia",
+    name: translate("Academia"),
     icon: "book",
-    title: "Un espacio para seguir creciendo.",
-    description:
+    title: translate("Un espacio para seguir creciendo."),
+    description: translate(
       "Cursos por grupos, materiales y un enlace de inscripción para compartir.",
+    ),
   },
   {
     id: "events",
-    name: "Actividades",
+    name: translate("Actividades"),
     icon: "home",
-    title: "Organiza lo que los reúne.",
-    description:
+    title: translate("Organiza lo que los reúne."),
+    description: translate(
       "Inscribe participantes y ordena los abonos, el presupuesto y los responsables.",
+    ),
   },
 ];
-const people = ["Alina Valnera", "Elio Naviel", "Nerea Solvén", "Iria Terván"];
+const people = [
+  translate("Alina Valnera"),
+  translate("Elio Naviel"),
+  translate("Nerea Solvén"),
+  translate("Iria Terván"),
+];
 function AttendancePreview() {
   const [present, setPresent] = useState([true, true, false, true]);
   return (
     <div className="tour-attendance">
       <div className="tour-panel-title">
         <div>
-          <small>Tu célula</small>
-          <h4>Esperanza</h4>
+          <small>{translate("Tu célula")}</small>
+          <h4>{translate("Esperanza")}</h4>
         </div>
         <span className="tour-tag">
-          {present.filter(Boolean).length} de 4 presentes
+          {present.filter(Boolean).length} {translate(" de 4 presentes")}
         </span>
       </div>
       <div className="tour-table-head">
-        <span>Integrante</span>
-        <span>Asistencia</span>
+        <span>{translate("Integrante")}</span>
+        <span>{translate("Asistencia")}</span>
       </div>
       {people.map((name, i) => (
         <div className="tour-person" key={name}>
@@ -69,17 +79,19 @@ function AttendancePreview() {
                 ? "tour-attendance-toggle checked"
                 : "tour-attendance-toggle"
             }
-            aria-label={`Asistencia de ${name}`}
+            aria-label={translate("Asistencia de {{p0}}", { p0: name })}
             aria-pressed={present[i]}
             onClick={() =>
               setPresent((p) => p.map((v, j) => (i === j ? !v : v)))
             }
           >
-            {present[i] ? <Icon name="check" size={16} /> : <span>—</span>}
+            {present[i] ? <Icon name={"check"} size={16} /> : <span>—</span>}
           </button>
         </div>
       ))}
-      <p className="tour-instruction">Prueba marcando la asistencia.</p>
+      <p className="tour-instruction">
+        {translate("Prueba marcando la asistencia.")}
+      </p>
     </div>
   );
 }
@@ -89,36 +101,40 @@ function ServicePreview() {
     <div>
       <div className="tour-panel-title">
         <div>
-          <small>Servicio del día</small>
-          <h4>{day === 0 ? "Domingo, 9:00" : "Miércoles, 19:00"}</h4>
+          <small>{translate("Servicio del día")}</small>
+          <h4>
+            {day === 0
+              ? translate("Domingo, 9:00")
+              : translate("Miércoles, 19:00")}
+          </h4>
         </div>
-        <Icon name="star" />
+        <Icon name={"star"} />
       </div>
-      <div className="tour-day-buttons" aria-label="Explorar días">
+      <div className="tour-day-buttons" aria-label={translate("Explorar días")}>
         <button
           type="button"
           aria-pressed={day === 0}
           onClick={() => setDay(0)}
         >
-          Domingo
+          {translate("Domingo")}
         </button>
         <button
           type="button"
           aria-pressed={day === 1}
           onClick={() => setDay(1)}
         >
-          Miércoles
+          {translate("Miércoles")}
         </button>
       </div>
       {(day === 0
         ? [
-            ["Alabanza", "Nerea S. y Elio N."],
-            ["Ujieres", "Alina V. y Gael O."],
-            ["Multimedia", "Iria T."],
+            [translate("Alabanza"), translate("Nerea S. y Elio N.")],
+            [translate("Ujieres"), translate("Alina V. y Gael O.")],
+            [translate("Multimedia"), translate("Iria T.")],
           ]
         : [
-            ["Alabanza", "Alina V."],
-            ["Ujieres", "Elio N."],
+            [translate("Alabanza"), translate("Alina V.")],
+            [translate("Ujieres"), translate("Elio N.")],
           ]
       ).map(([group, names]) => (
         <div className="tour-service-row" key={group}>
@@ -129,12 +145,12 @@ function ServicePreview() {
             <strong>{group}</strong>
             <small>{names}</small>
           </div>
-          <span className="tour-tag">Confirmado</span>
+          <span className="tour-tag">{translate("Confirmado")}</span>
         </div>
       ))}
       <div className="tour-note">
-        <Icon name="check" size={18} /> Cada siervo encuentra su turno en su
-        calendario.
+        <Icon name={"check"} size={18} />{" "}
+        {translate(" Cada siervo encuentra su turno en su calendario.")}
       </div>
     </div>
   );
@@ -144,15 +160,15 @@ function AcademyPreview() {
   return (
     <div>
       <div className="tour-course-art">
-        <Icon name="book" size={46} />
-        <span>Crecer en la Palabra</span>
+        <Icon name={"book"} size={46} />
+        <span>{translate("Crecer en la Palabra")}</span>
       </div>
       <div className="tour-panel-title">
         <div>
-          <small>Escuela bíblica</small>
-          <h4>Vida Abundante</h4>
+          <small>{translate("Escuela bíblica")}</small>
+          <h4>{translate("Vida Abundante")}</h4>
         </div>
-        <span className="tour-tag">2 grupos</span>
+        <span className="tour-tag">{translate("2 grupos")}</span>
       </div>
       <div className="tour-day-buttons">
         <button
@@ -160,21 +176,31 @@ function AcademyPreview() {
           aria-pressed={group === 0}
           onClick={() => setGroup(0)}
         >
-          Grupo de los martes
+          {translate("Grupo de los martes")}
         </button>
         <button
           type="button"
           aria-pressed={group === 1}
           onClick={() => setGroup(1)}
         >
-          Grupo de los sábados
+          {translate("Grupo de los sábados")}
         </button>
       </div>
       <div className="tour-course-detail">
-        <span>{group === 0 ? "Martes, 19:00" : "Sábado, 10:00"}</span>
-        <strong>{group === 0 ? "Clase en línea" : "Salón de formación"}</strong>
+        <span>
+          {group === 0
+            ? translate("Martes, 19:00")
+            : translate("Sábado, 10:00")}
+        </span>
+        <strong>
+          {group === 0
+            ? translate("Clase en línea")
+            : translate("Salón de formación")}
+        </strong>
         <small>
-          Materiales, asistencia y calificaciones en el mismo lugar.
+          {translate(
+            "Materiales, asistencia y calificaciones en el mismo lugar.",
+          )}
         </small>
       </div>
     </div>
@@ -190,31 +216,32 @@ function ActivityPreview() {
           <path d="M140 160L380 40 600 145V160" fill="#527e63" />
           <path d="M0 150Q150 90 350 140T600 125V160H0" fill="#285b45" />
         </svg>
-        <span>Nos encontramos para compartir.</span>
+        <span>{translate("Nos encontramos para compartir.")}</span>
       </div>
       <div className="tour-panel-title">
         <div>
-          <small>Retiro</small>
-          <h4>Encuentro de familias</h4>
+          <small>{translate("Retiro")}</small>
+          <h4>{translate("Encuentro de familias")}</h4>
         </div>
-        <span className="tour-tag">Inscripciones abiertas</span>
+        <span className="tour-tag">{translate("Inscripciones abiertas")}</span>
       </div>
       <div className="tour-finance">
         <div>
-          <small>Inscritos</small>
+          <small>{translate("Inscritos")}</small>
           <strong>24</strong>
         </div>
         <div>
-          <small>Abonos</small>
-          <strong>Por persona</strong>
+          <small>{translate("Abonos")}</small>
+          <strong>{translate("Por persona")}</strong>
         </div>
         <div>
-          <small>Presupuesto</small>
-          <strong>Organizado</strong>
+          <small>{translate("Presupuesto")}</small>
+          <strong>{translate("Organizado")}</strong>
         </div>
       </div>
       <div className="tour-note">
-        <Icon name="mail" size={18} /> Comparte el formulario con tu comunidad.
+        <Icon name={"mail"} size={18} />{" "}
+        {translate(" Comparte el formulario con tu comunidad.")}
       </div>
     </div>
   );
@@ -237,7 +264,11 @@ export function ProductTour() {
   };
   return (
     <div className="product-tour">
-      <div className="tour-tabs" role="tablist" aria-label="Explora SHEEPLINK">
+      <div
+        className="tour-tabs"
+        role="tablist"
+        aria-label={translate("Explora SHEEPLINK")}
+      >
         {modules.map((m, i) => (
           <button
             key={m.id}
@@ -277,9 +308,9 @@ export function ProductTour() {
                 <img src={mark} alt="" width="25" height="25" />
               </span>
               <span>
-                Más claridad para tu equipo.
+                {translate("Más claridad para tu equipo.")}
                 <br />
-                Más cercanía para tu iglesia.
+                {translate("Más cercanía para tu iglesia.")}
               </span>
             </div>
           </div>
@@ -288,8 +319,11 @@ export function ProductTour() {
               <span />
               <span />
               <span />
-              <p>SHEEPLINK / {module.name}</p>
-              <Icon name="shield" size={14} />
+              <p>
+                {translate("SHEEPLINK / ")}
+                {module.name}
+              </p>
+              <Icon name={"shield"} size={14} />
             </div>
             <div className="tour-window-body" key={module.id}>
               {index === 0 ? (

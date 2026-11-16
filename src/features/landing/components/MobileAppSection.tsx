@@ -1,3 +1,4 @@
+import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import { useEffect, useRef, useState } from "react";
 import { APP_STORE_URL, GOOGLE_PLAY_URL } from "../landing.content";
 import { Icon } from "./LandingIcons";
@@ -5,34 +6,40 @@ import "./mobile-app.css";
 
 const screens = [
   {
-    name: "Hoy",
+    name: translate("Hoy"),
     image: "hoy",
-    title: "Lo importante, a la mano.",
-    text: "Cumpleaños próximos y tus turnos de servicio, en un mismo lugar.",
-    note: "Tu próximo servicio",
-    detail: "Prepárate para servir con tu equipo.",
+    title: translate("Lo importante, a la mano."),
+    text: translate(
+      "Cumpleaños próximos y tus turnos de servicio, en un mismo lugar.",
+    ),
+    note: translate("Tu próximo servicio"),
+    detail: translate("Prepárate para servir con tu equipo."),
     icon: "star",
-    word: "sirve.",
+    word: translate("sirve."),
   },
   {
-    name: "Mi célula",
+    name: translate("Mi célula"),
     image: "celula",
-    title: "Cada persona cuenta.",
-    text: "Consulta a tu grupo y registra la asistencia de cada encuentro.",
-    note: "Cada encuentro cuenta",
-    detail: "Tu grupo y su asistencia, siempre cerca.",
+    title: translate("Cada persona cuenta."),
+    text: translate(
+      "Consulta a tu grupo y registra la asistencia de cada encuentro.",
+    ),
+    note: translate("Cada encuentro cuenta"),
+    detail: translate("Tu grupo y su asistencia, siempre cerca."),
     icon: "layers",
-    word: "conecta.",
+    word: translate("conecta."),
   },
   {
-    name: "Perfil",
+    name: translate("Perfil"),
     image: "perfil",
-    title: "Tu lugar en la comunidad.",
-    text: "Tus responsabilidades, ministerios y preferencias, siempre contigo.",
-    note: "Un lugar para ti",
-    detail: "Tu célula. Tus ministerios. Tu comunidad.",
+    title: translate("Tu lugar en la comunidad."),
+    text: translate(
+      "Tus responsabilidades, ministerios y preferencias, siempre contigo.",
+    ),
+    note: translate("Un lugar para ti"),
+    detail: translate("Tu célula. Tus ministerios. Tu comunidad."),
     icon: "user",
-    word: "pertenece.",
+    word: translate("pertenece."),
   },
 ];
 function StoreIcon({ apple }: { apple?: boolean }) {
@@ -108,53 +115,58 @@ export function MobileAppSection() {
       <div className="landing-container pocket-layout">
         <div className="pocket-copy">
           <h2 id="landing-app-title">
-            Tu comunidad.
+            {translate("Tu comunidad.")}
             <br />
-            En tu bolsillo.
+            {translate("En tu bolsillo.")}
           </h2>
           <p className="pocket-intro">
-            La app de SheepLink lleva tu iglesia contigo. Tu célula, los
-            cumpleaños y tus turnos de servicio, más cerca que nunca.
+            {translate(
+              "La app de SheepLink lleva tu iglesia contigo. Tu célula, los cumpleaños y tus turnos de servicio, más cerca que nunca.",
+            )}
           </p>
           <div className="pocket-stores">
             <a
               className="pocket-store"
-              href={APP_STORE_URL}
+              href={localizedPath(APP_STORE_URL)}
               target="_blank"
               rel="noreferrer"
-              aria-label="Descargar SheepLink en App Store"
+              aria-label={translate("Descargar SheepLink en App Store")}
             >
               <StoreIcon apple />
               <span>
-                <small>Descárgala en</small>
-                <strong>App Store</strong>
+                <small>{translate("Descárgala en")}</small>
+                <strong>{translate("App Store")}</strong>
               </span>
-              <Icon name="arrow" size={18} />
+              <Icon name={"arrow"} size={18} />
             </a>
             <a
               className="pocket-store pocket-store--android"
-              href={GOOGLE_PLAY_URL}
+              href={localizedPath(GOOGLE_PLAY_URL)}
               target="_blank"
               rel="noreferrer"
-              aria-label="Ver SheepLink en Google Play, lanzamiento en preparación"
+              aria-label={translate(
+                "Ver SheepLink en Google Play, lanzamiento en preparación",
+              )}
             >
               <StoreIcon />
               <span>
-                <small>Próximamente en</small>
-                <strong>Google Play</strong>
+                <small>{translate("Próximamente en")}</small>
+                <strong>{translate("Google Play")}</strong>
               </span>
-              <Icon name="arrow" size={18} />
+              <Icon name={"arrow"} size={18} />
             </a>
           </div>
           <p className="pocket-access">
-            Para entrar necesitas una cuenta activa de tu iglesia.
+            {translate(
+              "Para entrar necesitas una cuenta activa de tu iglesia.",
+            )}
             <br />
             iOS disponible · Android en preparación.
           </p>
           <div
             className="pocket-selector"
             role="tablist"
-            aria-label="Explora la app móvil"
+            aria-label={translate("Explora la app móvil")}
           >
             {screens.map((screen, i) => (
               <button
@@ -213,7 +225,7 @@ export function MobileAppSection() {
               width="28"
               height="28"
             />
-            <span>La iglesia va contigo.</span>
+            <span>{translate("La iglesia va contigo.")}</span>
           </div>
           <div className="pocket-device-scene">
             <div className="pocket-phone">
@@ -224,7 +236,10 @@ export function MobileAppSection() {
                   src={`/app/${screen.image}.webp`}
                   alt={
                     active === i
-                      ? `Pantalla real de SheepLink: ${screen.name}, con datos de demostración`
+                      ? translate(
+                          "Pantalla real de SheepLink: {{p0}}, con datos de demostración",
+                          { p0: screen.name },
+                        )
                       : ""
                   }
                   aria-hidden={active !== i}
@@ -242,18 +257,18 @@ export function MobileAppSection() {
               </div>
             </div>
             <div className="pocket-community" aria-hidden="true">
-              <span>LT</span>
-              <span>MC</span>
-              <span>AV</span>
+              <span>{translate("LT")}</span>
+              <span>{translate("MC")}</span>
+              <span>{translate("AV")}</span>
               <p>
-                Un mismo
+                {translate("Un mismo")}
                 <br />
-                <strong>propósito.</strong>
+                <strong>{translate("propósito.")}</strong>
               </p>
             </div>
           </div>
           <p className="pocket-caption">
-            Explora las pantallas reales de la app.
+            {translate("Explora las pantallas reales de la app.")}
           </p>
         </div>
       </div>

@@ -1,5 +1,11 @@
 # SHEEPLINK landing
 
+## Versiones de idioma
+
+La entrada sin prefijo detecta automáticamente la primera preferencia compatible del navegador y conserva query y hash al abrir `/es`, `/en` o `/pt`; español es el respaldo. No hay selector. Una URL con idioma explícito conserva su idioma. Se generan las seis páginas públicas en cada idioma, con contenido HTML, metadatos, canonical y alternates hreflang; las URL antiguas siguen sirviendo su HTML español. El blog conserva el contenido escrito por sus autores.
+
+`src/shared/i18n` contiene los catálogos y la resolución. Las frases españolas son las claves de `translate`; los parámetros usan `{{p0}}`. Los textos nuevos deben incorporarse a los tres catálogos. El prerender de cada idioma se ejecuta en un proceso separado para que los módulos de contenido se evalúen con el locale correspondiente. `localizedPath` conserva los enlaces internos dentro del idioma y deja intactos los destinos externos y los recursos.
+
 Sitio público independiente de la aplicación. Las rutas de registro e inicio de sesión apuntan al frontend; los documentos legales se publican aquí.
 
 `src/shared/config/seo.ts` centraliza las URL públicas y los metadatos de cada ruta. La compilación genera HTML para las cuatro páginas con React y el mismo árbol de rutas del navegador, además de sitemap, robots y datos estructurados. Nginx entrega esos archivos y devuelve 404 para rutas inexistentes. El navegador hidrata el contenido para conservar la navegación.
