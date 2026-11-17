@@ -1,7 +1,7 @@
 import { translate, localizedPath } from "../../../shared/i18n/index.ts";
 import { useState } from "react";
 import { appPath } from "../../../shared/config/sites";
-import { PLANS } from "../landing.content";
+import { PLANS, CAPACITY_COPY } from "../landing.content";
 import { pricingCopy } from "../pricing";
 import { Icon } from "./LandingIcons";
 import { MarketingButton } from "./MarketingButton";
@@ -107,6 +107,21 @@ export function PricingSection() {
         <p className="landing-billing-note">
           {pricingCopy(visiblePlans).terms}
         </p>
+        <aside
+          className="landing-capacity"
+          aria-labelledby="landing-capacity-title"
+        >
+          <h3 id="landing-capacity-title">
+            {translate("¿Tu iglesia tiene 1.500 integrantes?")}
+          </h3>
+          <p>{CAPACITY_COPY}</p>
+          <a
+            className="landing-text-link"
+            href={localizedPath("/software-para-iglesias#datos")}
+          >
+            {translate("Consulta migración, exportaciones y permisos")}
+          </a>
+        </aside>
       </div>
     </section>
   );

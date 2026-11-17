@@ -161,7 +161,9 @@ export function MobileAppSection() {
               "Para entrar necesitas una cuenta activa de tu iglesia.",
             )}
             <br />
-            {translate("iOS disponible · Android: APK por envío · Google Play próximamente.")}
+            {translate(
+              "iOS disponible · Android: APK por envío · Google Play próximamente.",
+            )}
           </p>
           <div
             className="pocket-selector"

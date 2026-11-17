@@ -1,5 +1,5 @@
 import { translate } from "../../shared/i18n/index.ts";
-import { pricingCopy, priceLabel } from "./pricing";
+import { pricingCopy, priceLabel, capacityCopy } from "./pricing";
 import BILLING_CATALOG from "./billing-catalog.generated.json";
 export const CONTACT_EMAIL = "krecarfaz@gmail.com";
 export const WHATSAPP_URL =
@@ -83,6 +83,13 @@ export const PLANS = BILLING_CATALOG.map((p) => ({
   ],
 }));
 export const PRICING = pricingCopy(BILLING_CATALOG);
+export const CAPACITY_COPY = capacityCopy(BILLING_CATALOG);
+export const MIGRATION_COPY = translate(
+  "La importación masiva de integrantes desde Excel o CSV todavía no está disponible. Actualmente los integrantes se registran desde la plataforma. Si vas a migrar una base de datos, consulta el alcance y los pasos con soporte antes de contratar.",
+);
+export const EXPORTS_COPY = translate(
+  "Sí. Tesorería exporta movimientos en CSV y el reporte mensual de diezmos en Excel. Academia Bíblica exporta sus reportes en Excel y las actividades permiten descargar la lista de inscritos en CSV. Estas exportaciones dependen de tus permisos y no equivalen a una copia completa de la base de datos.",
+);
 export const FAQ = [
   {
     q: translate("¿En qué idiomas está disponible SheepLink?"),
@@ -103,7 +110,9 @@ export const FAQ = [
     ),
   },
   {
-    q: translate("¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?"),
+    q: translate(
+      "¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?",
+    ),
     a: translate(
       "Sí. Organiza ministerios y turnos de servicio, planifica cultos y fechas importantes en el calendario de la iglesia, y coordina actividades, cursos y sus inscripciones.",
     ),
@@ -116,26 +125,40 @@ export const FAQ = [
   },
   {
     q: translate("¿Puedo importar miembros desde Excel o CSV?"),
-    a: translate(
-      "Sí. Puedes importar integrantes en grupo desde archivos Excel o CSV para agilizar la puesta en marcha.",
-    ),
+    a: MIGRATION_COPY,
   },
   {
-    q: translate("¿SheepLink funciona para iglesias grandes?"),
-    a: translate(
-      "SheepLink está diseñado para organizar iglesias de distintos tamaños. Los límites de integrantes, células, ministerios y usuarios dependen del plan elegido.",
-    ),
+    q: translate("¿SheepLink sirve para una iglesia de 1.500 integrantes?"),
+    a: CAPACITY_COPY,
+  },
+  {
+    q: translate("¿Puedo exportar información de mi iglesia?"),
+    a: EXPORTS_COPY,
   },
   {
     q: translate("¿Cómo se protegen los datos y permisos?"),
     a: translate(
-      "El acceso se organiza por roles. Cada usuario puede consultar y gestionar las funciones que corresponden a su responsabilidad en la iglesia.",
+      "Cada persona usa una cuenta propia. El líder de célula accede a las células que tiene asignadas; los líderes de zona y sector trabajan dentro de su ámbito. Tesorería tiene permisos específicos de lectura, gestión y acceso. Los datos se separan por iglesia y las acciones se validan en el servidor.",
     ),
   },
   {
     q: translate("¿Qué soporte técnico ofrecen?"),
     a: translate(
       "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.",
+    ),
+  },
+  {
+    q: translate(
+      "¿Puedo registrar la llegada de participantes a una actividad?",
+    ),
+    a: translate(
+      "Sí. Las actividades y retiros permiten gestionar inscripciones y marcar la llegada de sus participantes. Este check-in corresponde al evento; no es un sistema de entrega y recogida infantil con impresión de etiquetas o códigos.",
+    ),
+  },
+  {
+    q: translate("¿Cómo organizo varios cultos o sedes?"),
+    a: translate(
+      "Puedes programar distintos cultos y fechas en el calendario, y coordinar ministerios y turnos de servicio. La estructura de una iglesia se organiza en sectores, zonas y células. Si necesitas campus con administración y contabilidad independientes, confirma ese alcance con soporte antes de contratar.",
     ),
   },
   {

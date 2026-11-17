@@ -90,9 +90,13 @@ export function structuredData(path: string, localized = false) {
         translate("Devocionales de iglesia y célula"),
         translate("Tesorería e inventario"),
         translate("Programación y seguimiento pastoral"),
-        translate("Importación de integrantes desde Excel y CSV"),
+        translate(
+          "Exportaciones CSV y Excel de tesorería, academia y actividades",
+        ),
         translate("Acceso protegido con permisos por roles"),
-        translate("Soporte técnico 24/7 con solución en menos de 4 horas"),
+        translate(
+          "Soporte técnico 24/7 con objetivo de solución en menos de 4 horas",
+        ),
         translate("Tres idiomas automáticos"),
       ],
       publisher: { "@id": SITE_URL + "/#organization" },

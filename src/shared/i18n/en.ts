@@ -1,20 +1,12 @@
 export default {
-  "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.":
-    "Manage members, services, finances and inventory. Import from Excel or CSV, assign role-based access, and get 24/7 support with issues resolved in under 4 hours.",
   "Software para iglesias: funciones y app | SheepLink":
     "Church management software: features and app | SheepLink",
-  "Software para iglesias: cultos, tesorería e inventario. Importa miembros de Excel o CSV. Permisos por roles y soporte 24/7 con solución en menos de 4 h.":
-    "Church software for services, finances and inventory. Import members from Excel or CSV. Role-based permissions and 24/7 support with issues resolved in under 4 hours.",
   "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.":
     "An app for church members and leaders: birthdays, service shifts, small groups, attendance and profiles. An active church account is required. Available for iPhone; Android APK by request, with Google Play coming soon.",
   "Calendario de cultos y fechas de la iglesia":
     "Church services and important dates calendar",
-  "Importación de integrantes desde Excel y CSV":
-    "Member import from Excel and CSV",
   "Acceso protegido con permisos por roles":
     "Access protected by role-based permissions",
-  "Soporte técnico 24/7 con solución en menos de 4 horas":
-    "24/7 technical support with issues resolved in under four hours",
   "SheepLink para Android: APK disponible por envío, Google Play próximamente":
     "SheepLink for Android: APK available by request, Google Play coming soon",
   "iOS disponible · Android: APK por envío · Google Play próximamente.":
@@ -29,8 +21,6 @@ export default {
     "Yes. Record contributions, tithes, expenses and fundraising, review transactions and reports, and track church assets, loans and inventory.",
   "¿Puedo importar miembros desde Excel o CSV?":
     "Can I import members from Excel or CSV?",
-  "Sí. Puedes importar integrantes en grupo desde archivos Excel o CSV para agilizar la puesta en marcha.":
-    "Yes. Import members in bulk from Excel or CSV files to get started faster.",
   "¿SheepLink funciona para iglesias grandes?":
     "Can SheepLink support large churches?",
   "SheepLink está diseñado para organizar iglesias de distintos tamaños. Los límites de integrantes, células, ministerios y usuarios dependen del plan elegido.":
@@ -84,7 +74,6 @@ export default {
   mensual: "monthly",
   "SheepLink: tecnología al servicio de tu iglesia.":
     "SheepLink: technology serving your church.",
-
   "Contactar soporte": "Contact support",
   "Abrir WhatsApp": "Open WhatsApp",
   "¡Hola! Soy el asistente de SHEEPLINK. Puedo orientarte sobre Dashboard, Mi espacio, mensajes, comunidad, organización, formación, actividades, planes y uso desde el celular. Si encuentras un bug o error, te indico cómo contactar soporte. ¿Qué necesitas saber?":
@@ -1788,4 +1777,55 @@ export default {
   Guardar: "Save",
   Cancelar: "Cancel",
   "SHEEPLINK / ": "SHEEPLINK / ",
+  "Software para iglesias con células, cultos, tesorería, inventario y app en tres idiomas. Consulta precios, capacidad, permisos y exportaciones sin registro.":
+    "Church software with small groups, services, finances, inventory and an app in three languages. See pricing, capacity, permissions and exports without signing up.",
+  "Conoce SheepLink: planes para 1.500 integrantes, diezmos, ofrendas, reportes, exportaciones y permisos por rol. Funciones y alcance actual sin registro.":
+    "Explore SheepLink: plans for 1,500 members, tithes, offerings, reports, exports and role-based access. Read about current features without signing up.",
+  "Registra diezmos, ofrendas, recaudaciones, ingresos y gastos por cuenta y categoría, en soles o dólares. Consulta movimientos, aportes por integrante y reportes mensuales. Exporta los movimientos en CSV y el reporte mensual de diezmos en Excel. El presupuesto de actividades se gestiona junto con cada evento.":
+    "Record tithes, offerings, fundraising, income and expenses by account and category, in Peruvian soles or US dollars. View transactions, member contributions and monthly reports. Export transactions to CSV and monthly tithe reports to Excel. Activity budgets are managed within each event.",
+  "Tesorería y finanzas": "Treasury and finances",
+  "Inventario y préstamos": "Inventory and loans",
+  "Lleva el registro de los bienes de la iglesia, su estado y sus préstamos. Registra reparaciones, costos y bajas para conservar el historial de cada bien. Los costos de reparación pueden quedar pendientes de registro en Tesorería.":
+    "Keep records of church assets, their condition and loans. Record repairs, costs and retirements to maintain each asset’s history. Repair costs can be left pending for posting in Treasury.",
+  "Migración y exportaciones": "Migration and exports",
+  "La importación masiva de integrantes desde Excel o CSV todavía no está disponible. Actualmente los integrantes se registran desde la plataforma. Si vas a migrar una base de datos, consulta el alcance y los pasos con soporte antes de contratar.":
+    "Bulk member import from Excel or CSV is not available yet. Members are currently registered through the platform. If you are migrating a database, discuss the scope and steps with support before subscribing.",
+  "Sí. Tesorería exporta movimientos en CSV y el reporte mensual de diezmos en Excel. Academia Bíblica exporta sus reportes en Excel y las actividades permiten descargar la lista de inscritos en CSV. Estas exportaciones dependen de tus permisos y no equivalen a una copia completa de la base de datos.":
+    "Yes. Treasury exports transactions to CSV and monthly tithe reports to Excel. Bible Academy exports its reports to Excel, and activities let you download registration lists as CSV. These exports depend on your permissions and are not a complete database backup.",
+  "Administra cursos, períodos académicos, inscripciones, alumnos y materiales de formación. Registra asistencia y calificaciones, consulta reportes y descárgalos en Excel. Los responsables acceden según sus cursos y permisos.":
+    "Manage courses, academic terms, enrollments, students and learning materials. Record attendance and grades, review reports and download them in Excel. Staff access depends on their assigned courses and permissions.",
+  "Organiza retiros y actividades con formularios de inscripción, participantes, responsables, tareas, abonos y presupuesto. Marca la llegada de los inscritos y descarga su lista en CSV. Comparte devocionales de iglesia y célula para acompañar a tu comunidad durante la semana.":
+    "Organize retreats and activities with registration forms, participants, coordinators, tasks, payments and budgets. Mark registered participants as arrived and download their list as CSV. Share church and small-group devotionals to support your community throughout the week.",
+  "Cada persona usa una cuenta propia. El líder de célula accede a las células que tiene asignadas; los líderes de zona y sector trabajan dentro de su ámbito. Tesorería tiene permisos específicos de lectura, gestión y acceso. Los datos se separan por iglesia y las acciones se validan en el servidor.":
+    "Each person uses their own account. Small-group leaders access the groups assigned to them; zone and sector leaders work within their assigned scope. Treasury has specific permissions for reading, managing and granting access. Data is separated by church, and actions are validated on the server.",
+  "Exportaciones CSV y Excel de tesorería, academia y actividades":
+    "CSV and Excel exports for treasury, academy and activities",
+  "Soporte técnico 24/7 con objetivo de solución en menos de 4 horas":
+    "24/7 technical support targeting resolution in under 4 hours",
+  "Consulta los planes vigentes para confirmar la capacidad que necesita tu iglesia.":
+    "Check current plans to confirm the capacity your church needs.",
+  "Para {{p0}} integrantes, {{p1}} cuesta {{p2}} al mes. {{p3}}{{p4}}":
+    "For {{p0}} members, {{p1}} costs {{p2}} per month. {{p3}}{{p4}}",
+  "La modalidad anual cuesta {{p0}} por año, en un solo cobro. ":
+    "Annual billing costs {{p0}} per year, charged as a single payment. ",
+  "Este plan no tiene límite de integrantes: crecer a 2.000 o 3.000 personas no cambia su tarifa por cantidad de integrantes. Los importes y condiciones vigentes se muestran al contratar.":
+    "This plan has no member limit: growing to 2,000 or 3,000 people does not change its price based on member count. Current prices and terms are shown at checkout.",
+  "Incluye hasta {{p0}} integrantes; si tu iglesia supera ese límite, necesitarás un plan con más capacidad.":
+    "It includes up to {{p0}} members; if your church exceeds that limit, you will need a plan with more capacity.",
+  "¿Tu iglesia tiene 1.500 integrantes?":
+    "Does your church have 1,500 members?",
+  "Consulta migración, exportaciones y permisos":
+    "Read about migration, exports and permissions",
+  "¿SheepLink sirve para una iglesia de 1.500 integrantes?":
+    "Can SheepLink serve a church with 1,500 members?",
+  "¿Puedo exportar información de mi iglesia?":
+    "Can I export my church’s information?",
+  "¿Puedo registrar la llegada de participantes a una actividad?":
+    "Can I check participants in to an activity?",
+  "Sí. Las actividades y retiros permiten gestionar inscripciones y marcar la llegada de sus participantes. Este check-in corresponde al evento; no es un sistema de entrega y recogida infantil con impresión de etiquetas o códigos.":
+    "Yes. Activities and retreats let you manage registrations and mark participants as arrived. This check-in is for the event; it is not a child drop-off and pickup system with printed labels or codes.",
+  "¿Cómo organizo varios cultos o sedes?":
+    "How do I organize multiple services or locations?",
+  "Puedes programar distintos cultos y fechas en el calendario, y coordinar ministerios y turnos de servicio. La estructura de una iglesia se organiza en sectores, zonas y células. Si necesitas campus con administración y contabilidad independientes, confirma ese alcance con soporte antes de contratar.":
+    "You can schedule different services and dates in the calendar, and coordinate ministries and service shifts. A church is organized into sectors, zones and small groups. If you need campuses with independent administration and accounting, confirm that scope with support before subscribing.",
 };
