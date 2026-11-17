@@ -1,4 +1,4 @@
-import { translate } from "../../shared/i18n/index.ts";
+import { translate, locale } from "../../shared/i18n/index.ts";
 export interface PublicPlan {
   id: string;
   name: string;
@@ -14,6 +14,45 @@ export interface PublicPlan {
 }
 export const priceLabel = (plan: PublicPlan) =>
   `US$${(plan.amount / 100).toLocaleString(translate("en-US"), { maximumFractionDigits: 2 })}`;
+/** Capacity and prices come from the public catalog used by checkout. */
+export function capacityCopy(plans: readonly PublicPlan[], members = 1500) {
+  const fits = (plan: PublicPlan) =>
+    plan.maxMembers === null || plan.maxMembers >= members;
+  const monthly = plans
+    .filter((plan) => plan.interval !== "year" && fits(plan))
+    .sort((a, b) => a.amount - b.amount)[0];
+  if (!monthly)
+    return translate(
+      "Consulta los planes vigentes para confirmar la capacidad que necesita tu iglesia.",
+    );
+  const annual = plans.find(
+    (plan) =>
+      plan.interval === "year" && plan.name === monthly.name && fits(plan),
+  );
+  return translate(
+    "Para {{p0}} integrantes, {{p1}} cuesta {{p2}} al mes. {{p3}}{{p4}}",
+    {
+      p0: members.toLocaleString(locale),
+      p1: monthly.name,
+      p2: priceLabel(monthly),
+      p3: annual
+        ? translate(
+            "La modalidad anual cuesta {{p0}} por año, en un solo cobro. ",
+            { p0: priceLabel(annual) },
+          )
+        : "",
+      p4:
+        monthly.maxMembers === null
+          ? translate(
+              "Este plan no tiene límite de integrantes: crecer a 2.000 o 3.000 personas no cambia su tarifa por cantidad de integrantes. Los importes y condiciones vigentes se muestran al contratar.",
+            )
+          : translate(
+              "Incluye hasta {{p0}} integrantes; si tu iglesia supera ese límite, necesitarás un plan con más capacidad.",
+              { p0: monthly.maxMembers.toLocaleString(locale) },
+            ),
+    },
+  );
+}
 export function pricingCopy(plans: readonly PublicPlan[]) {
   const trial = plans.find((p) => p.interval !== "year" && p.trialDays > 0);
   const first = trial ?? plans[0];

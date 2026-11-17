@@ -1,6 +1,7 @@
 import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import SiteRoutes from "../src/SiteRoutes";
+import ChatbotWidget from "../src/features/chatbot/ChatbotWidget";
 import { language, localizedPath } from "../src/shared/i18n/index";
 export {
   PUBLIC_PAGES,
@@ -18,6 +19,7 @@ export function renderPage(path: string, localized = false) {
       location={localized ? localizedPath(path) : path}
     >
       <SiteRoutes />
+      <ChatbotWidget />
     </StaticRouter>,
   );
 }

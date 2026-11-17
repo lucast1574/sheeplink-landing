@@ -1,5 +1,11 @@
 import { translate, localizedPath } from "../../../shared/i18n/index.ts";
-import { PRICING, FAQ } from "../landing.content";
+import {
+  PRICING,
+  FAQ,
+  CAPACITY_COPY,
+  MIGRATION_COPY,
+  EXPORTS_COPY,
+} from "../landing.content";
 import { appPath } from "../../../shared/config/sites";
 import { LegalLinks } from "../../legal/LegalLinks";
 import "../landing.css";
@@ -7,10 +13,19 @@ import "./product-guide.css";
 
 const capabilities = [
   {
-    id: "administracion",
-    title: translate("Tesorería e inventario"),
+    id: "inventario",
+    title: translate("Inventario y préstamos"),
     text: translate(
-      "Organiza las cuentas, los ingresos, los gastos y los reportes de tesorería. Gestiona el inventario de la iglesia, los préstamos y el estado de los bienes. Los permisos de cada cuenta determinan el acceso a estas herramientas.",
+      "Lleva el registro de los bienes de la iglesia, su estado y sus préstamos. Registra reparaciones, costos y bajas para conservar el historial de cada bien. Los costos de reparación pueden quedar pendientes de registro en Tesorería.",
+    ),
+    link: translate("Conocer la plataforma web"),
+    href: "/#funciones",
+  },
+  {
+    id: "administracion",
+    title: translate("Tesorería y finanzas"),
+    text: translate(
+      "Registra diezmos, ofrendas, recaudaciones, ingresos y gastos por cuenta y categoría, en soles o dólares. Consulta movimientos, aportes por integrante y reportes mensuales. Exporta los movimientos en CSV y el reporte mensual de diezmos en Excel. El presupuesto de actividades se gestiona junto con cada evento.",
     ),
     link: translate("Conocer la plataforma web"),
     href: "/#funciones",
@@ -64,7 +79,7 @@ const capabilities = [
     id: "formacion",
     title: translate("Escuela bíblica"),
     text: translate(
-      "La plataforma web reúne cursos y materiales para acompañar la formación de la iglesia. La escuela bíblica forma parte del mismo sistema que las células y los ministerios, para que el equipo pueda organizar tanto el servicio como el aprendizaje.",
+      "Administra cursos, períodos académicos, inscripciones, alumnos y materiales de formación. Registra asistencia y calificaciones, consulta reportes y descárgalos en Excel. Los responsables acceden según sus cursos y permisos.",
     ),
     link: translate("Conocer la plataforma web"),
     href: "/#funciones",
@@ -73,7 +88,7 @@ const capabilities = [
     id: "comunidad",
     title: translate("Actividades y devocionales"),
     text: translate(
-      "Organiza actividades con inscripciones y presupuesto, y comparte devocionales de iglesia y célula. SheepLink acompaña tanto la preparación de los encuentros como el contenido que la comunidad consulta durante la semana.",
+      "Organiza retiros y actividades con formularios de inscripción, participantes, responsables, tareas, abonos y presupuesto. Marca la llegada de los inscritos y descarga su lista en CSV. Comparte devocionales de iglesia y célula para acompañar a tu comunidad durante la semana.",
     ),
     link: translate("Leer devocionales públicos"),
     href: appPath("/devocionales/publicados"),
@@ -140,6 +155,7 @@ export default function ProductGuide() {
               {c.title}
             </a>
           ))}
+          <a href="#datos">{translate("Migración y exportaciones")}</a>
           <a href="#app">{translate("App móvil")}</a>
         </nav>
         {capabilities.map((c) => (
@@ -153,6 +169,13 @@ export default function ProductGuide() {
             </div>
           </section>
         ))}
+        <section className="guide-chapter" id="datos">
+          <h2>{translate("Migración y exportaciones")}</h2>
+          <div>
+            <p>{MIGRATION_COPY}</p>
+            <p>{EXPORTS_COPY}</p>
+          </div>
+        </section>
         <section className="guide-chapter" id="app">
           <h2>{translate("Tu iglesia en el celular.")}</h2>
           <div>
@@ -179,7 +202,7 @@ export default function ProductGuide() {
           <div>
             <p>
               {translate(
-                "El pastor principal tiene una visión de toda la iglesia. Los líderes de zona acompañan a sus células; los líderes de célula registran integrantes y asistencia; los líderes de ministerio organizan el servicio. Una misma persona puede tener varios roles.",
+                "Cada persona usa una cuenta propia. El líder de célula accede a las células que tiene asignadas; los líderes de zona y sector trabajan dentro de su ámbito. Tesorería tiene permisos específicos de lectura, gestión y acceso. Los datos se separan por iglesia y las acciones se validan en el servidor.",
               )}
             </p>
             <p>
@@ -195,7 +218,7 @@ export default function ProductGuide() {
             </a>
           </div>
         </section>
-        <section className="guide-chapter">
+        <section className="guide-chapter" id="capacidad">
           <h2>{translate("Planes para tu comunidad.")}</h2>
           <div>
             <p>
@@ -203,6 +226,7 @@ export default function ProductGuide() {
                 "Los planes mensuales y anuales se muestran en dólares estadounidenses y varían según los límites de integrantes, células, ministerios y cuentas de usuario. Consulta los precios y condiciones vigentes antes de registrar tu iglesia.",
               )}
             </p>
+            <p>{CAPACITY_COPY}</p>
             <p>
               {PRICING.disclosure} {PRICING.cancellation}
             </p>

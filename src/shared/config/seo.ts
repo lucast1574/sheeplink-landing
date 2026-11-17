@@ -23,14 +23,14 @@ export const PUBLIC_PAGES = [
     path: "/",
     title: translate("SheepLink | Software de gestión para iglesias"),
     description: translate(
-      "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.",
+      "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.",
     ),
   },
   {
     path: "/software-para-iglesias",
     title: translate("Software para iglesias: funciones y app | SheepLink"),
     description: translate(
-      "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.",
+      "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.",
     ),
   },
   {
