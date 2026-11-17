@@ -149,7 +149,7 @@ export default function ProductGuide() {
           <div>
             <p>
               {translate(
-                "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.",
+                "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.",
               )}
             </p>
             <p>

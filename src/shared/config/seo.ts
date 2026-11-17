@@ -21,16 +21,16 @@ export const pageAlternates = (path: string) => [
 export const PUBLIC_PAGES = [
   {
     path: "/",
-    title: translate("SheepLink | Software para iglesias y app multilingüe"),
+    title: translate("SheepLink | Software de gestión para iglesias"),
     description: translate(
-      "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.",
+      "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.",
     ),
   },
   {
     path: "/software-para-iglesias",
-    title: translate("SheepLink: funciones, idiomas y app para tu iglesia"),
+    title: translate("Software para iglesias: funciones y app | SheepLink"),
     description: translate(
-      "Conoce las funciones de SheepLink: seguimiento pastoral, programación, cursos, tesorería, inventario y app móvil. Tres idiomas automáticos para tu iglesia.",
+      "Software para iglesias: cultos, tesorería e inventario. Importa miembros de Excel o CSV. Permisos por roles y soporte 24/7 con solución en menos de 4 h.",
     ),
   },
   {

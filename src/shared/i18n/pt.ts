@@ -1,4 +1,49 @@
 export default {
+  "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.":
+    "Gerencie membros, cultos, tesouraria e inventário. Importe do Excel ou CSV, defina permissões por função e conte com suporte 24/7 com solução em menos de quatro horas.",
+  "Software para iglesias: funciones y app | SheepLink":
+    "Software para igrejas: recursos e app | SheepLink",
+  "Software para iglesias: cultos, tesorería e inventario. Importa miembros de Excel o CSV. Permisos por roles y soporte 24/7 con solución en menos de 4 h.":
+    "Software para igrejas: cultos, tesouraria e inventário. Importe membros do Excel ou CSV. Permissões por função e suporte 24/7 com solução em menos de quatro horas.",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.":
+    "App para membros e líderes de igrejas: aniversários, escalas, células, presença e perfil. Requer uma conta ativa da igreja. Disponível para iPhone; APK para Android por envio e Google Play em breve.",
+  "Calendario de cultos y fechas de la iglesia":
+    "Calendário de cultos e datas importantes da igreja",
+  "Importación de integrantes desde Excel y CSV":
+    "Importação de membros do Excel e CSV",
+  "Acceso protegido con permisos por roles":
+    "Acesso protegido por permissões de função",
+  "Soporte técnico 24/7 con solución en menos de 4 horas":
+    "Suporte técnico 24/7 com solução em menos de quatro horas",
+  "SheepLink para Android: APK disponible por envío, Google Play próximamente":
+    "SheepLink para Android: APK disponível por solicitação; Google Play em breve",
+  "iOS disponible · Android: APK por envío · Google Play próximamente.":
+    "iOS disponível · APK para Android por solicitação · Google Play em breve.",
+  "¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?":
+    "O SheepLink permite organizar ministérios, cultos e datas da igreja?",
+  "Sí. Organiza ministerios y turnos de servicio, planifica cultos y fechas importantes en el calendario de la iglesia, y coordina actividades, cursos y sus inscripciones.":
+    "Sim. Organize ministérios e escalas de serviço, planeje cultos e datas importantes no calendário da igreja e coordene atividades, cursos e inscrições.",
+  "¿Puedo gestionar tesorería, finanzas e inventario?":
+    "Posso gerenciar finanças e inventário da igreja?",
+  "Sí. Registra aportes, diezmos, gastos y recaudaciones, consulta movimientos y reportes, y lleva el control de los bienes, préstamos e inventario de la iglesia.":
+    "Sim. Registre contribuições, dízimos, despesas e arrecadações, consulte movimentações e relatórios e controle bens, empréstimos e inventário da igreja.",
+  "¿Puedo importar miembros desde Excel o CSV?":
+    "Posso importar membros do Excel ou CSV?",
+  "Sí. Puedes importar integrantes en grupo desde archivos Excel o CSV para agilizar la puesta en marcha.":
+    "Sim. Importe membros em lote de arquivos Excel ou CSV para agilizar o início do uso.",
+  "¿SheepLink funciona para iglesias grandes?":
+    "O SheepLink atende igrejas grandes?",
+  "SheepLink está diseñado para organizar iglesias de distintos tamaños. Los límites de integrantes, células, ministerios y usuarios dependen del plan elegido.":
+    "O SheepLink foi desenvolvido para organizar igrejas de diferentes tamanhos. Os limites de membros, células, ministérios e usuários dependem do plano escolhido.",
+  "¿Cómo se protegen los datos y permisos?":
+    "Como os dados e acessos são protegidos?",
+  "El acceso se organiza por roles. Cada usuario puede consultar y gestionar las funciones que corresponden a su responsabilidad en la iglesia.":
+    "O acesso é organizado por funções. Cada usuário pode consultar e gerenciar os recursos relacionados às suas responsabilidades na igreja.",
+  "¿Qué soporte técnico ofrecen?": "Que suporte técnico vocês oferecem?",
+  "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.":
+    "O suporte técnico está disponível 24 horas por dia. Atendemos às solicitações e buscamos resolvê-las em menos de quatro horas.",
+  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.":
+    "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store. No Android, solicite o APK por mensagem enquanto preparamos a chegada ao Google Play. É necessária uma conta ativa da sua igreja para entrar.",
   "SheepLink | Software para iglesias y app multilingüe":
     "SheepLink | Software para igrejas e app multilíngue",
   "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.":
@@ -10,7 +55,7 @@ export default {
   "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
     "SheepLink é um software de gestão de igrejas em português, espanhol e inglês. Reúne membros, células, presença, ministérios, escola bíblica, atividades e devocionais em uma plataforma web.",
   "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
-    "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store e o Android está em testes fechados. Para entrar no app, você precisa de uma conta ativa da sua igreja.",
+    "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store. No Android, solicite o APK por mensagem enquanto preparamos a chegada ao Google Play. É necessária uma conta ativa da sua igreja para entrar.",
   "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
     "A plataforma, o app e este site detectam automaticamente o idioma do navegador ou dispositivo: português, espanhol ou inglês. Para idiomas não compatíveis, o conteúdo aparece em espanhol. Não é preciso configurar um seletor de idioma.",
   "¿En qué idiomas está disponible SheepLink?":
@@ -24,18 +69,18 @@ export default {
     "Consulte a programação da igreja e coordene as responsabilidades da equipe. Os pastores podem selecionar a célula que acompanham para consultar suas informações e acompanhar a comunidade.",
   "Tres idiomas automáticos": "Três idiomas automáticos",
   "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
-    "O app SheepLink reúne aniversários, escalas, célula, presença e perfil, conforme suas permissões. É necessária uma conta ativa da sua igreja. iPhone está disponível na App Store; Android está em testes fechados. As atualizações das lojas podem chegar em datas diferentes.",
+    "O app SheepLink reúne aniversários, escalas, célula, presença e perfil, conforme suas permissões. É necessária uma conta ativa da sua igreja. iPhone está disponível na App Store; solicite o APK para Android por mensagem. Google Play em breve.",
   "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":
     "A plataforma web também funciona no navegador do celular e reúne cursos, materiais, atividades, orçamento, tesouraria e inventário. Os recursos disponíveis no app dependem das permissões e da versão instalada.",
   "iOS disponible · Android en pruebas cerradas.":
-    "iOS disponível · Android em testes fechados.",
+    "iOS disponível · APK para Android por solicitação · Google Play em breve.",
   "SheepLink para Android: pruebas cerradas, aún sin descarga pública":
-    "SheepLink para Android: testes fechados, ainda sem download público",
+    "SheepLink para Android: APK disponível por solicitação; Google Play em breve",
   "Software de gestión para iglesias en español, inglés y portugués: células, asistencia, ministerios, escuela bíblica, tesorería e inventario.":
     "Software de gestão de igrejas em português, espanhol e inglês: células, presença, ministérios, escola bíblica, tesouraria e inventário.",
   "Pastores y líderes de iglesias": "Pastores e líderes de igrejas",
   "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; Android en pruebas cerradas.":
-    "App para membros e líderes de igrejas: aniversários, escalas, célula, presença e perfil. Requer uma conta ativa da sua igreja. Disponível para iPhone; Android em testes fechados.",
+    "App para membros e líderes de igrejas: aniversários, escalas, células, presença e perfil. Requer uma conta ativa da igreja. Disponível para iPhone; APK para Android por solicitação e Google Play em breve.",
   anual: "anual",
   mensual: "mensal",
   "SheepLink: tecnología al servicio de tu iglesia.":
@@ -597,7 +642,7 @@ export default {
     "Para consultas ou solicitações de serviços relacionadas aos seus dados, escreva para",
   "Volver a SHEEPLINK": "Retornar ao SHEEPLINK",
   "SheepLink | Software de gestión para iglesias":
-    "SheepLink | Software de gerenciamento de igreja",
+    "SheepLink | Software de gestão para igrejas",
   "SheepLink: software de gestión para iglesias. Organiza células, asistencia, ministerios, turnos y escuela bíblica. Conoce los planes y la app para iPhone.":
     "SheepLink: software de gestão para igrejas. Organiza células, assistências, ministérios, turnos e escola bíblica. Conheça os planos e o aplicativo para iPhone.",
   "Qué es SheepLink: funciones y app para iglesias":
