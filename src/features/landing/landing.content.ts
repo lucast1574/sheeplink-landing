@@ -93,7 +93,7 @@ export const FAQ = [
   {
     q: translate("¿Qué es SheepLink y para quién es?"),
     a: translate(
-      "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
+      "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades, devocionales, tesorería e inventario en una plataforma web.",
     ),
   },
   {
@@ -103,15 +103,45 @@ export const FAQ = [
     ),
   },
   {
-    q: translate("¿SheepLink permite organizar ministerios y escuela bíblica?"),
+    q: translate("¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?"),
     a: translate(
-      "Sí. La plataforma web permite organizar ministerios y turnos de servicio, gestionar cursos y materiales de escuela bíblica, y preparar actividades con inscripciones y presupuesto. También reúne devocionales para la iglesia y sus células.",
+      "Sí. Organiza ministerios y turnos de servicio, planifica cultos y fechas importantes en el calendario de la iglesia, y coordina actividades, cursos y sus inscripciones.",
+    ),
+  },
+  {
+    q: translate("¿Puedo gestionar tesorería, finanzas e inventario?"),
+    a: translate(
+      "Sí. Registra aportes, diezmos, gastos y recaudaciones, consulta movimientos y reportes, y lleva el control de los bienes, préstamos e inventario de la iglesia.",
+    ),
+  },
+  {
+    q: translate("¿Puedo importar miembros desde Excel o CSV?"),
+    a: translate(
+      "Sí. Puedes importar integrantes en grupo desde archivos Excel o CSV para agilizar la puesta en marcha.",
+    ),
+  },
+  {
+    q: translate("¿SheepLink funciona para iglesias grandes?"),
+    a: translate(
+      "SheepLink está diseñado para organizar iglesias de distintos tamaños. Los límites de integrantes, células, ministerios y usuarios dependen del plan elegido.",
+    ),
+  },
+  {
+    q: translate("¿Cómo se protegen los datos y permisos?"),
+    a: translate(
+      "El acceso se organiza por roles. Cada usuario puede consultar y gestionar las funciones que corresponden a su responsabilidad en la iglesia.",
+    ),
+  },
+  {
+    q: translate("¿Qué soporte técnico ofrecen?"),
+    a: translate(
+      "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.",
     ),
   },
   {
     q: translate("¿Necesito instalar algo?"),
     a: translate(
-      "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.",
+      "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
     ),
   },
   {
