@@ -1,4 +1,16 @@
 export default {
+  "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.": "Gerencie membros, cultos com programação e formulários para visitantes e oração. Organize a tesouraria e o inventário com SheepLink.",
+  "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.": "Software para igrejas: programe cultos e responsáveis, crie formulários para a congregação e gerencie membros, tesouraria e inventário.",
+  "Programación de cultos y seguimiento pastoral": "Programação de cultos e acompanhamento pastoral",
+  "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.": "Programe cultos e reuniões no calendário, organize cada momento do culto com horário e responsável e coordene a equipe. Pastores podem acompanhar as células sob seus cuidados.",
+  "Formularios para la congregación": "Formulários para a congregação",
+  "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.": "Crie formulários com perguntas próprias para visitantes, pedidos de oração, inscrições e atualização de dados. Compartilhe um link, consulte as respostas da sua igreja e pause o formulário quando terminar.",
+  "Cronogramas de cultos con momentos y responsables": "Programação de cultos com momentos e responsáveis",
+  "Formularios para visitas, oración e inscripciones": "Formulários para visitantes, oração e inscrições",
+  "Programa cultos con un cronograma de momentos, horarios y responsables.": "Programe cultos com momentos, horários e responsáveis.",
+  "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.": "Sim. Programe cultos e reuniões no calendário da igreja. Organize cada momento com horário e responsável e coordene as escalas dos ministérios.",
+  "¿Puedo crear formularios para mi congregación?": "Posso criar formulários para minha congregação?",
+  "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.": "Sim. Pastores e responsáveis podem criar perguntas para visitantes, pedidos de oração, inscrições e atualização de dados, compartilhar o link e consultar as respostas da igreja.",
   "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.":
     "Gerencie membros, cultos, tesouraria e inventário. Importe do Excel ou CSV, defina permissões por função e conte com suporte 24/7 com solução em menos de quatro horas.",
   "Software para iglesias: funciones y app | SheepLink":

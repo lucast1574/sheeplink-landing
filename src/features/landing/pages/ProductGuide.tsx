@@ -17,9 +17,18 @@ const capabilities = [
   },
   {
     id: "programacion",
-    title: translate("Programación y seguimiento pastoral"),
+    title: translate("Programación de cultos y seguimiento pastoral"),
     text: translate(
-      "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.",
+      "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.",
+    ),
+    link: translate("Conocer la plataforma web"),
+    href: "/#funciones",
+  },
+  {
+    id: "formularios",
+    title: translate("Formularios para la congregación"),
+    text: translate(
+      "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.",
     ),
     link: translate("Conocer la plataforma web"),
     href: "/#funciones",

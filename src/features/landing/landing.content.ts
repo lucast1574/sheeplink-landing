@@ -105,7 +105,13 @@ export const FAQ = [
   {
     q: translate("¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?"),
     a: translate(
-      "Sí. Organiza ministerios y turnos de servicio, planifica cultos y fechas importantes en el calendario de la iglesia, y coordina actividades, cursos y sus inscripciones.",
+      "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.",
+    ),
+  },
+  {
+    q: translate("¿Puedo crear formularios para mi congregación?"),
+    a: translate(
+      "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.",
     ),
   },
   {

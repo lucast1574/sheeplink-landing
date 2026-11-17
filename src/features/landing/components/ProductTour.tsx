@@ -18,7 +18,7 @@ const modules = [
     icon: "star",
     title: translate("El domingo empieza con orden."),
     description: translate(
-      "Un calendario compartido para saber quién sirve, dónde y a qué hora.",
+      "Programa cultos con un cronograma de momentos, horarios y responsables.",
     ),
   },
   {
