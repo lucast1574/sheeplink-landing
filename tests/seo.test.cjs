@@ -125,8 +125,13 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
     )[1],
   )["@graph"];
   const mobile = graph.find((n) => n["@type"] === "MobileApplication");
-  assert.equal(mobile.operatingSystem, "iOS");
-  assert.match(mobile.installUrl, /^https:\/\/apps.apple.com\//);
+  assert.deepEqual(mobile.operatingSystem, ["iOS", "Android"]);
+  assert.deepEqual(mobile.installUrl, [
+    "https://apps.apple.com/pe/app/sheeplink/id6829374579",
+    "https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink",
+  ]);
+  for (const url of mobile.installUrl)
+    assert.ok(html.includes(`href="${url}"`));
   assert.equal(mobile.screenshot.length, 3);
   assert.match(mobile.description, /cuenta activa/);
   assert.equal(

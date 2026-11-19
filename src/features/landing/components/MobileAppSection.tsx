@@ -144,13 +144,11 @@ export function MobileAppSection() {
               href={localizedPath(GOOGLE_PLAY_URL)}
               target="_blank"
               rel="noreferrer"
-              aria-label={translate(
-                "SheepLink para Android: APK disponible por envío, Google Play próximamente",
-              )}
+              aria-label={translate("Descargar SheepLink en Google Play")}
             >
               <StoreIcon />
               <span>
-                <small>{translate("Próximamente en")}</small>
+                <small>{translate("Descárgala en")}</small>
                 <strong>{translate("Google Play")}</strong>
               </span>
               <Icon name={"arrow"} size={18} />
@@ -159,10 +157,6 @@ export function MobileAppSection() {
           <p className="pocket-access">
             {translate(
               "Para entrar necesitas una cuenta activa de tu iglesia.",
-            )}
-            <br />
-            {translate(
-              "iOS disponible · Android: APK por envío · Google Play próximamente.",
             )}
           </p>
           <div

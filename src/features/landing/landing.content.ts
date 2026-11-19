@@ -170,7 +170,7 @@ export const FAQ = [
   {
     q: translate("¿Necesito instalar algo?"),
     a: translate(
-      "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
+      "La plataforma web funciona desde el navegador en computadora o celular. También puedes descargar la app en App Store y Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
     ),
   },
   {

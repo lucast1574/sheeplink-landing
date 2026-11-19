@@ -1,24 +1,37 @@
 export default {
-  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.": "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.",
-  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.": "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.",
-  "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.": "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.",
-  "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.": "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.",
-  "Programación de cultos y seguimiento pastoral": "Programación de cultos y seguimiento pastoral",
-  "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.": "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.",
+  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.":
+    "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.",
+  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.":
+    "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.",
+  "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
+    "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.",
+  "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.":
+    "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.",
+  "Programación de cultos y seguimiento pastoral":
+    "Programación de cultos y seguimiento pastoral",
+  "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.":
+    "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.",
   "Formularios para la congregación": "Formularios para la congregación",
-  "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.": "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.",
-  "Cronogramas de cultos con momentos y responsables": "Cronogramas de cultos con momentos y responsables",
-  "Formularios para visitas, oración e inscripciones": "Formularios para visitas, oración e inscripciones",
-  "Programa cultos con un cronograma de momentos, horarios y responsables.": "Programa cultos con un cronograma de momentos, horarios y responsables.",
-  "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.": "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.",
-  "¿Puedo crear formularios para mi congregación?": "¿Puedo crear formularios para mi congregación?",
-  "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.": "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.",
+  "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.":
+    "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.",
+  "Cronogramas de cultos con momentos y responsables":
+    "Cronogramas de cultos con momentos y responsables",
+  "Formularios para visitas, oración e inscripciones":
+    "Formularios para visitas, oración e inscripciones",
+  "Programa cultos con un cronograma de momentos, horarios y responsables.":
+    "Programa cultos con un cronograma de momentos, horarios y responsables.",
+  "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.":
+    "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.",
+  "¿Puedo crear formularios para mi congregación?":
+    "¿Puedo crear formularios para mi congregación?",
+  "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.":
+    "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.",
   "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.":
     "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.",
   "Software para iglesias: funciones y app | SheepLink":
     "Software para iglesias: funciones y app | SheepLink",
-  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.":
-    "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible en App Store y Google Play.":
+    "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible en App Store y Google Play.",
   "Calendario de cultos y fechas de la iglesia":
     "Calendario de cultos y fechas de la iglesia",
   "Acceso protegido con permisos por roles":
@@ -407,7 +420,7 @@ export default {
     "La app de SheepLink para iPhone reúne cumpleaños próximos, turnos de servicio, tu célula, asistencia y perfil. Necesitas una cuenta activa de tu iglesia y las funciones disponibles dependen de tus permisos. Android está en preparación.",
   "La plataforma web también se puede usar desde el navegador del celular. La gestión de cursos, actividades y presupuesto se presenta en la plataforma web; la app móvil se centra en el acompañamiento diario.":
     "La plataforma web también se puede usar desde el navegador del celular. La gestión de cursos, actividades y presupuesto se presenta en la plataforma web; la app móvil se centra en el acompañamiento diario.",
-  "Ver la app y descargar para iPhone": "Ver la app y descargar para iPhone",
+  "Ver la app para iPhone y Android": "Ver la app para iPhone y Android",
   "Roles y acceso.": "Roles y acceso.",
   "El pastor principal tiene una visión de toda la iglesia. Los líderes de zona acompañan a sus células; los líderes de célula registran integrantes y asistencia; los líderes de ministerio organizan el servicio. Una misma persona puede tener varios roles.":
     "El pastor principal tiene una visión de toda la iglesia. Los líderes de zona acompañan a sus células; los líderes de célula registran integrantes y asistencia; los líderes de ministerio organizan el servicio. Una misma persona puede tener varios roles.",
@@ -1082,9 +1095,9 @@ export default {
   "Con SHEEPLINK puedes organizar zonas y células, registrar integrantes, revisar asistencias semanales y coordinar turnos de servicio. También reúne devocionales, cursos, actividades y comunidad. Los líderes acceden con su propio usuario y cada rol ve lo que le corresponde. La plataforma web funciona en el navegador de la computadora o del celular.":
     "Con SHEEPLINK puedes organizar zonas y células, registrar integrantes, revisar asistencias semanales y coordinar turnos de servicio. También reúne devocionales, cursos, actividades y comunidad. Los líderes acceden con su propio usuario y cada rol ve lo que le corresponde. La plataforma web funciona en el navegador de la computadora o del celular.",
   "Puedes usar SHEEPLINK desde el navegador de tu celular, sin instalar nada: consultar grupos, registrar asistencia y gestionar tus tareas según tu rol. También está disponible la app para iPhone y iPad en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación y se anunciará cuando esté lista.":
-    "Puedes usar SHEEPLINK desde el navegador de tu celular, sin instalar nada: consultar grupos, registrar asistencia y gestionar tus tareas según tu rol. También está disponible la app para iPhone y iPad en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación y se anunciará cuando esté lista.",
+    "Puedes usar SheepLink desde el navegador o descargar la app. App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579 · Google Play: https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink",
   "SHEEPLINK se puede usar desde el navegador del celular. La app para iPhone y iPad ya está disponible en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación; todavía no hay un enlace de descarga de Google Play.":
-    "SHEEPLINK se puede usar desde el navegador del celular. La app para iPhone y iPad ya está disponible en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación; todavía no hay un enlace de descarga de Google Play.",
+    "Puedes usar SheepLink desde el navegador o descargar la app. App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579 · Google Play: https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink",
   "SHEEPLINK permite registrar y dar seguimiento a los devocionales diarios de los cargos de servicio y liderazgo, incluidos los pastores. Si pasan tres días completos consecutivos sin registro, el responsable directo recibe un aviso para acompañar a la persona. El seguimiento queda a criterio del liderazgo y no suspende automáticamente el servicio.":
     "SHEEPLINK permite registrar y dar seguimiento a los devocionales diarios de los cargos de servicio y liderazgo, incluidos los pastores. Si pasan tres días completos consecutivos sin registro, el responsable directo recibe un aviso para acompañar a la persona. El seguimiento queda a criterio del liderazgo y no suspende automáticamente el servicio.",
   "En Mis cursos, cada alumno encuentra sus aulas, materiales y resultados. Los cursos pueden mostrar horarios, fechas, modalidad y ubicación o enlace de reunión; el responsable comparte el formulario de inscripción, que también se puede completar desde el celular. El acceso depende de la inscripción o asignación del responsable.":
@@ -1820,8 +1833,7 @@ export default {
     "¿Cómo organizo varios cultos o sedes?",
   "Puedes programar distintos cultos y fechas en el calendario, y coordinar ministerios y turnos de servicio. La estructura de una iglesia se organiza en sectores, zonas y células. Si necesitas campus con administración y contabilidad independientes, confirma ese alcance con soporte antes de contratar.":
     "Puedes programar distintos cultos y fechas en el calendario, y coordinar ministerios y turnos de servicio. La estructura de una iglesia se organiza en sectores, zonas y células. Si necesitas campus con administración y contabilidad independientes, confirma ese alcance con soporte antes de contratar.",
-  "SheepLink para Android: APK disponible por envío, Google Play próximamente":
-    "SheepLink para Android: APK disponible por envío, Google Play próximamente",
+  "Descargar SheepLink en Google Play": "Descargar SheepLink en Google Play",
   "iOS disponible · Android: APK por envío · Google Play próximamente.":
     "iOS disponible · Android: APK por envío · Google Play próximamente.",
   "¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?":
@@ -1845,6 +1857,6 @@ export default {
   "¿Qué soporte técnico ofrecen?": "¿Qué soporte técnico ofrecen?",
   "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.":
     "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.",
-  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.":
-    "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
+  "La plataforma web funciona desde el navegador en computadora o celular. También puedes descargar la app en App Store y Google Play. Para entrar necesitas una cuenta activa de tu iglesia.":
+    "La plataforma web funciona desde el navegador en computadora o celular. También puedes descargar la app en App Store y Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
 };

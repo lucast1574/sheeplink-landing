@@ -4,6 +4,7 @@ import {
   PLANS,
   CONTACT_EMAIL,
   APP_STORE_URL,
+  GOOGLE_PLAY_URL,
 } from "./features/landing/landing.content";
 export function structuredData(path: string, localized = false) {
   const page = pageMetadata(path);
@@ -136,11 +137,11 @@ export function structuredData(path: string, localized = false) {
       name: "SheepLink",
       url: SITE_URL + "/#app-movil",
       applicationCategory: "BusinessApplication",
-      operatingSystem: "iOS",
-      installUrl: APP_STORE_URL,
+      operatingSystem: ["iOS", "Android"],
+      installUrl: [APP_STORE_URL, GOOGLE_PLAY_URL],
       inLanguage: ["es", "en", "pt"],
       description: translate(
-        "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.",
+        "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible en App Store y Google Play.",
       ),
       screenshot: ["hoy", "celula", "perfil"].map(
         (name) => SITE_URL + "/app/" + name + ".webp",
