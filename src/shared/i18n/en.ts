@@ -1,4 +1,5 @@
 export default {
+  Idioma: "Language",
   "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.":
     "Church software: small groups, services with run sheets, and visitor and prayer forms. Explore pricing, permissions, and exports.",
   "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.":

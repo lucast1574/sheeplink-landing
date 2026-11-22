@@ -2,22 +2,23 @@ import { renderToString } from "react-dom/server";
 import { StaticRouter } from "react-router-dom";
 import SiteRoutes from "../src/SiteRoutes";
 import ChatbotWidget from "../src/features/chatbot/ChatbotWidget";
-import { language, localizedPath } from "../src/shared/i18n/index";
+import {
+  language,
+  localizedPath,
+  SUPPORTED_LANGUAGES,
+} from "../src/shared/i18n/index";
 export {
   PUBLIC_PAGES,
   SITE_URL,
-  APP_URL,
-  SOCIAL_IMAGE,
   SOCIAL_IMAGE_ALT,
   OG_LOCALE,
   pageAlternates,
 } from "../src/shared/config/seo";
-export function renderPage(path: string, localized = false) {
+export { language, localizedPath, SUPPORTED_LANGUAGES };
+
+export function renderPage(path: string) {
   return renderToString(
-    <StaticRouter
-      basename={localized ? "/" + language : undefined}
-      location={localized ? localizedPath(path) : path}
-    >
+    <StaticRouter basename={localizedPath("/")} location={localizedPath(path)}>
       <SiteRoutes />
       <ChatbotWidget />
     </StaticRouter>,

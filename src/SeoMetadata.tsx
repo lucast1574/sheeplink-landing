@@ -17,9 +17,10 @@ export default function SeoMetadata() {
     document.title = page.title;
     const schema = document.querySelector("#public-structured-data");
     if (schema)
-      schema.textContent = JSON.stringify(
-        structuredData(page.path, true),
-      ).replace(/</g, "\\u003c");
+      schema.textContent = JSON.stringify(structuredData(page.path)).replace(
+        /</g,
+        "\\u003c",
+      );
     for (const [selector, value] of [
       ['meta[name="description"]', page.description],
       ['meta[property="og:title"]', page.title],

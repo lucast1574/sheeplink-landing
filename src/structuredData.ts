@@ -6,10 +6,10 @@ import {
   APP_STORE_URL,
   GOOGLE_PLAY_URL,
 } from "./features/landing/landing.content";
-export function structuredData(path: string, localized = false) {
+export function structuredData(path: string) {
   const page = pageMetadata(path);
   if (!page) return null;
-  const pageUrl = SITE_URL + (localized ? localizedPath(page.path) : page.path);
+  const pageUrl = SITE_URL + localizedPath(page.path);
   const graph: object[] = [
     {
       "@type": "Organization",
@@ -157,7 +157,7 @@ export function structuredData(path: string, localized = false) {
           "@type": "ListItem",
           position: 1,
           name: "SHEEPLINK",
-          item: SITE_URL + (localized ? localizedPath("/") : "/"),
+          item: SITE_URL + localizedPath("/"),
         },
         {
           "@type": "ListItem",

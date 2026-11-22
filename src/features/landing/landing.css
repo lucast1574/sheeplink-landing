@@ -1225,6 +1225,19 @@
   line-height: 1.8;
   margin-top: 18px;
 }
+.landing-footer-languages {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 14px;
+}
+.landing-footer-languages a[aria-current="page"] {
+  font-weight: 700;
+}
+.landing-footer-languages a:focus-visible {
+  outline: none;
+  text-decoration: underline;
+}
 .landing-footer-top nav {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

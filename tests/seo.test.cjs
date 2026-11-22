@@ -31,7 +31,7 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     assert.ok(/<h2/.test(html));
     assert.doesNotMatch(html, /<div id="root"><\/div>/);
     const canonical = /<link rel="canonical" href="([^"]+)"/.exec(html)[1];
-    assert.equal(canonical, site + "/es" + (slug ? "/" + slug : ""));
+    assert.equal(canonical, site + "/" + slug);
     assert.match(html, /<meta name="description" content="[^"]{40,180}"/);
     assert.ok(html.includes(`<meta property="og:url" content="${canonical}"`));
     assert.match(html, /summary_large_image/);
@@ -56,6 +56,10 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     home.includes(`href="https://app.sheeplink.app/registro?plan=${first.id}"`),
   );
   assert.match(home, /gestión para iglesias/);
+  assert.doesNotMatch(home, /locale-redirect\.js/);
+  assert.match(home, /href="\/" lang="es" hrefLang="es" aria-current="page"/i);
+  assert.match(home, /href="\/en" lang="en" hrefLang="en"/i);
+  assert.match(home, /href="\/pt" lang="pt" hrefLang="pt"/i);
 });
 test("imagen social horizontal ligera, sitemap canónico y página inexistente sin indexación", () => {
   const bytes = fs.readFileSync(path.join(root, "og-sheeplink-20261016.png"));
@@ -63,7 +67,21 @@ test("imagen social horizontal ligera, sitemap canónico y página inexistente s
   assert.equal(bytes.readUInt32BE(20), 630);
   assert.ok(bytes.length < 300000);
   const sitemap = fs.readFileSync(path.join(root, "sitemap.xml"), "utf8");
-  assert.equal((sitemap.match(/<loc>/g) || []).length, 18);
+  const locations = [...sitemap.matchAll(/<loc>(.*?)<\/loc>/g)].map(
+    ([, url]) => url,
+  );
+  assert.equal(new Set(locations).size, 18);
+  assert.equal(locations.length, 18);
+  assert.ok(locations.includes(site + "/"));
+  assert.ok(locations.includes(site + "/software-para-iglesias"));
+  assert.doesNotMatch(sitemap, /sheeplink\.app\/es(?:[/"<]|$)/);
+  for (const url of locations) {
+    const html = fs.readFileSync(
+      path.join(root, new URL(url).pathname, "index.html"),
+      "utf8",
+    );
+    assert.ok(html.includes(`<link rel="canonical" href="${url}"`), url);
+  }
   for (const language of ["es", "en", "pt"])
     assert.ok(sitemap.includes(`hreflang="${language}"`));
   assert.doesNotMatch(sitemap, /login|registro|dashboard/);
@@ -110,7 +128,7 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
     path.join(root, "software-para-iglesias/index.html"),
     "utf8",
   );
-  assert.match(html, /href="\/es\/software-para-iglesias"/);
+  assert.match(html, /href="\/software-para-iglesias"/);
   for (const topic of [
     "Células y asistencia",
     "Ministerios y servicio",
