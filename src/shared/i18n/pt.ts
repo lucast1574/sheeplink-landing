@@ -20,32 +20,45 @@ export default {
   "Almacén": "Depósito",
   "En reparación": "Em reparo",
   "Bienes de la iglesia": "Bens da igreja",
-  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.": "Software para igrejas: células, cultos com programação e formulários para visitantes e oração. Consulte preços, permissões e exportações.",
-  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.": "Programe cultos, crie formulários e gerencie tesouraria e inventário. Consulte planos, permissões e exportações sem cadastro.",
-  "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.": "Gerencie membros, cultos com programação e formulários para visitantes e oração. Organize a tesouraria e o inventário com SheepLink.",
-  "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.": "Software para igrejas: programe cultos e responsáveis, crie formulários para a congregação e gerencie membros, tesouraria e inventário.",
-  "Programación de cultos y seguimiento pastoral": "Programação de cultos e acompanhamento pastoral",
-  "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.": "Programe cultos e reuniões no calendário, organize cada momento do culto com horário e responsável e coordene a equipe. Pastores podem acompanhar as células sob seus cuidados.",
+  Idioma: "Idioma",
+  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.":
+    "Software para igrejas: células, cultos com programação e formulários para visitantes e oração. Consulte preços, permissões e exportações.",
+  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.":
+    "Programe cultos, crie formulários e gerencie tesouraria e inventário. Consulte planos, permissões e exportações sem cadastro.",
+  "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
+    "Gerencie membros, cultos com programação e formulários para visitantes e oração. Organize a tesouraria e o inventário com SheepLink.",
+  "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.":
+    "Software para igrejas: programe cultos e responsáveis, crie formulários para a congregação e gerencie membros, tesouraria e inventário.",
+  "Programación de cultos y seguimiento pastoral":
+    "Programação de cultos e acompanhamento pastoral",
+  "Programa cultos y reuniones en el calendario, ordena cada momento del culto con su hora y responsable, y coordina las responsabilidades del equipo. Los pastores pueden dar seguimiento a las células que acompañan.":
+    "Programe cultos e reuniões no calendário, organize cada momento do culto com horário e responsável e coordene a equipe. Pastores podem acompanhar as células sob seus cuidados.",
   "Formularios para la congregación": "Formulários para a congregação",
-  "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.": "Crie formulários com perguntas próprias para visitantes, pedidos de oração, inscrições e atualização de dados. Compartilhe um link, consulte as respostas da sua igreja e pause o formulário quando terminar.",
-  "Cronogramas de cultos con momentos y responsables": "Programação de cultos com momentos e responsáveis",
-  "Formularios para visitas, oración e inscripciones": "Formulários para visitantes, oração e inscrições",
-  "Programa cultos con un cronograma de momentos, horarios y responsables.": "Programe cultos com momentos, horários e responsáveis.",
-  "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.": "Sim. Programe cultos e reuniões no calendário da igreja. Organize cada momento com horário e responsável e coordene as escalas dos ministérios.",
-  "¿Puedo crear formularios para mi congregación?": "Posso criar formulários para minha congregação?",
-  "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.": "Sim. Pastores e responsáveis podem criar perguntas para visitantes, pedidos de oração, inscrições e atualização de dados, compartilhar o link e consultar as respostas da igreja.",
+  "Crea formularios con preguntas propias para recibir visitas, peticiones de oración, inscripciones y actualizaciones de datos. Comparte un enlace, consulta las respuestas de tu iglesia y pausa el formulario cuando termine.":
+    "Crie formulários com perguntas próprias para visitantes, pedidos de oração, inscrições e atualização de dados. Compartilhe um link, consulte as respostas da sua igreja e pause o formulário quando terminar.",
+  "Cronogramas de cultos con momentos y responsables":
+    "Programação de cultos com momentos e responsáveis",
+  "Formularios para visitas, oración e inscripciones":
+    "Formulários para visitantes, oração e inscrições",
+  "Programa cultos con un cronograma de momentos, horarios y responsables.":
+    "Programe cultos com momentos, horários e responsáveis.",
+  "Sí. Programa cultos y reuniones en el calendario. En cada culto puedes ordenar los momentos con su hora y responsable, además de coordinar los turnos de los ministerios.":
+    "Sim. Programe cultos e reuniões no calendário da igreja. Organize cada momento com horário e responsável e coordene as escalas dos ministérios.",
+  "¿Puedo crear formularios para mi congregación?":
+    "Posso criar formulários para minha congregação?",
+  "Sí. El pastor o responsable puede crear preguntas para visitas, peticiones de oración, inscripciones y actualización de datos, compartir el enlace y consultar las respuestas de su iglesia.":
+    "Sim. Pastores e responsáveis podem criar perguntas para visitantes, pedidos de oração, inscrições e atualização de dados, compartilhar o link e consultar as respostas da igreja.",
   "Gestiona miembros, cultos, tesorería e inventario. Importa desde Excel o CSV, asigna permisos por roles y recibe soporte 24/7 con solución en menos de 4 h.":
     "Gerencie membros, cultos, tesouraria e inventário. Importe do Excel ou CSV, defina permissões por função e conte com suporte 24/7 com solução em menos de quatro horas.",
   "Software para iglesias: funciones y app | SheepLink":
     "Software para igrejas: recursos e app | SheepLink",
-  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.":
-    "App para membros e líderes de igrejas: aniversários, escalas, células, presença e perfil. Requer uma conta ativa da igreja. Disponível para iPhone; APK para Android por envio e Google Play em breve.",
+  "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible en App Store y Google Play.":
+    "App para membros e líderes de igrejas: aniversários, escalas, células, presença e perfil. Requer uma conta ativa da igreja. Disponível na App Store e no Google Play.",
   "Calendario de cultos y fechas de la iglesia":
     "Calendário de cultos e datas importantes da igreja",
   "Acceso protegido con permisos por roles":
     "Acesso protegido por permissões de função",
-  "SheepLink para Android: APK disponible por envío, Google Play próximamente":
-    "SheepLink para Android: APK disponível por solicitação; Google Play em breve",
+  "Descargar SheepLink en Google Play": "Baixar SheepLink no Google Play",
   "iOS disponible · Android: APK por envío · Google Play próximamente.":
     "iOS disponível · APK para Android por solicitação · Google Play em breve.",
   "¿SheepLink permite organizar ministerios, cultos y fechas de la iglesia?":
@@ -69,8 +82,8 @@ export default {
   "¿Qué soporte técnico ofrecen?": "Que suporte técnico vocês oferecem?",
   "El soporte técnico está disponible las 24 horas. Atendemos las solicitudes y buscamos darles solución en menos de 4 horas.":
     "O suporte técnico está disponível 24 horas por dia. Atendemos às solicitações e buscamos resolvê-las em menos de quatro horas.",
-  "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.":
-    "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store. No Android, solicite o APK por mensagem enquanto preparamos a chegada ao Google Play. É necessária uma conta ativa da sua igreja para entrar.",
+  "La plataforma web funciona desde el navegador en computadora o celular. También puedes descargar la app en App Store y Google Play. Para entrar necesitas una cuenta activa de tu iglesia.":
+    "A plataforma web funciona no navegador do computador ou celular. Você também pode baixar o app na App Store e no Google Play. É necessária uma conta ativa da sua igreja para entrar.",
   "SheepLink | Software para iglesias y app multilingüe":
     "SheepLink | Software para igrejas e app multilíngue",
   "Gestiona células, asistencia, ministerios, escuela bíblica, tesorería e inventario con SheepLink. Plataforma y app en español, inglés y portugués.":
@@ -196,7 +209,7 @@ export default {
   "Ver SheepLink en Google Play, lanzamiento en preparación":
     "Veja SheepLink no Google Play, lançamento em preparação",
   "Próximamente en": "Em breve",
-  "Google Play": "GooglePlay",
+  "Google Play": "Google Play",
   "Para entrar necesitas una cuenta activa de tu iglesia.":
     "Para participar você precisa de uma conta ativa de sua igreja.",
   "Explora la app móvil": "Explore o aplicativo móvel",
@@ -456,8 +469,7 @@ export default {
     "O aplicativo SheepLink para iPhone reúne próximos aniversários, turnos de plantão, seu celular, frequência e perfil. Você precisa de uma conta ativa da sua igreja e os recursos disponíveis dependem de suas permissões. O Android está em preparação.",
   "La plataforma web también se puede usar desde el navegador del celular. La gestión de cursos, actividades y presupuesto se presenta en la plataforma web; la app móvil se centra en el acompañamiento diario.":
     "A plataforma web também pode ser utilizada a partir do navegador do celular. A gestão dos cursos, atividades e orçamento é apresentada na plataforma web; O aplicativo móvel concentra-se no suporte diário.",
-  "Ver la app y descargar para iPhone":
-    "Visualize o aplicativo e baixe para iPhone",
+  "Ver la app para iPhone y Android": "Conheça o app para iPhone e Android",
   "Roles y acceso.": "Funções e acesso.",
   "El pastor principal tiene una visión de toda la iglesia. Los líderes de zona acompañan a sus células; los líderes de célula registran integrantes y asistencia; los líderes de ministerio organizan el servicio. Una misma persona puede tener varios roles.":
     "O pastor titular tem uma visão para toda a igreja. Os líderes de zona acompanham as suas células; os líderes de célula registram os membros e a frequência; os líderes do ministério organizam o serviço. A mesma pessoa pode desempenhar diversas funções.",
@@ -1127,9 +1139,9 @@ export default {
   "Con SHEEPLINK puedes organizar zonas y células, registrar integrantes, revisar asistencias semanales y coordinar turnos de servicio. También reúne devocionales, cursos, actividades y comunidad. Los líderes acceden con su propio usuario y cada rol ve lo que le corresponde. La plataforma web funciona en el navegador de la computadora o del celular.":
     "Com o SHEEPLINK você pode organizar zonas e células, registrar membros, revisar a frequência semanal e coordenar turnos de serviço. Também reúne devocionais, cursos, atividades e comunidade. Os líderes acessam com seu próprio usuário e cada função vê o que lhe corresponde. A plataforma web funciona no navegador do computador ou celular.",
   "Puedes usar SHEEPLINK desde el navegador de tu celular, sin instalar nada: consultar grupos, registrar asistencia y gestionar tus tareas según tu rol. También está disponible la app para iPhone y iPad en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación y se anunciará cuando esté lista.":
-    "Você pode usar o SHEEPLINK a partir do navegador do seu celular, sem instalar nada: consulte grupos, registre presença e gerencie suas tarefas de acordo com sua função. O aplicativo para iPhone e iPad também está disponível na App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. O aplicativo Android está em preparação e será anunciado quando estiver pronto.",
+    "Use o SheepLink no navegador ou baixe o app. App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579 · Google Play: https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink",
   "SHEEPLINK se puede usar desde el navegador del celular. La app para iPhone y iPad ya está disponible en App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. La app para Android está en preparación; todavía no hay un enlace de descarga de Google Play.":
-    "O SHEEPLINK pode ser utilizado a partir do navegador do celular. O aplicativo para iPhone e iPad já está disponível na App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579. O aplicativo Android está em preparação; Ainda não há link para download do Google Play.",
+    "Use o SheepLink no navegador ou baixe o app. App Store: https://apps.apple.com/pe/app/sheeplink/id6829374579 · Google Play: https://play.google.com/store/apps/details?id=app.sheeplink.sheeplink",
   "SHEEPLINK permite registrar y dar seguimiento a los devocionales diarios de los cargos de servicio y liderazgo, incluidos los pastores. Si pasan tres días completos consecutivos sin registro, el responsable directo recibe un aviso para acompañar a la persona. El seguimiento queda a criterio del liderazgo y no suspende automáticamente el servicio.":
     "O SHEEPLINK permite gravar e acompanhar devocionais diários para cargos de serviço e liderança, incluindo pastores. Se passarem três dias consecutivos completos sem registro, o responsável direto recebe um aviso para acompanhá-lo. O monitoramento fica a critério da liderança e não suspende automaticamente o serviço.",
   "En Mis cursos, cada alumno encuentra sus aulas, materiales y resultados. Los cursos pueden mostrar horarios, fechas, modalidad y ubicación o enlace de reunión; el responsable comparte el formulario de inscripción, que también se puede completar desde el celular. El acceso depende de la inscripción o asignación del responsable.":

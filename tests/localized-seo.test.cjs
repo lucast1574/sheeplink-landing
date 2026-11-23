@@ -13,11 +13,12 @@ test("all language versions have prerendered content, canonical, alternates and 
       "cookies",
       "soporte",
     ]) {
+      const prefix = language === "es" ? "" : "/" + language;
       const html = fs.readFileSync(
-        path.join(__dirname, "../dist", language, slug, "index.html"),
+        path.join(__dirname, "../dist", prefix, slug, "index.html"),
         "utf8",
       );
-      const url = `https://sheeplink.app/${language}${slug ? "/" + slug : ""}`;
+      const url = `https://sheeplink.app${prefix}${slug ? "/" + slug : prefix ? "" : "/"}`;
       assert.ok(html.includes(`<html lang="${language}"`));
       assert.match(/<title>(.*?)<\/title>/.exec(html)[1], /sheeplink/i);
       assert.ok(html.includes(`<link rel="canonical" href="${url}"`));
@@ -25,7 +26,9 @@ test("all language versions have prerendered content, canonical, alternates and 
       assert.equal((html.match(/class="sl-chat__launcher"/g) || []).length, 1);
       assert.doesNotMatch(html, /\{\{p\d+\}\}/);
       for (const code of ["es", "en", "pt", "x-default"]) {
-        const target = `https://sheeplink.app${code === "x-default" ? "" : "/" + code}${slug ? "/" + slug : code === "x-default" ? "/" : ""}`;
+        const targetPrefix =
+          code === "es" || code === "x-default" ? "" : "/" + code;
+        const target = `https://sheeplink.app${targetPrefix}${slug ? "/" + slug : targetPrefix ? "" : "/"}`;
         assert.ok(html.includes(`hreflang="${code}" href="${target}"`));
       }
       assert.doesNotMatch(
@@ -96,7 +99,7 @@ test("all language versions have prerendered content, canonical, alternates and 
         );
         assert.equal(
           breadcrumbs.itemListElement[0].item,
-          `https://sheeplink.app/${language}`,
+          `https://sheeplink.app${prefix || "/"}`,
         );
       }
     }

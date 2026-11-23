@@ -2,7 +2,7 @@
 
 ## Versiones de idioma
 
-La entrada sin prefijo detecta automáticamente la primera preferencia compatible del navegador y conserva query y hash al abrir `/es`, `/en` o `/pt`; español es el respaldo. No hay selector. Una URL con idioma explícito conserva su idioma. Se generan las seis páginas públicas en cada idioma, con contenido HTML, metadatos, canonical y alternates hreflang; las URL antiguas siguen sirviendo su HTML español. El blog conserva el contenido escrito por sus autores.
+Las URL sin prefijo sirven español. Las versiones en inglés y portugués usan `/en` y `/pt` y se enlazan desde el pie de la portada. Nginx redirige las URL antiguas de `/es` a sus equivalentes en español y conserva la consulta. Las seis páginas públicas de cada idioma entregan HTML prerenderizado, metadatos, una canónica propia y enlaces alternativos hreflang. El sitemap lista las 18 URL canónicas. El blog conserva el contenido escrito por sus autores.
 
 `src/shared/i18n` contiene los catálogos y la resolución. Las frases españolas son las claves de `translate`; los parámetros usan `{{p0}}`. Los textos nuevos deben incorporarse a los tres catálogos. El prerender de cada idioma se ejecuta en un proceso separado para que los módulos de contenido se evalúen con el locale correspondiente. `localizedPath` conserva los enlaces internos dentro del idioma y deja intactos los destinos externos y los recursos.
 

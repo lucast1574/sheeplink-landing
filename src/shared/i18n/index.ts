@@ -25,9 +25,7 @@ export const language: Language = resolveLanguage(
     ? [pathLanguage]
     : typeof window === "undefined"
       ? [environment?.SHEEPLINK_LANGUAGE ?? "es"]
-      : navigator.languages?.length
-        ? navigator.languages
-        : [navigator.language],
+      : ["es"],
 );
 export const locale = { es: "es-PE", en: "en-US", pt: "pt-BR" }[language];
 export const i18n = createInstance();
@@ -91,6 +89,7 @@ export function localizedPath(
   selected: Language = language,
 ): string {
   if (
+    selected === "es" ||
     !href.startsWith("/") ||
     href.startsWith("//") ||
     /^\/(es|en|pt)(?:\/|$)/.test(href) ||

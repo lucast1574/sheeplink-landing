@@ -1,4 +1,8 @@
-import { translate, localizedPath } from "../../../shared/i18n/index.ts";
+import {
+  language,
+  translate,
+  localizedPath,
+} from "../../../shared/i18n/index.ts";
 import { PRICING } from "../landing.content";
 import { useEffect, useRef, useState } from "react";
 import { appPath } from "../../../shared/config/sites";
@@ -444,6 +448,29 @@ export default function Landing() {
                 <br />
                 {translate("Tecnología al servicio de tu iglesia.")}
               </p>
+              <div
+                className="landing-footer-languages"
+                role="group"
+                aria-label={translate("Idioma")}
+              >
+                {(
+                  [
+                    ["es", "Español"],
+                    ["en", "English"],
+                    ["pt", "Português"],
+                  ] as const
+                ).map(([code, name]) => (
+                  <a
+                    key={code}
+                    href={localizedPath("/", code)}
+                    lang={code}
+                    hrefLang={code}
+                    aria-current={language === code ? "page" : undefined}
+                  >
+                    {name}
+                  </a>
+                ))}
+              </div>
             </div>
             <nav aria-label={translate("Enlaces del sitio")}>
               {NAV.map((n) => (

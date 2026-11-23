@@ -2,12 +2,15 @@ server {
  gzip on;gzip_vary on;gzip_min_length 1024;gzip_types text/css application/javascript application/json application/xml image/svg+xml;
  listen 0.0.0.0:${PORT};server_name _;root /usr/share/nginx/html;index index.html;
  if ($host = www.sheeplink.app) { return 301 https://sheeplink.app$request_uri; }
- location ~ ^/(software-para-iglesias|terminos|privacidad|cookies|soporte)/$ { return 301 https://sheeplink.app/$1; }
+ if ($host = sheeplink.nexode.app) { return 301 https://sheeplink.app$request_uri; }
+ absolute_redirect off;
+ location ~ ^/es/?$ { return 301 /$is_args$args; }
+ location ~ ^/es/(software-para-iglesias|terminos|privacidad|cookies|soporte)/?$ { return 301 /$1$is_args$args; }
+ location ~ ^/(software-para-iglesias|terminos|privacidad|cookies|soporte)/$ { return 301 /$1$is_args$args; }
  location = /health {default_type application/json;return 200 '{"status":"ok"}';}
  location = /config.js {add_header Cache-Control "no-store" always;}
- location = /locale-redirect.js {add_header Cache-Control "no-cache" always;}
- location ~ ^/(es|en|pt)/$ { return 301 /$1$is_args$args; }
- location ~ ^/(es|en|pt)/(software-para-iglesias|terminos|privacidad|cookies|soporte)/$ { return 301 /$1/$2$is_args$args; }
+ location ~ ^/(en|pt)/$ { return 301 /$1$is_args$args; }
+ location ~ ^/(en|pt)/(software-para-iglesias|terminos|privacidad|cookies|soporte)/$ { return 301 /$1/$2$is_args$args; }
  location = /blog/ {return 301 /blog$is_args$args;}
  location = /blog {proxy_ssl_server_name on;proxy_ssl_name api.sheeplink.app;proxy_set_header Host api.sheeplink.app;proxy_set_header Cookie "";proxy_set_header Authorization "";proxy_pass https://api.sheeplink.app/api/public-blog;}
  location /blog/ {proxy_ssl_server_name on;proxy_ssl_name api.sheeplink.app;proxy_set_header Host api.sheeplink.app;proxy_set_header Cookie "";proxy_set_header Authorization "";proxy_pass https://api.sheeplink.app/api/public-blog/;}

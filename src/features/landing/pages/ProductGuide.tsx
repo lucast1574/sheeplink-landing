@@ -181,7 +181,7 @@ export default function ProductGuide() {
           <div>
             <p>
               {translate(
-                "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible para iPhone; APK para Android por envío y Google Play próximamente.",
+                "App para integrantes y líderes de iglesias: cumpleaños, turnos de servicio, célula, asistencia y perfil. Requiere una cuenta activa de tu iglesia. Disponible en App Store y Google Play.",
               )}
             </p>
             <p>
@@ -193,7 +193,7 @@ export default function ProductGuide() {
               className="landing-text-link"
               href={localizedPath("/#app-movil")}
             >
-              {translate("Ver la app y descargar para iPhone")}
+              {translate("Ver la app para iPhone y Android")}
             </a>
           </div>
         </section>
