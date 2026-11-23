@@ -1,4 +1,4 @@
-import { translate } from "../../../shared/i18n/index.ts";
+import { locale, translate } from "../../../shared/i18n/index.ts";
 import { useState, type KeyboardEvent } from "react";
 import mark from "../../../assets/sheeplink-mark-white.svg";
 import { Icon } from "./LandingIcons";
@@ -7,6 +7,7 @@ const modules = [
     id: "cells",
     name: translate("Células"),
     icon: "layers",
+    Preview: AttendancePreview,
     title: translate("Conoce a cada persona."),
     description: translate(
       "Registra asistencias, acompaña los devocionales y mantén cerca a tu célula.",
@@ -16,6 +17,7 @@ const modules = [
     id: "service",
     name: translate("Servicio"),
     icon: "star",
+    Preview: ServicePreview,
     title: translate("El domingo empieza con orden."),
     description: translate(
       "Programa cultos con un cronograma de momentos, horarios y responsables.",
@@ -25,6 +27,7 @@ const modules = [
     id: "academy",
     name: translate("Academia"),
     icon: "book",
+    Preview: AcademyPreview,
     title: translate("Un espacio para seguir creciendo."),
     description: translate(
       "Cursos por grupos, materiales y un enlace de inscripción para compartir.",
@@ -34,9 +37,30 @@ const modules = [
     id: "events",
     name: translate("Actividades"),
     icon: "home",
+    Preview: ActivityPreview,
     title: translate("Organiza lo que los reúne."),
     description: translate(
       "Inscribe participantes y ordena los abonos, el presupuesto y los responsables.",
+    ),
+  },
+  {
+    id: "treasury",
+    name: translate("Tesorería"),
+    icon: "chart",
+    Preview: TreasuryPreview,
+    title: translate("Lleva tus cuentas al día."),
+    description: translate(
+      "Registra diezmos, ofrendas y gastos. Consulta el saldo y los reportes de cada período.",
+    ),
+  },
+  {
+    id: "inventory",
+    name: translate("Inventario"),
+    icon: "box",
+    Preview: InventoryPreview,
+    title: translate("Encuentra cada bien de tu iglesia."),
+    description: translate(
+      "Consulta dónde está cada equipo y registra sus préstamos y reparaciones.",
     ),
   },
 ];
@@ -246,6 +270,76 @@ function ActivityPreview() {
     </div>
   );
 }
+function TreasuryPreview() {
+  const formatAmount = new Intl.NumberFormat(locale, {
+    style: "currency",
+    currency: "PEN",
+    maximumFractionDigits: 0,
+  });
+  const income = 3250;
+  const expenses = 780;
+  return (
+    <div>
+      <div className="tour-panel-title">
+        <div>
+          <small>{translate("Período actual")}</small>
+          <h4>{translate("Resumen de tesorería")}</h4>
+        </div>
+        <Icon name="chart" />
+      </div>
+      <div className="tour-finance">
+        <div>
+          <small>{translate("Ingresos")}</small>
+          <strong>{formatAmount.format(income)}</strong>
+        </div>
+        <div>
+          <small>{translate("Gastos")}</small>
+          <strong>{formatAmount.format(expenses)}</strong>
+        </div>
+        <div>
+          <small>{translate("Saldo del período")}</small>
+          <strong>{formatAmount.format(income - expenses)}</strong>
+        </div>
+      </div>
+      <div className="tour-note">
+        <Icon name="shield" size={18} />
+        {translate("Acceso según los permisos de tu equipo.")}
+      </div>
+    </div>
+  );
+}
+
+function InventoryPreview() {
+  const items = [
+    [translate("Micrófono inalámbrico"), translate("Cabina de sonido"), translate("Disponible")],
+    [translate("Proyector"), translate("Salón de formación"), translate("En préstamo")],
+    [translate("Parlante portátil"), translate("Almacén"), translate("En reparación")],
+  ];
+  return (
+    <div>
+      <div className="tour-panel-title">
+        <div>
+          <small>{translate("Inventario")}</small>
+          <h4>{translate("Bienes de la iglesia")}</h4>
+        </div>
+        <Icon name="box" />
+      </div>
+      {items.map(([name, location, status]) => (
+        <div className="tour-service-row" key={name}>
+          <span className="tour-service-symbol">
+            <Icon name="box" size={19} />
+          </span>
+          <div>
+            <strong>{name}</strong>
+            <small>{location}</small>
+          </div>
+          <span className="tour-tag">{status}</span>
+        </div>
+      ))}
+    </div>
+  );
+}
+
 export function ProductTour() {
   const [active, setActive] = useState(0);
   const keyDown = (event: KeyboardEvent<HTMLButtonElement>, index: number) => {
@@ -326,15 +420,7 @@ export function ProductTour() {
               <Icon name={"shield"} size={14} />
             </div>
             <div className="tour-window-body" key={module.id}>
-              {index === 0 ? (
-                <AttendancePreview />
-              ) : index === 1 ? (
-                <ServicePreview />
-              ) : index === 2 ? (
-                <AcademyPreview />
-              ) : (
-                <ActivityPreview />
-              )}
+              <module.Preview />
             </div>
           </div>
         </div>

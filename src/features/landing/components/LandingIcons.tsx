@@ -37,6 +37,7 @@ export const ICON: Record<string, ReactNode> = {
     </>
   ),
   chart: <path d="M5 20V10M12 20V4M19 20v-7" />,
+  box: <path d="m3 7 9-4 9 4v10l-9 4-9-4V7zm0 0 9 4 9-4m-9 4v10M7.5 5l9 4" />,
   home: (
     <>
       <path d="M3 11l9-8 9 8" />
