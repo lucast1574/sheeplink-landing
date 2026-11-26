@@ -1,4 +1,12 @@
 export default {
+  "Empieza con tus datos y conserva tus reportes":
+    "Bring your data and keep your reports",
+  "Importa tu lista de integrantes":
+    "Import your member list",
+  "Descarga los reportes de tu iglesia":
+    "Download your church reports",
+  "Ver formatos y permisos de exportación":
+    "See export formats and permissions",
   "Tesorería": "Treasury",
   "Inventario": "Inventory",
   "Lleva tus cuentas al día.": "Keep your accounts up to date.",
@@ -21,10 +29,10 @@ export default {
   "En reparación": "Under repair",
   "Bienes de la iglesia": "Church assets",
   Idioma: "Language",
-  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.":
-    "Church software: small groups, services with run sheets, and visitor and prayer forms. Explore pricing, permissions, and exports.",
-  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.":
-    "Plan services, create forms, and manage finances and inventory. Explore plans, permissions, and exports without signing up.",
+  "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.":
+    "Manage your church with SheepLink. Import members from Excel or CSV, plan services and small groups, build forms and export treasury and Bible school reports.",
+  "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
+    "Explore SheepLink features: Excel or CSV member import, report exports, forms, inventory, and a mobile app for Android and iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
     "Manage members, services with run sheets, and visitor and prayer forms. Organize church finances and inventory with SheepLink.",
   "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.":
@@ -1838,18 +1846,18 @@ export default {
   "Lleva el registro de los bienes de la iglesia, su estado y sus préstamos. Registra reparaciones, costos y bajas para conservar el historial de cada bien. Los costos de reparación pueden quedar pendientes de registro en Tesorería.":
     "Keep records of church assets, their condition and loans. Record repairs, costs and retirements to maintain each asset’s history. Repair costs can be left pending for posting in Treasury.",
   "Migración y exportaciones": "Migration and exports",
-  "La importación masiva de integrantes desde Excel o CSV todavía no está disponible. Actualmente los integrantes se registran desde la plataforma. Si vas a migrar una base de datos, consulta el alcance y los pasos con soporte antes de contratar.":
-    "Bulk member import from Excel or CSV is not available yet. Members are currently registered through the platform. If you are migrating a database, discuss the scope and steps with support before subscribing.",
-  "Sí. Tesorería exporta movimientos en CSV y el reporte mensual de diezmos en Excel. Academia Bíblica exporta sus reportes en Excel y las actividades permiten descargar la lista de inscritos en CSV. Estas exportaciones dependen de tus permisos y no equivalen a una copia completa de la base de datos.":
-    "Yes. Treasury exports transactions to CSV and monthly tithe reports to Excel. Bible Academy exports its reports to Excel, and activities let you download registration lists as CSV. These exports depend on your permissions and are not a complete database backup.",
+  "Importa integrantes desde Excel (.xlsx) o CSV. Descarga una plantilla o usa tu propio archivo, asocia las columnas y revisa los posibles duplicados antes de confirmar. Puedes asignar una célula al archivo completo o por fila. La administración puede dejar integrantes sin célula y asignarlos más adelante.":
+    "Import members from Excel (.xlsx) or CSV. Download a template or use your own file, map columns and review possible duplicates before confirming. Assign a small group to the entire file or per row. Church administrators can leave members unassigned and assign them later.",
+  "Descarga movimientos de Tesorería e inscritos a actividades en CSV, el informe mensual de diezmos en Excel y reportes de Academia Bíblica en Excel o PDF, según tus permisos. Si decides dejar SheepLink, guarda los archivos que necesites antes de finalizar tu acceso. Las descargas cubren los reportes indicados.":
+    "Download treasury transactions and event registrations as CSV, the monthly tithing report as Excel, and Bible school reports as Excel or PDF, according to your permissions. If you decide to leave SheepLink, save the files you need before your access ends. Downloads cover the listed reports.",
   "Administra cursos, períodos académicos, inscripciones, alumnos y materiales de formación. Registra asistencia y calificaciones, consulta reportes y descárgalos en Excel. Los responsables acceden según sus cursos y permisos.":
     "Manage courses, academic terms, enrollments, students and learning materials. Record attendance and grades, review reports and download them in Excel. Staff access depends on their assigned courses and permissions.",
   "Organiza retiros y actividades con formularios de inscripción, participantes, responsables, tareas, abonos y presupuesto. Marca la llegada de los inscritos y descarga su lista en CSV. Comparte devocionales de iglesia y célula para acompañar a tu comunidad durante la semana.":
     "Organize retreats and activities with registration forms, participants, coordinators, tasks, payments and budgets. Mark registered participants as arrived and download their list as CSV. Share church and small-group devotionals to support your community throughout the week.",
   "Cada persona usa una cuenta propia. El líder de célula accede a las células que tiene asignadas; los líderes de zona y sector trabajan dentro de su ámbito. Tesorería tiene permisos específicos de lectura, gestión y acceso. Los datos se separan por iglesia y las acciones se validan en el servidor.":
     "Each person uses their own account. Small-group leaders access the groups assigned to them; zone and sector leaders work within their assigned scope. Treasury has specific permissions for reading, managing and granting access. Data is separated by church, and actions are validated on the server.",
-  "Exportaciones CSV y Excel de tesorería, academia y actividades":
-    "CSV and Excel exports for treasury, academy and activities",
+  "Exportación de movimientos, inscritos y reportes en CSV, Excel o PDF según el módulo":
+    "Export transactions, registrations and reports in CSV, Excel or PDF by module",
   "Soporte técnico 24/7 con objetivo de solución en menos de 4 horas":
     "24/7 technical support targeting resolution in under 4 hours",
   "Consulta los planes vigentes para confirmar la capacidad que necesita tu iglesia.":

@@ -95,7 +95,7 @@ export function structuredData(path: string) {
         translate("Formularios para visitas, oración e inscripciones"),
         translate("Importación de integrantes desde Excel y CSV"),
         translate(
-          "Exportaciones CSV y Excel de tesorería, academia y actividades",
+          "Exportación de movimientos, inscritos y reportes en CSV, Excel o PDF según el módulo",
         ),
         translate("Acceso protegido con permisos por roles"),
         translate(

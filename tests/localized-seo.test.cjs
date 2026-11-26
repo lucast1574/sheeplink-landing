@@ -36,20 +36,33 @@ test("all language versions have prerendered content, canonical, alternates and 
         /de habla hispana|Android (?:está )?en preparación/,
       );
       if (!slug || slug === "software-para-iglesias") {
-        const unavailable = {
-          es: "La importación masiva de integrantes desde Excel o CSV todavía no está disponible.",
-          en: "Bulk member import from Excel or CSV is not available yet.",
-          pt: "A importação em massa de membros de Excel ou CSV ainda não está disponível.",
+        const importCopy = {
+          es: "Importa integrantes desde Excel (.xlsx) o CSV.",
+          en: "Import members from Excel (.xlsx) or CSV.",
+          pt: "Importe integrantes do Excel (.xlsx) ou CSV.",
         };
-        assert.ok(html.includes(unavailable[language]));
-        assert.match(html, /CSV/);
-        assert.doesNotMatch(
+        const exportCopy = {
+          es: "Las descargas cubren los reportes indicados.",
+          en: "Downloads cover the listed reports.",
+          pt: "Os downloads abrangem os relatórios indicados.",
+        };
+        assert.ok(html.includes(importCopy[language]));
+        assert.ok(html.includes(exportCopy[language]));
+        assert.match(
           html,
-          /Sí\. Puedes importar integrantes en grupo|You can bulk import members/,
+          /<meta name="description" content="[^"]*Excel[^"]*CSV/,
+        );
+        assert.match(
+          html,
+          /<meta property="og:description" content="[^"]*Excel[^"]*CSV/,
+        );
+        assert.match(
+          html,
+          /<meta name="twitter:description" content="[^"]*Excel[^"]*CSV/,
         );
         assert.doesNotMatch(
           html,
-          /Importa (?:miembros|desde) (?:de )?Excel|Import members from Excel/,
+          /CSV todavía no está disponible|CSV is not available yet|CSV ainda não está disponível/,
         );
       }
       const schema = JSON.parse(

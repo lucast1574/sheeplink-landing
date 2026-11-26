@@ -1,4 +1,12 @@
 export default {
+  "Empieza con tus datos y conserva tus reportes":
+    "Traga seus dados e guarde seus relatórios",
+  "Importa tu lista de integrantes":
+    "Importe sua lista de integrantes",
+  "Descarga los reportes de tu iglesia":
+    "Baixe os relatórios da sua igreja",
+  "Ver formatos y permisos de exportación":
+    "Veja os formatos e permissões de exportação",
   "Tesorería": "Tesouraria",
   "Inventario": "Inventário",
   "Lleva tus cuentas al día.": "Mantenha suas contas em dia.",
@@ -21,10 +29,10 @@ export default {
   "En reparación": "Em reparo",
   "Bienes de la iglesia": "Bens da igreja",
   Idioma: "Idioma",
-  "Software para iglesias: células, cultos con cronograma y formularios para visitas y oración. Consulta precios, permisos y exportaciones.":
-    "Software para igrejas: células, cultos com programação e formulários para visitantes e oração. Consulte preços, permissões e exportações.",
-  "Programa cultos, crea formularios y gestiona tesorería e inventario. Consulta planes, permisos y exportaciones sin registro.":
-    "Programe cultos, crie formulários e gerencie tesouraria e inventário. Consulte planos, permissões e exportações sem cadastro.",
+  "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.":
+    "Gerencie sua igreja com o SheepLink. Importe integrantes do Excel ou CSV, organize cultos e células, crie formulários e exporte relatórios da tesouraria e escola bíblica.",
+  "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
+    "Conheça os recursos do SheepLink: importação de integrantes por Excel ou CSV, exportação de relatórios, formulários, inventário e app para Android e iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
     "Gerencie membros, cultos com programação e formulários para visitantes e oração. Organize a tesouraria e o inventário com SheepLink.",
   "Software para iglesias: programa cultos y responsables, crea formularios para tu congregación y gestiona miembros, tesorería e inventario.":
@@ -1837,18 +1845,18 @@ export default {
   "Lleva el registro de los bienes de la iglesia, su estado y sus préstamos. Registra reparaciones, costos y bajas para conservar el historial de cada bien. Los costos de reparación pueden quedar pendientes de registro en Tesorería.":
     "Mantenha o registro dos bens da igreja, seu estado e seus empréstimos. Registre reparos, custos e baixas para conservar o histórico de cada bem. Os custos de reparo podem ficar pendentes de lançamento na Tesouraria.",
   "Migración y exportaciones": "Migração e exportações",
-  "La importación masiva de integrantes desde Excel o CSV todavía no está disponible. Actualmente los integrantes se registran desde la plataforma. Si vas a migrar una base de datos, consulta el alcance y los pasos con soporte antes de contratar.":
-    "A importação em massa de membros de Excel ou CSV ainda não está disponível. Atualmente os membros são cadastrados pela plataforma. Se pretende migrar uma base de dados, consulte o escopo e os passos com o suporte antes de contratar.",
-  "Sí. Tesorería exporta movimientos en CSV y el reporte mensual de diezmos en Excel. Academia Bíblica exporta sus reportes en Excel y las actividades permiten descargar la lista de inscritos en CSV. Estas exportaciones dependen de tus permisos y no equivalen a una copia completa de la base de datos.":
-    "Sim. A Tesouraria exporta movimentações em CSV e o relatório mensal de dízimos em Excel. A Academia Bíblica exporta seus relatórios em Excel e as atividades permitem baixar a lista de inscritos em CSV. Essas exportações dependem das suas permissões e não equivalem a uma cópia completa da base de dados.",
+  "Importa integrantes desde Excel (.xlsx) o CSV. Descarga una plantilla o usa tu propio archivo, asocia las columnas y revisa los posibles duplicados antes de confirmar. Puedes asignar una célula al archivo completo o por fila. La administración puede dejar integrantes sin célula y asignarlos más adelante.":
+    "Importe integrantes do Excel (.xlsx) ou CSV. Baixe um modelo ou use seu próprio arquivo, associe as colunas e revise possíveis duplicidades antes de confirmar. Atribua uma célula ao arquivo inteiro ou por linha. A administração pode deixar integrantes sem célula e atribuí-los depois.",
+  "Descarga movimientos de Tesorería e inscritos a actividades en CSV, el informe mensual de diezmos en Excel y reportes de Academia Bíblica en Excel o PDF, según tus permisos. Si decides dejar SheepLink, guarda los archivos que necesites antes de finalizar tu acceso. Las descargas cubren los reportes indicados.":
+    "Baixe movimentações da tesouraria e inscritos em atividades em CSV, o relatório mensal de dízimos em Excel e relatórios da escola bíblica em Excel ou PDF, conforme suas permissões. Se decidir deixar o SheepLink, salve os arquivos de que precisa antes do fim do acesso. Os downloads abrangem os relatórios indicados.",
   "Administra cursos, períodos académicos, inscripciones, alumnos y materiales de formación. Registra asistencia y calificaciones, consulta reportes y descárgalos en Excel. Los responsables acceden según sus cursos y permisos.":
     "Gerencie cursos, períodos acadêmicos, inscrições, alunos e materiais de formação. Registre presença e notas, consulte relatórios e baixe-os em Excel. O acesso dos responsáveis depende dos cursos e das permissões atribuídos.",
   "Organiza retiros y actividades con formularios de inscripción, participantes, responsables, tareas, abonos y presupuesto. Marca la llegada de los inscritos y descarga su lista en CSV. Comparte devocionales de iglesia y célula para acompañar a tu comunidad durante la semana.":
     "Organize retiros e atividades com formulários de inscrição, participantes, responsáveis, tarefas, pagamentos e orçamento. Registre a chegada dos inscritos e baixe sua lista em CSV. Compartilhe devocionais da igreja e da célula para acompanhar sua comunidade durante a semana.",
   "Cada persona usa una cuenta propia. El líder de célula accede a las células que tiene asignadas; los líderes de zona y sector trabajan dentro de su ámbito. Tesorería tiene permisos específicos de lectura, gestión y acceso. Los datos se separan por iglesia y las acciones se validan en el servidor.":
     "Cada pessoa usa sua própria conta. O líder de célula acessa as células que lhe foram atribuídas; os líderes de zona e setor trabalham dentro do seu âmbito. A Tesouraria tem permissões específicas de leitura, gestão e acesso. Os dados são separados por igreja e as ações são validadas no servidor.",
-  "Exportaciones CSV y Excel de tesorería, academia y actividades":
-    "Exportações CSV e Excel de tesouraria, academia e atividades",
+  "Exportación de movimientos, inscritos y reportes en CSV, Excel o PDF según el módulo":
+    "Exportação de movimentações, inscritos e relatórios em CSV, Excel ou PDF conforme o módulo",
   "Soporte técnico 24/7 con objetivo de solución en menos de 4 horas":
     "Suporte técnico 24/7 com objetivo de solução em menos de 4 horas",
   "Consulta los planes vigentes para confirmar la capacidad que necesita tu iglesia.":

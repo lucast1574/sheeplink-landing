@@ -20,6 +20,8 @@ import { MobileAppSection } from "../components/MobileAppSection";
 import {
   CONTACT_EMAIL,
   FAQ,
+  MIGRATION_COPY,
+  EXPORTS_COPY,
   NAV,
   ROLES,
   STEPS,
@@ -352,6 +354,30 @@ export default function Landing() {
                   </details>
                 ))}
               </div>
+            </div>
+          </section>
+          <section className="landing-section" id="datos">
+            <div className="landing-container">
+              <h2>
+                {translate("Empieza con tus datos y conserva tus reportes")}
+              </h2>
+              <div className="landing-data-grid">
+                <div>
+                  <h3>{translate("Importa tu lista de integrantes")}</h3>
+                  <p>{MIGRATION_COPY}</p>
+                </div>
+                <div>
+                  <h3>{translate("Descarga los reportes de tu iglesia")}</h3>
+                  <p>{EXPORTS_COPY}</p>
+                </div>
+              </div>
+              <a
+                className="landing-text-link"
+                href={localizedPath("/software-para-iglesias#datos")}
+              >
+                {translate("Ver formatos y permisos de exportación")}
+                <Icon name="arrow" size={18} />
+              </a>
             </div>
           </section>
           <PricingSection />

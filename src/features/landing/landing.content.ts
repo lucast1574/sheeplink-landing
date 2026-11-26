@@ -85,10 +85,10 @@ export const PLANS = BILLING_CATALOG.map((p) => ({
 export const PRICING = pricingCopy(BILLING_CATALOG);
 export const CAPACITY_COPY = capacityCopy(BILLING_CATALOG);
 export const MIGRATION_COPY = translate(
-  "La importación masiva de integrantes desde Excel o CSV todavía no está disponible. Actualmente los integrantes se registran desde la plataforma. Si vas a migrar una base de datos, consulta el alcance y los pasos con soporte antes de contratar.",
+  "Importa integrantes desde Excel (.xlsx) o CSV. Descarga una plantilla o usa tu propio archivo, asocia las columnas y revisa los posibles duplicados antes de confirmar. Puedes asignar una célula al archivo completo o por fila. La administración puede dejar integrantes sin célula y asignarlos más adelante.",
 );
 export const EXPORTS_COPY = translate(
-  "Sí. Tesorería exporta movimientos en CSV y el reporte mensual de diezmos en Excel. Academia Bíblica exporta sus reportes en Excel y las actividades permiten descargar la lista de inscritos en CSV. Estas exportaciones dependen de tus permisos y no equivalen a una copia completa de la base de datos.",
+  "Descarga movimientos de Tesorería e inscritos a actividades en CSV, el informe mensual de diezmos en Excel y reportes de Academia Bíblica en Excel o PDF, según tus permisos. Si decides dejar SheepLink, guarda los archivos que necesites antes de finalizar tu acceso. Las descargas cubren los reportes indicados.",
 );
 export const FAQ = [
   {
