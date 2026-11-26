@@ -31,8 +31,8 @@ export default {
   "En reparación": "Under repair",
   "Bienes de la iglesia": "Church assets",
   Idioma: "Language",
-  "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.":
-    "Manage your church with SheepLink. Import members from Excel or CSV, plan services and small groups, build forms and export treasury and Bible school reports.",
+  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink is church management software in Spanish, English and Portuguese. Import members from Excel or CSV and export reports.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Explore SheepLink features: Excel or CSV member import, report exports, forms, inventory, and a mobile app for Android and iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -346,8 +346,6 @@ export default {
   "Asistencia, servicio y devocionales": "Assistance, service and devotionals",
   "Cursos, actividades y comunidad": "Courses, activities and community",
   "¿Qué es SheepLink y para quién es?": "What is SheepLink and who is it for?",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.":
-    "SheepLink is management software for Spanish-speaking churches. Helps pastors and leaders organize members, zones, small groups, attendance, ministries, shifts of service, Bible school, activities and devotionals from a web platform.",
   "¿Qué puedo hacer con las células y la asistencia?":
     "What can I do with small groups and attendance?",
   "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.":
@@ -465,8 +463,6 @@ export default {
   Inicio: "Home",
   "SheepLink para": "SheepLink for",
   "tu iglesia.": "your church.",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Conecta integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
-    "SheepLink is management software for Spanish-speaking churches. Connect members, small groups, attendance, ministries, Bible school, activities and devotionals on a web platform.",
   "Está pensado para pastores y líderes que necesitan organizar a su comunidad y dar seguimiento a las personas. Su app móvil acerca las tareas del día a día a quienes sirven en la iglesia.":
     "It is designed for pastors and leaders who need to organize their community and follow up with people. Its mobile app brings day-to-day tasks closer to those who serve in the church.",
   "Funciones de SheepLink": "SheepLink Features",
@@ -704,10 +700,6 @@ export default {
   "Soporte de la app | SHEEPLINK": "App support | SHEEPLINK",
   "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.":
     "Help with SheepLink app access, notifications, photos, and privacy requests.",
-  "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.":
-    "Management software for Spanish-speaking churches: small groups, attendance, ministries, Bible school and community.",
-  "Pastores y líderes de iglesias de habla hispana":
-    "Pastors and leaders of Spanish-speaking churches",
   "Gestión de células e integrantes": "Small group and member management",
   "Registro de asistencia": "Attendance record",
   "Organización de ministerios y turnos":

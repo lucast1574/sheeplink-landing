@@ -31,8 +31,8 @@ export default {
   "En reparación": "En reparación",
   "Bienes de la iglesia": "Bienes de la iglesia",
   Idioma: "Idioma",
-  "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.":
-    "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.",
+  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -321,8 +321,6 @@ export default {
   "Asistencia, servicio y devocionales": "Asistencia, servicio y devocionales",
   "Cursos, actividades y comunidad": "Cursos, actividades y comunidad",
   "¿Qué es SheepLink y para quién es?": "¿Qué es SheepLink y para quién es?",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.":
-    "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.",
   "¿Qué puedo hacer con las células y la asistencia?":
     "¿Qué puedo hacer con las células y la asistencia?",
   "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.":
@@ -442,8 +440,6 @@ export default {
   Inicio: "Inicio",
   "SheepLink para": "SheepLink para",
   "tu iglesia.": "tu iglesia.",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Conecta integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
-    "SheepLink es un software de gestión para iglesias de habla hispana. Conecta integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
   "Está pensado para pastores y líderes que necesitan organizar a su comunidad y dar seguimiento a las personas. Su app móvil acerca las tareas del día a día a quienes sirven en la iglesia.":
     "Está pensado para pastores y líderes que necesitan organizar a su comunidad y dar seguimiento a las personas. Su app móvil acerca las tareas del día a día a quienes sirven en la iglesia.",
   "Funciones de SheepLink": "Funciones de SheepLink",
@@ -683,10 +679,6 @@ export default {
   "Soporte de la app | SHEEPLINK": "Soporte de la app | SHEEPLINK",
   "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.":
     "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.",
-  "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.":
-    "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.",
-  "Pastores y líderes de iglesias de habla hispana":
-    "Pastores y líderes de iglesias de habla hispana",
   "Gestión de células e integrantes": "Gestión de células e integrantes",
   "Registro de asistencia": "Registro de asistencia",
   "Organización de ministerios y turnos":

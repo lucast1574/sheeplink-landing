@@ -23,7 +23,7 @@ export const PUBLIC_PAGES = [
     path: "/",
     title: translate("SheepLink | Software de gestión para iglesias"),
     description: translate(
-      "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.",
+      "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.",
     ),
   },
   {

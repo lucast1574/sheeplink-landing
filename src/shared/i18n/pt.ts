@@ -31,8 +31,8 @@ export default {
   "En reparación": "Em reparo",
   "Bienes de la iglesia": "Bens da igreja",
   Idioma: "Idioma",
-  "Gestiona tu iglesia con SheepLink. Importa integrantes desde Excel o CSV, organiza cultos y células, crea formularios y exporta reportes de tesorería y academia.":
-    "Gerencie sua igreja com o SheepLink. Importe integrantes do Excel ou CSV, organize cultos e células, crie formulários e exporte relatórios da tesouraria e escola bíblica.",
+  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink é um software para igrejas em espanhol, inglês e português. Importe integrantes do Excel ou CSV e exporte relatórios.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Conheça os recursos do SheepLink: importação de integrantes por Excel ou CSV, exportação de relatórios, formulários, inventário e app para Android e iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -349,8 +349,6 @@ export default {
   "Cursos, actividades y comunidad": "Cursos, atividades e comunidade",
   "¿Qué es SheepLink y para quién es?":
     "O que é SheepLink e para quem se destina?",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Ayuda a pastores y líderes a organizar integrantes, zonas, células, asistencia, ministerios, turnos de servicio, escuela bíblica, actividades y devocionales desde una plataforma web.":
-    "SheepLink é um software de gerenciamento para igrejas de língua espanhola. Ajuda pastores e líderes a organizar membros, zonas, células, frequência, ministérios, turnos de serviço, escola bíblica, atividades e devocionais a partir de uma plataforma web.",
   "¿Qué puedo hacer con las células y la asistencia?":
     "O que posso fazer com células e presença?",
   "Puedes organizar las células de tu iglesia por zonas, registrar a sus integrantes y marcar la asistencia de cada encuentro. Los líderes de célula acompañan a su grupo y los líderes de zona revisan la información de las células a su cargo.":
@@ -469,8 +467,6 @@ export default {
   Inicio: "Início",
   "SheepLink para": "SheepLink para",
   "tu iglesia.": "sua igreja.",
-  "SheepLink es un software de gestión para iglesias de habla hispana. Conecta integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.":
-    "SheepLink é um software de gerenciamento para igrejas de língua espanhola. Conecte membros, células, frequência, ministérios, escola bíblica, atividades e devocionais em uma plataforma web.",
   "Está pensado para pastores y líderes que necesitan organizar a su comunidad y dar seguimiento a las personas. Su app móvil acerca las tareas del día a día a quienes sirven en la iglesia.":
     "Ele é destinado a pastores e líderes que precisam organizar sua comunidade e acompanhar as pessoas. Seu aplicativo móvel aproxima as tarefas do dia a dia daqueles que servem na igreja.",
   "Funciones de SheepLink": "Recursos do SheepLink",
@@ -709,10 +705,6 @@ export default {
   "Soporte de la app | SHEEPLINK": "Suporte a aplicativos | SHEEPLINK",
   "Ayuda con el acceso, las notificaciones, las fotografías y las solicitudes de privacidad de la aplicación SheepLink.":
     "Ajuda com acesso ao aplicativo SheepLink, notificações, fotos e solicitações de privacidade.",
-  "Software de gestión para iglesias de habla hispana: células, asistencia, ministerios, escuela bíblica y comunidad.":
-    "Software de gestão para igrejas de língua espanhola: células, atendimento, ministérios, escola bíblica e comunidade.",
-  "Pastores y líderes de iglesias de habla hispana":
-    "Pastores e líderes de igrejas de língua espanhola",
   "Gestión de células e integrantes": "Gerenciamento de células e membros",
   "Registro de asistencia": "Registro de presença",
   "Organización de ministerios y turnos": "Organização de ministérios e turnos",

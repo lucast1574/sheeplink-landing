@@ -56,8 +56,11 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     home.includes(`href="https://app.sheeplink.app/registro?plan=${first.id}"`),
   );
   assert.match(home, /gestión para iglesias/);
-  assert.doesNotMatch(home, /locale-redirect\.js/);
-  assert.match(home, /href="\/" lang="es" hrefLang="es" aria-current="page"/i);
+  assert.match(home, /locale-redirect\.js/);
+  assert.match(
+    home,
+    /href="\/" lang="es" hrefLang="es" data-site-language="es" aria-current="page"/i,
+  );
   assert.match(home, /href="\/en" lang="en" hrefLang="en"/i);
   assert.match(home, /href="\/pt" lang="pt" hrefLang="pt"/i);
 });

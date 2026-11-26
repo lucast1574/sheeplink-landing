@@ -33,7 +33,7 @@ test("all language versions have prerendered content, canonical, alternates and 
       }
       assert.doesNotMatch(
         html,
-        /de habla hispana|Android (?:está )?en preparación/,
+        /de habla hispana|Spanish-speaking churches|igrejas de língua espanhola|Android (?:está )?en preparación/,
       );
       if (!slug || slug === "software-para-iglesias") {
         const importCopy = {
