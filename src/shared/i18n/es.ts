@@ -1,4 +1,6 @@
 export default {
+  "Ver más preguntas": "Ver más preguntas",
+  "Ver menos preguntas": "Ver menos preguntas",
   "Empieza con tus datos y conserva tus reportes":
     "Empieza con tus datos y conserva tus reportes",
   "Importa tu lista de integrantes":

@@ -2024,3 +2024,24 @@
 .landing-data-grid p {
   margin: 0;
 }
+
+.landing-faq-more > summary {
+  width: fit-content;
+  max-width: 100%;
+  gap: 10px;
+  margin-block: 20px;
+  padding: 10px 16px;
+  border: 1px solid #91aa7e;
+  border-radius: 10px;
+  color: var(--forest);
+  font-size: 14px;
+}
+
+.landing-faq-more > summary:hover {
+  background: var(--soft);
+}
+
+.landing-faq-more:not([open]) .landing-faq-collapse,
+.landing-faq-more[open] .landing-faq-expand {
+  display: none;
+}

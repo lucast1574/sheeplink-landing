@@ -54,6 +54,24 @@ const moments = [
     icon: "book",
   },
 ];
+const VISIBLE_FAQ_COUNT = 6;
+
+function FaqList({ questions }: { questions: typeof FAQ }) {
+  return (
+    <div className="landing-faq-list">
+      {questions.map(({ q, a }) => (
+        <details key={q}>
+          <summary>
+            {q}
+            <Icon name="plus" size={20} />
+          </summary>
+          <p>{a}</p>
+        </details>
+      ))}
+    </div>
+  );
+}
+
 export default function Landing() {
   const [menuOpen, setMenuOpen] = useState(false);
   const rhythm = useRef<HTMLElement>(null);
@@ -405,16 +423,20 @@ export default function Landing() {
                   <Icon name="arrow" size={18} />
                 </a>
               </div>
-              <div className="landing-faq-list">
-                {FAQ.map((f) => (
-                  <details key={f.q}>
-                    <summary>
-                      {f.q}
-                      <Icon name="plus" size={20} />
-                    </summary>
-                    <p>{f.a}</p>
-                  </details>
-                ))}
+              <div>
+                <FaqList questions={FAQ.slice(0, VISIBLE_FAQ_COUNT)} />
+                <details className="landing-faq-more">
+                  <summary>
+                    <span className="landing-faq-expand">
+                      {translate("Ver más preguntas")}
+                    </span>
+                    <span className="landing-faq-collapse">
+                      {translate("Ver menos preguntas")}
+                    </span>
+                    <Icon name="plus" size={18} />
+                  </summary>
+                  <FaqList questions={FAQ.slice(VISIBLE_FAQ_COUNT)} />
+                </details>
               </div>
             </div>
           </section>
