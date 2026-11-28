@@ -56,11 +56,8 @@ test("cada URL pública entrega contenido HTML y metadatos propios sin ejecutar 
     home.includes(`href="https://app.sheeplink.app/registro?plan=${first.id}"`),
   );
   assert.match(home, /gestión para iglesias/);
-  assert.match(home, /locale-redirect\.js/);
-  assert.match(
-    home,
-    /href="\/" lang="es" hrefLang="es" data-site-language="es" aria-current="page"/i,
-  );
+  assert.doesNotMatch(home, /locale-redirect\.js/);
+  assert.match(home, /href="\/" lang="es" hrefLang="es" aria-current="page"/i);
   assert.match(home, /href="\/en" lang="en" hrefLang="en"/i);
   assert.match(home, /href="\/pt" lang="pt" hrefLang="pt"/i);
 });
@@ -155,10 +152,20 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
     assert.ok(html.includes(`href="${url}"`));
   assert.equal(mobile.screenshot.length, 3);
   assert.match(mobile.description, /cuenta activa/);
+  const organization = graph.find((n) => n["@type"] === "Organization");
+  assert.equal(organization.name, "SheepLink");
+  assert.deepEqual(organization.sameAs, [
+    "https://www.instagram.com/sheeplink.app/",
+    "https://www.linkedin.com/company/sheeplink/",
+  ]);
+  const website = graph.find((n) => n["@type"] === "WebSite");
+  assert.equal(website.url, site + "/");
+  assert.equal(website.alternateName, new URL(site).hostname);
   assert.equal(
-    graph.find((n) => n["@type"] === "Organization").name,
-    "SheepLink",
+    graph.find((n) => n["@type"] === "WebPage").isAccessibleForFree,
+    true,
   );
+  assert.match(html, /og:site_name" content="SheepLink"/);
 });
 
 test("ofertas anuales publican duración anual y excluyen prueba en datos estructurados", () => {

@@ -50,9 +50,9 @@ const capabilities = [
   },
   {
     id: "idiomas",
-    title: translate("Tres idiomas automáticos"),
+    title: translate("Disponible en tres idiomas"),
     text: translate(
-      "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.",
+      "SheepLink está disponible en español, inglés y portugués. Puedes cambiar el idioma de este sitio desde el pie de página.",
     ),
     link: translate("Conocer la plataforma web"),
     href: "/#funciones",

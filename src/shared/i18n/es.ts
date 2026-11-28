@@ -31,8 +31,8 @@ export default {
   "En reparación": "En reparación",
   "Bienes de la iglesia": "Bienes de la iglesia",
   Idioma: "Idioma",
-  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
-    "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.",
+  "SheepLink es el software de gestión para iglesias. Organiza células, asistencia y ministerios, importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink es el software de gestión para iglesias. Organiza células, asistencia y ministerios, importa integrantes desde Excel o CSV y exporta reportes.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -80,8 +80,8 @@ export default {
     "SheepLink es un software de gestión para iglesias en español, inglés y portugués. Reúne integrantes, células, asistencia, ministerios, escuela bíblica, actividades y devocionales en una plataforma web.",
   "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
     "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store. En Android, puedes solicitar el APK por envío mientras preparamos su llegada a Google Play. Para entrar necesitas una cuenta activa de tu iglesia.",
-  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
-    "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.",
+  "SheepLink está disponible en español, inglés y portugués. Puedes cambiar el idioma de este sitio desde el pie de página.":
+    "SheepLink está disponible en español, inglés y portugués. Puedes cambiar el idioma de este sitio desde el pie de página.",
   "¿En qué idiomas está disponible SheepLink?":
     "¿En qué idiomas está disponible SheepLink?",
   "Tesorería e inventario": "Tesorería e inventario",
@@ -90,7 +90,7 @@ export default {
   "Programación y seguimiento pastoral": "Programación y seguimiento pastoral",
   "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
     "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.",
-  "Tres idiomas automáticos": "Tres idiomas automáticos",
+  "Disponible en tres idiomas": "Disponible en tres idiomas",
   "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
     "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; puedes solicitar el APK de Android por envío y Google Play llegará próximamente.",
   "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":

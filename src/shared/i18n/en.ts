@@ -31,8 +31,8 @@ export default {
   "En reparación": "Under repair",
   "Bienes de la iglesia": "Church assets",
   Idioma: "Language",
-  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
-    "SheepLink is church management software in Spanish, English and Portuguese. Import members from Excel or CSV and export reports.",
+  "SheepLink es el software de gestión para iglesias. Organiza células, asistencia y ministerios, importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink is church management software. Organize small groups, attendance and ministries, import members from Excel or CSV, and export reports.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Explore SheepLink features: Excel or CSV member import, report exports, forms, inventory, and a mobile app for Android and iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -106,8 +106,8 @@ export default {
     "SheepLink is church management software in English, Spanish and Portuguese. Bring members, small groups, attendance, ministries, Bible school, activities and devotionals together on one web platform.",
   "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
     "The web platform works in a desktop or mobile browser with no installation. The iPhone app is available on the App Store. Request the Android APK by message while we prepare for Google Play. You need an active church account to sign in.",
-  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
-    "The platform, app and this website automatically detect your browser or device language: English, Spanish or Portuguese. Unsupported languages fall back to Spanish. There is no language selector to configure.",
+  "SheepLink está disponible en español, inglés y portugués. Puedes cambiar el idioma de este sitio desde el pie de página.":
+    "SheepLink is available in English, Spanish and Portuguese. You can switch this website’s language in the footer.",
   "¿En qué idiomas está disponible SheepLink?":
     "Which languages does SheepLink support?",
   "Tesorería e inventario": "Finances and inventory",
@@ -116,7 +116,7 @@ export default {
   "Programación y seguimiento pastoral": "Scheduling and pastoral care",
   "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
     "View the church schedule and coordinate team responsibilities. Pastors can select the small group they oversee to view its information and follow up with their community.",
-  "Tres idiomas automáticos": "Three automatic languages",
+  "Disponible en tres idiomas": "Available in three languages",
   "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
     "The SheepLink app brings together birthdays, service shifts, your small group, attendance and profile, according to your permissions. An active church account is required. iPhone is available on the App Store; request the Android APK by message, with Google Play coming soon.",
   "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":

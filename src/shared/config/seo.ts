@@ -6,6 +6,10 @@ import {
 } from "../i18n/index.ts";
 export const SITE_URL = "https://sheeplink.app";
 export const APP_URL = "https://app.sheeplink.app";
+export const OFFICIAL_PROFILES = [
+  "https://www.instagram.com/sheeplink.app/",
+  "https://www.linkedin.com/company/sheeplink/",
+] as const;
 export const SOCIAL_IMAGE = "/og-sheeplink-20261016.png";
 export const SOCIAL_IMAGE_ALT = translate(
   "SheepLink: tecnología al servicio de tu iglesia.",
@@ -23,7 +27,7 @@ export const PUBLIC_PAGES = [
     path: "/",
     title: translate("SheepLink | Software de gestión para iglesias"),
     description: translate(
-      "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.",
+      "SheepLink es el software de gestión para iglesias. Organiza células, asistencia y ministerios, importa integrantes desde Excel o CSV y exporta reportes.",
     ),
   },
   {

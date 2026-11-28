@@ -31,8 +31,8 @@ export default {
   "En reparación": "Em reparo",
   "Bienes de la iglesia": "Bens da igreja",
   Idioma: "Idioma",
-  "SheepLink es un software para iglesias en español, inglés y portugués. Importa integrantes desde Excel o CSV y exporta reportes.":
-    "SheepLink é um software para igrejas em espanhol, inglês e português. Importe integrantes do Excel ou CSV e exporte relatórios.",
+  "SheepLink es el software de gestión para iglesias. Organiza células, asistencia y ministerios, importa integrantes desde Excel o CSV y exporta reportes.":
+    "SheepLink é um software de gestão para igrejas. Organize células, presença e ministérios, importe integrantes do Excel ou CSV e exporte relatórios.",
   "Conoce las funciones de SheepLink: importación de integrantes por Excel o CSV, exportación de reportes, formularios, inventario y app para Android e iOS.":
     "Conheça os recursos do SheepLink: importação de integrantes por Excel ou CSV, exportação de relatórios, formulários, inventário e app para Android e iOS.",
   "Gestiona miembros, cultos con cronograma y formularios para visitas y oración. Organiza tesorería e inventario con SheepLink.":
@@ -106,8 +106,8 @@ export default {
     "SheepLink é um software de gestão de igrejas em português, espanhol e inglês. Reúne membros, células, presença, ministérios, escola bíblica, atividades e devocionais em uma plataforma web.",
   "La plataforma web funciona desde el navegador en computadora o celular, sin instalar nada. La app para iPhone está disponible en App Store y Android está en pruebas cerradas. Para entrar a la app necesitas una cuenta activa de tu iglesia.":
     "A plataforma web funciona no navegador do computador ou celular, sem instalação. O app para iPhone está disponível na App Store. No Android, solicite o APK por mensagem enquanto preparamos a chegada ao Google Play. É necessária uma conta ativa da sua igreja para entrar.",
-  "La plataforma, la app y esta web detectan automáticamente el idioma del navegador o dispositivo: español, inglés o portugués. Si el idioma no es compatible, se muestra español. No necesitas elegirlo en un selector.":
-    "A plataforma, o app e este site detectam automaticamente o idioma do navegador ou dispositivo: português, espanhol ou inglês. Para idiomas não compatíveis, o conteúdo aparece em espanhol. Não é preciso configurar um seletor de idioma.",
+  "SheepLink está disponible en español, inglés y portugués. Puedes cambiar el idioma de este sitio desde el pie de página.":
+    "O SheepLink está disponível em português, espanhol e inglês. Você pode mudar o idioma deste site no rodapé.",
   "¿En qué idiomas está disponible SheepLink?":
     "Em quais idiomas SheepLink está disponível?",
   "Tesorería e inventario": "Tesouraria e inventário",
@@ -117,7 +117,7 @@ export default {
     "Programação e acompanhamento pastoral",
   "Consulta la programación de la iglesia y coordina las responsabilidades del equipo. Los pastores pueden seleccionar la célula que acompañan para consultar su información y dar seguimiento a su comunidad.":
     "Consulte a programação da igreja e coordene as responsabilidades da equipe. Os pastores podem selecionar a célula que acompanham para consultar suas informações e acompanhar a comunidade.",
-  "Tres idiomas automáticos": "Três idiomas automáticos",
+  "Disponible en tres idiomas": "Disponível em três idiomas",
   "La app de SheepLink reúne cumpleaños, turnos, célula, asistencia y perfil, según tus permisos. Requiere una cuenta activa de tu iglesia. iPhone está disponible en App Store; Android está en pruebas cerradas. Las actualizaciones de las tiendas pueden llegar en fechas distintas.":
     "O app SheepLink reúne aniversários, escalas, célula, presença e perfil, conforme suas permissões. É necessária uma conta ativa da sua igreja. iPhone está disponível na App Store; solicite o APK para Android por mensagem. Google Play em breve.",
   "La plataforma web también funciona en el navegador del celular y reúne cursos, materiales, actividades, presupuesto, tesorería e inventario. Las funciones disponibles en la app dependen de los permisos y de la versión instalada.":

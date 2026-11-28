@@ -513,7 +513,6 @@ export default function Landing() {
                     href={localizedPath("/", code)}
                     lang={code}
                     hrefLang={code}
-                    data-site-language={code}
                     aria-current={language === code ? "page" : undefined}
                   >
                     {name}

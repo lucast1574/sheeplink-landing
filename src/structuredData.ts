@@ -1,5 +1,10 @@
 import { translate, language, localizedPath } from "./shared/i18n/index.ts";
-import { SITE_URL, SOCIAL_IMAGE, pageMetadata } from "./shared/config/seo";
+import {
+  OFFICIAL_PROFILES,
+  SITE_URL,
+  SOCIAL_IMAGE,
+  pageMetadata,
+} from "./shared/config/seo";
 import {
   PLANS,
   CONTACT_EMAIL,
@@ -15,8 +20,8 @@ export function structuredData(path: string) {
       "@type": "Organization",
       "@id": SITE_URL + "/#organization",
       name: "SheepLink",
-      alternateName: "SHEEPLINK",
-      url: SITE_URL,
+      url: SITE_URL + "/",
+      sameAs: OFFICIAL_PROFILES,
       logo: {
         "@type": "ImageObject",
         url: SITE_URL + "/brand/sheeplink-mark-green.png",
@@ -38,9 +43,9 @@ export function structuredData(path: string) {
     {
       "@type": "WebSite",
       "@id": SITE_URL + "/#website",
-      url: SITE_URL,
+      url: SITE_URL + "/",
       name: "SheepLink",
-      alternateName: "SHEEPLINK",
+      alternateName: new URL(SITE_URL).hostname,
       inLanguage: ["es", "en", "pt"],
       publisher: { "@id": SITE_URL + "/#organization" },
     },
@@ -50,6 +55,7 @@ export function structuredData(path: string) {
       url: pageUrl,
       name: page.title,
       description: page.description,
+      isAccessibleForFree: true,
       inLanguage: language,
       isPartOf: { "@id": SITE_URL + "/#website" },
       ...(path === "/" || path === "/software-para-iglesias"
@@ -101,7 +107,7 @@ export function structuredData(path: string) {
         translate(
           "Soporte técnico 24/7 con objetivo de solución en menos de 4 horas",
         ),
-        translate("Tres idiomas automáticos"),
+        translate("Disponible en tres idiomas"),
       ],
       publisher: { "@id": SITE_URL + "/#organization" },
       offers: PLANS.map((p) => ({
