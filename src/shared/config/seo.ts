@@ -9,6 +9,7 @@ export const APP_URL = "https://app.sheeplink.app";
 export const OFFICIAL_PROFILES = [
   "https://www.instagram.com/sheeplink.app/",
   "https://www.linkedin.com/company/sheeplink/",
+  "https://www.facebook.com/profile.php?id=61596718644956",
 ] as const;
 export const SOCIAL_IMAGE = "/og-sheeplink-20261016.png";
 export const SOCIAL_IMAGE_ALT = translate(

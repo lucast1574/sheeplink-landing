@@ -157,6 +157,7 @@ test("la guía es descubrible y la app móvil describe su disponibilidad real", 
   assert.deepEqual(organization.sameAs, [
     "https://www.instagram.com/sheeplink.app/",
     "https://www.linkedin.com/company/sheeplink/",
+    "https://www.facebook.com/profile.php?id=61596718644956",
   ]);
   const website = graph.find((n) => n["@type"] === "WebSite");
   assert.equal(website.url, site + "/");
